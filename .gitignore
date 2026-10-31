@@ -1,0 +1,5 @@
+data/cache/*
+!data/cache/.gitkeep
+data/enquiries.log
+data/content.backup.json
+data/content.json

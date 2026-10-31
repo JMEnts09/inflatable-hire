@@ -1,0 +1,51 @@
+name: Deploy to IONOS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      reset_content:
+        description: "Also overwrite the live site content with the repo default (wipes admin edits)"
+        type: boolean
+        default: false
+
+concurrency: deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Upload site over SFTP
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_PATH: ${{ secrets.SFTP_PATH }}
+          RESET: ${{ inputs.reset_content }}
+        run: |
+          set -e
+          TARGET="${SFTP_PATH:-/Inflatables}"
+          lftp -u "$SFTP_USER","$SFTP_PASSWORD" "sftp://$SFTP_HOST" -e "
+            set sftp:auto-confirm yes
+            set net:max-retries 3
+            mkdir -p -f $TARGET
+            mirror -R --parallel=4 --verbose \
+              --exclude-glob .git/ --exclude-glob .github/ \
+              --exclude-glob data/content.json --exclude-glob data/content.backup.json \
+              --exclude-glob data/enquiries.log --exclude-glob 'data/cache/*' \
+              --exclude-glob 'assets/img/uploads/*' \
+              ./ $TARGET
+            mkdir -p -f $TARGET/data/cache
+            mkdir -p -f $TARGET/assets/img/uploads
+            put assets/img/uploads/.htaccess -o $TARGET/assets/img/uploads/.htaccess
+            quit"
+          if [ "$RESET" = "true" ]; then
+            lftp -u "$SFTP_USER","$SFTP_PASSWORD" "sftp://$SFTP_HOST" -e "set sftp:auto-confirm yes; put data/content.default.json -o $TARGET/data/content.json; quit"
+          fi
+          echo "Deployed to $TARGET"

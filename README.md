@@ -44,4 +44,4 @@ Inflatable stock in the CRM that isn't on the site yet is added automatically an
 - `/availability` · `/gallery` · `/faq` · `/contact` · `/sitemap.xml` · `/robots.txt`
 
 ## Images
-The category images are branded illustrations so the site can go live now. Replace them with real photos via Admin → Gallery (upload, then pick the image on each page/product) or by adding CRM product images (used automatically when "Prefer CRM images" is on).
+76 of the 79 inflatables use their real product photo (first photo from the JM product photos folder in Google Drive), saved as responsive WebP files (`assets/img/{product}-hire.webp`, `-800`, `-480`). Category pages, the home page and the gallery use real photos too. The 3 Sports Inflatable Game, Rodeo Pig and Rodeo Football still use the branded illustrations – swap them in Admin → Products once photos are uploaded via Admin → Gallery. CRM product images, when added, are used automatically ("Prefer CRM images").

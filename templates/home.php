@@ -16,7 +16,7 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/', 'imag
         'offers' => ['@type' => 'AggregateOffer', 'priceCurrency' => 'GBP', 'lowPrice' => min(array_column($all, 'price_from')), 'offerCount' => count($all)]]]]);
 ?>
 <section class="hero">
-  <div class="hero-bg"><?= picture($pg['image'], 'Bouncy castle and giant inflatable slide hire', '', true, '100vw') ?></div>
+  <div class="hero-bg"><?= picture($pg['image'], 'Twin inflatable racing slide hire', '', true, '100vw') ?></div>
   <div class="wrap hero-inner">
     <p class="kicker"><?= e($pg['kicker']) ?></p>
     <h1><?= e($pg['h1']) ?><span>Castles · Slides · Assault Courses · Rodeo Bulls</span></h1>
@@ -50,7 +50,7 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/', 'imag
 
 <section class="section alt">
   <div class="wrap split rev">
-    <div><?= picture('assault-course-hire', 'Inflatable assault course hire for a corporate fun day', 'rounded') ?></div>
+    <div><?= picture('human-table-football-inflatable-hire', 'Human table football inflatable at a corporate fun day', 'rounded') ?></div>
     <div class="prose"><?php foreach (array_slice($pg['sections'], 2) as $sec): ?><h2><?= e($sec['h2']) ?></h2><?= $sec['html'] ?><?php endforeach; ?>
       <h2>How hiring works</h2>
       <ol class="steps"><li><b>Check availability</b> for your date and pick your inflatables.</li><li><b>Get your quote</b> with the space and power each item needs.</li><li><b>Confirm your booking</b> – we send your booking form, risk assessment and insurance.</li><li><b>We deliver &amp; set up</b>, then collect after the event.</li></ol>

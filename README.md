@@ -36,16 +36,16 @@ All 79 inflatables come from the JM CRM (`jm-crm` products), matched by **CRM ID
 
 `/inflatable-hire` lists everything. New categories can be added as pages in `content.json` (any page with a `cat` becomes a category; `"local": true` also creates town pages).
 
-## CRM connection (crm.jments.co.uk)
-Same contract as the other hire sites (Bearer token auth):
+## CRM connection (live)
+The JM CRM is the master copy. The site reads it through the read-only feed Worker `jm-crm-feed` (source in `crm-feed/worker.js`, bound to the `jm-crm` D1 database as `DB`) at `https://jm-crm-feed.plain-wood-3958.workers.dev`.
 
-| Purpose | Request | Response |
-|---|---|---|
-| Products | `GET /api/public/products?category=inflatables` | `{"products":[{"id","slug","name","price_from","prices":{"1":595,"2":935},"stock_qty","staffed","images":[url],"spec":{"dimensions","weight","power","players"},"spec_sheet_url","category"}]}` |
-| Availability | `GET /api/public/availability?product=ID&start=YYYY-MM-DD&days=N&qty=N` | `{"available_qty":2,"total_qty":3,"status":"available|limited|unavailable"}` |
-| Enquiries | `POST /api/public/enquiries` (JSON) | `{"ok":true,"reference":"ENQ-1234"}` |
+Every 30 seconds (Admin → CRM & stock) the site asks for every product it sells plus everything in its CRM categories and updates:
+- **prices** – 1, 2, 3, 4 and 7-day hire, straight from the CRM
+- **stock**, **specs** (size, weight, power, users, set-up time) and **descriptions**
+- **photos** – the CRM's product photos, served by the feed at `/img/{id}`
+- **products** – hidden in the CRM → gone from the site; new online stock in the site's CRM categories → added (with an exclude list for bunting, trampolines etc.)
 
-Inflatable stock in the CRM that isn't on the site yet is added automatically and sorted into a category by name. If the CRM is down the site keeps working from the last good copy.
+Availability checks read CRM bookings live (`/availability`). If the feed can't be reached the site keeps the last good copy, then `data/crm-prices.json` (imported 1 Nov 2026, 79 products, 255 photos).
 
 ## Pages
 - `/` home · `/inflatable-hire` · `/bouncy-castle-hire` · `/inflatable-slide-hire` · `/assault-course-hire` · `/inflatable-games-hire` · `/inflatable-challenge-hire` · `/rodeo-bull-hire`

@@ -143,7 +143,7 @@ function product_card(array $p): void {
     $img = $p['crm_image'] ?? null; ?>
   <article class="card">
     <a href="<?= e(product_url($p)) ?>" class="card-img">
-      <?= $img ? '<img src="' . e($img) . '" alt="' . e($p['name']) . ' hire" loading="lazy">' : picture($p['image'], $p['name'] . ' hire', '', false, '(max-width:760px) 100vw, 33vw') ?>
+      <?= $img ? '<img src="' . e($img) . '" alt="' . e($p['name']) . ' hire" loading="lazy" decoding="async" width="800" height="600">' : picture($p['image'], $p['name'] . ' hire', '', false, '(max-width:760px) 100vw, 33vw') ?>
       <?php if (!empty($p['stock_qty'])): ?><span class="stock"><?= (int)$p['stock_qty'] ?> in stock</span><?php endif; ?>
     </a>
     <div class="card-body">

@@ -137,7 +137,7 @@ $SETTINGS = [
     'Contact details' => ['email' => 'Email shown on the site', 'phone' => 'Phone number', 'address' => 'Address (shown on contact page & footer)', 'opening_hours' => 'Opening hours', 'notify_email' => 'Send enquiries to'],
     'SEO & tracking' => ['base_url' => 'Live website address (e.g. https://www.yourdomain.co.uk)', 'default_share_image' => 'Default image for social shares', 'ga4_id' => 'Google Analytics 4 ID (G-…)', 'gsc_verification' => 'Google Search Console verification code', 'noindex_site' => 'Hide the whole site from Google (staging only)'],
 ];
-$BOOL_SETTINGS = ['noindex_site', 'crm_enabled', 'prefer_crm_images'];
+$BOOL_SETTINGS = ['noindex_site', 'crm_enabled', 'prefer_crm_images', 'crm_use_descriptions', 'crm_auto_add'];
 $IMAGE_SETTINGS = ['default_share_image'];
 
 /** Handle an image field: an uploaded file wins, otherwise the picked library value. */
@@ -165,7 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $k = (string)$k;
                     if (in_array($k, $BOOL_SETTINGS, true)) continue;
                     if ($k === 'crm_api_key' && $v === '') continue;          // blank = keep existing key
-                    if ($k === 'crm_cache_minutes') { $d['settings'][$k] = max(1, (int)$v); continue; }
+                    if ($k === 'crm_cache_seconds') { $d['settings'][$k] = max(10, (int)$v); continue; }
                     $d['settings'][$k] = $clean($v, 500);
                 }
                 foreach ((array)($_POST['bools'] ?? []) as $k) if (in_array($k, $BOOL_SETTINGS, true)) $d['settings'][$k] = !empty($_POST['s'][$k]);
@@ -179,8 +179,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             case 'crm_sync':
                 $list = crm_fetch_products(true);
-                if ($list === null) $err = 'Could not reach the CRM. Check the address, API key and products path.';
-                else $msg = 'Synced ' . count($list) . ' products from the CRM.';
+                if ($list === null || empty($list['rows'])) $err = 'Could not reach the CRM feed. Check the feed address under CRM settings – the site keeps showing the last copy meanwhile.';
+                else $msg = 'Synced ' . count($list['rows']) . ' products and ' . array_sum(array_map(fn($r) => count($r['photos'] ?? []), $list['rows'])) . ' photos from the CRM.';
                 break;
 
             case 'text':
@@ -400,6 +400,8 @@ elseif ($tab === 'products' && isset($_GET['edit'])):
 <label for="short">Short description <small>(shown on product cards and at the top of the page)</small></label><textarea id="short" name="short" rows="3"><?= e($p['short'] ?? '') ?></textarea>
 <label>Full description <small>(the “About” section on the product page)</small></label><textarea class="rich" name="description"><?= e($p['description'] ?? '') ?></textarea>
 </fieldset>
+<?php $live = !$isNew && ($p['crm_id'] ?? '') !== '' ? (array_values(array_filter(crm_products(), fn($x) => ($x['crm_id'] ?? '') === $p['crm_id']))[0] ?? null) : null; ?>
+<?php if ($live): ?><div class="ok" style="margin-top:12px"><b>Linked to CRM product <?= e($p['crm_id']) ?>.</b> The website shows the CRM’s prices (<?= e(implode(' · ', array_map(fn($d, $v) => $d . 'd ' . money($v), array_keys($live['prices'] ?? []), $live['prices'] ?? []))) ?>)<?= !empty($live['crm_image']) ? ', photos' : '' ?><?= !empty($live['spec']) ? ', specs' : '' ?> and description when the CRM has them – change those in the CRM. The fields below are the fallback.</div><?php endif; ?>
 <fieldset><legend>Prices (£ + VAT)</legend><div class="g5">
 <?php foreach (['1' => '1 day', '2' => '2 days', '3' => '3 days', '4' => '4 days', '7' => '7 days'] as $dd => $l): ?><div><label for="p<?= $dd ?>"><?= $l ?></label><input id="p<?= $dd ?>" name="p<?= $dd ?>" inputmode="decimal" value="<?= e((string)($dd === '1' ? ($p['price_from'] ?? '') : ($p['prices'][$dd] ?? ''))) ?>"></div><?php endforeach; ?>
 </div><small>Leave a price empty to use the standard multi-day rule. Live CRM prices replace these when a CRM ID is set and the CRM is connected.</small>
@@ -538,18 +540,24 @@ elseif ($tab === 'settings'): ?>
 <p><small>Google settings are under <a href="?tab=seo">SEO</a>; the logo and menu are under <a href="?tab=text&g=Header+%26+footer">Site text → Header &amp; footer</a>.</small></p>
 <div class="save"><button>Save settings</button></div></form>
 
-<?php elseif ($tab === 'crm'): $st = crm_status(); ?>
+<?php elseif ($tab === 'crm'): $st = crm_status(); $ok = $st['cached_at'] && !$st['failing']; ?>
 <div class="box"><h2>CRM connection</h2>
-<p>Stock levels, prices, specs, spec sheets, product images and availability can be pulled live from your CRM. Products are matched by <b>CRM ID</b> (set on each product); any inflatable stock in the CRM that isn’t on the site yet is added automatically.</p>
-<p>Status: <b><?= $st['enabled'] ? 'On' : 'Off' ?></b> · Last sync: <b><?= $st['cached_at'] ? date('d M Y H:i', $st['cached_at']) : 'never' ?></b> · CRM products: <b><?= $st['count'] ?></b></p>
-<form method="post"><?= $csrf ?><input type="hidden" name="act" value="crm_sync"><button class="btn2">Sync now / test connection</button></form></div>
+<p>The CRM is the master copy. Every <?= (int)s('crm_cache_seconds', 30) ?> seconds the site reads the CRM through the live feed and updates <b>prices</b> (1, 2, 3, 4 and 7 days), <b>stock</b>, <b>specs</b> (size, weight, power, users, set-up time), <b>descriptions</b> and <b>photos</b>. A product hidden in the CRM disappears from the site, and new online stock in the CRM categories below is added automatically. Availability checks read CRM bookings live.</p>
+<p>Status: <b style="color:<?= $ok ? 'var(--ok)' : 'var(--warn)' ?>"><?= !$st['enabled'] ? 'Off' : ($ok ? 'Connected' : ($st['failing'] ? 'Feed not reachable – showing the last copy' : 'Not synced yet')) ?></b><br>
+Last sync: <b><?= $st['cached_at'] ? date('d M Y H:i:s', (int)$st['cached_at']) : 'never' ?></b> · CRM products: <b><?= $st['count'] ?></b> · CRM photos: <b><?= $st['photos'] ?></b><br>
+<small>Backup copy (used if the feed is down): <?= (int)$st['snapshot_count'] ?> products from <?= e((string)$st['snapshot_at']) ?></small></p>
+<form method="post"><?= $csrf ?><input type="hidden" name="act" value="crm_sync"><button class="btn2">Sync now</button></form></div>
 <form method="post" class="box"><?= $csrf ?><input type="hidden" name="act" value="settings"><input type="hidden" name="back" value="crm"><h2>CRM settings</h2>
-<input type="hidden" name="bools[]" value="crm_enabled"><input type="hidden" name="bools[]" value="prefer_crm_images">
-<label class="chk"><input type="checkbox" name="s[crm_enabled]" value="1" <?= !empty($d['settings']['crm_enabled']) ? 'checked' : '' ?>> Use live data from the CRM</label>
-<label class="chk"><input type="checkbox" name="s[prefer_crm_images]" value="1" <?= !empty($d['settings']['prefer_crm_images']) ? 'checked' : '' ?>> Use CRM product photos when the CRM has them</label>
-<?php foreach (['crm_base_url' => 'CRM address', 'crm_products_path' => 'Products path', 'crm_availability_path' => 'Availability path', 'crm_enquiry_path' => 'Enquiries path', 'crm_cache_minutes' => 'Refresh product data every (minutes)'] as $k => $l): ?>
-<label for="s_<?= $k ?>"><?= e($l) ?></label><input id="s_<?= $k ?>" name="s[<?= $k ?>]" value="<?= e((string)($d['settings'][$k] ?? '')) ?>"><?php endforeach; ?>
-<label for="s_key">API key</label><input id="s_key" type="password" name="s[crm_api_key]" placeholder="<?= !empty($d['settings']['crm_api_key']) ? '•••••••• (saved – leave blank to keep)' : 'Paste API key' ?>" autocomplete="off">
+<?php foreach (['crm_enabled' => 'Use live data from the CRM', 'prefer_crm_images' => 'Use CRM photos (replace the site’s own photos when the CRM has some)', 'crm_use_descriptions' => 'Use CRM descriptions (when the CRM has one)', 'crm_auto_add' => 'Add new online CRM stock from the categories below automatically'] as $k => $l): ?>
+<input type="hidden" name="bools[]" value="<?= $k ?>"><label class="chk"><input type="checkbox" name="s[<?= $k ?>]" value="1" <?= s($k, true) ? 'checked' : '' ?>> <?= e($l) ?></label>
+<?php endforeach; ?>
+<label for="s_crm_categories">CRM categories this site sells <small>(separate with |)</small></label><input id="s_crm_categories" name="s[crm_categories]" value="<?= e(crm_setting('crm_categories')) ?>">
+<label for="s_crm_exclude">Never add these CRM product IDs <small>(comma-separated, e.g. bunting, trampolines)</small></label><input id="s_crm_exclude" name="s[crm_exclude]" value="<?= e(crm_setting('crm_exclude')) ?>">
+<label for="s_crm_cache_seconds">Check the CRM every (seconds)</label><input id="s_crm_cache_seconds" name="s[crm_cache_seconds]" inputmode="numeric" value="<?= e((string)s('crm_cache_seconds', 30)) ?>">
+<details><summary><small>Advanced</small></summary>
+<label for="s_crm_base_url">Feed address</label><input id="s_crm_base_url" name="s[crm_base_url]" value="<?= e(crm_setting('crm_base_url')) ?>">
+<label for="s_crm_products_path">Products path</label><input id="s_crm_products_path" name="s[crm_products_path]" value="<?= e(crm_setting('crm_products_path')) ?>">
+<label for="s_crm_availability_path">Availability path</label><input id="s_crm_availability_path" name="s[crm_availability_path]" value="<?= e(crm_setting('crm_availability_path')) ?>"></details>
 <div class="save"><button>Save CRM settings</button></div></form>
 
 <?php elseif ($tab === 'enquiries'): $lines = is_file(ROOT . '/data/enquiries.log') ? array_reverse(file(ROOT . '/data/enquiries.log', FILE_IGNORE_NEW_LINES)) : []; ?>

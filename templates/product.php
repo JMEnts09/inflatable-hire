@@ -26,11 +26,14 @@ page_start(['title' => $title, 'meta' => $meta, 'path' => product_url($p), 'imag
 <section class="page-hero">
   <div class="wrap split">
     <div>
-      <?= $img ? '<img class="rounded" src="' . e($img) . '" alt="' . e($p['name']) . ' hire">' : picture($p['image'], $p['image_alt'] ?? ($p['name'] . ' hire'), 'rounded', true) ?>
-      <?php if ($extra): ?><div class="thumbs-row"><?php foreach ($extra as $x): ?><a href="<?= e(img_src($x)) ?>" target="_blank" rel="noopener"><?= picture($x, $p['name'] . ' hire', '', false, '120px') ?></a><?php endforeach; ?></div><?php endif; ?>
+      <?= $img ? '<img class="rounded" src="' . e($img) . '" alt="' . e($p['image_alt'] ?? ($p['name'] . ' hire')) . '" width="1600" height="1200" fetchpriority="high">' : picture($p['image'], $p['image_alt'] ?? ($p['name'] . ' hire'), 'rounded', true) ?>
+      <?php $crmExtra = $img ? ($p['crm_photos'] ?? []) : []; if ($extra || $crmExtra): ?><div class="thumbs-row">
+        <?php foreach ($crmExtra as $u): ?><a href="<?= e($u) ?>" target="_blank" rel="noopener"><img src="<?= e($u) ?>" alt="<?= e($p['name']) ?> hire" loading="lazy" decoding="async"></a><?php endforeach; ?>
+        <?php foreach ($extra as $x): ?><a href="<?= e(img_src($x)) ?>" target="_blank" rel="noopener"><?= picture($x, $p['name'] . ' hire', '', false, '120px') ?></a><?php endforeach; ?>
+      </div><?php endif; ?>
     </div>
     <div>
-      <p class="kicker"><a href="/<?= e($catKey) ?>"><?= e($catPage['h1']) ?></a><?php if (!empty($p['crm_live'])): ?> · <span class="live">Live stock</span><?php endif; ?></p>
+      <p class="kicker"><a href="/<?= e($catKey) ?>"><?= e($catPage['h1']) ?></a><?php if (!empty($p['crm_live'])): ?> · <span class="live">Live prices &amp; stock</span><?php endif; ?></p>
       <h1><?= e($p['h1'] ?? '') ?: e($p['name']) . ' Hire' ?></h1>
       <p class="lead"><?= e($p['short'] ?? '') ?></p>
       <table class="prices"><caption><?= e(t('product.prices_caption')) ?></caption>

@@ -13,16 +13,20 @@
     "ga4_id": "",
     "gsc_verification": "",
     "crm_enabled": true,
-    "crm_base_url": "https://crm.jments.co.uk",
+    "crm_base_url": "https://jm-crm-feed.plain-wood-3958.workers.dev",
     "crm_api_key": "",
-    "crm_products_path": "/api/public/products?category=inflatables",
-    "crm_availability_path": "/api/public/availability",
-    "crm_enquiry_path": "/api/public/enquiries",
-    "crm_cache_minutes": 15,
+    "crm_products_path": "/products?ids={ids}&category={categories}",
+    "crm_availability_path": "/availability",
+    "crm_enquiry_path": "",
     "prefer_crm_images": true,
     "opening_hours": "Mon–Fri 9am–5:30pm",
     "default_share_image": "",
-    "noindex_site": false
+    "noindex_site": false,
+    "crm_cache_seconds": 30,
+    "crm_use_descriptions": true,
+    "crm_auto_add": true,
+    "crm_categories": "Bouncy Castles & Slides|Action Inflatables|Assault Courses|Bungee Runs|Climbing Walls|Inflatables|Wipeout & Last Man Standing|Rodeo Bull Hire|Surf Simulator Hire",
+    "crm_exclude": "90581,90827,90828,90217,90281,90677,90788"
   },
   "products": [
     {

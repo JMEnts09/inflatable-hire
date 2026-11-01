@@ -127,3 +127,6 @@ details[open] summary:after{transform:rotate(45deg)}details div{color:#cfcfd8;pa
 .kicker a{color:inherit}
 .grid3>*,.cat-grid>*,.split>*,.foot-grid>*{min-width:0}
 .wrap.section{padding-left:16px;padding-right:16px}
+.logo-img{height:40px;width:auto;max-width:160px}
+.thumbs-row{display:flex;gap:8px;margin-top:10px;overflow-x:auto}.thumbs-row a{flex:0 0 88px}.thumbs-row img{width:88px;height:66px;object-fit:cover;border-radius:8px}
+.lead-html p:first-child{font-size:1.15rem;color:var(--mut)}

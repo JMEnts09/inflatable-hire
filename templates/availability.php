@@ -1,10 +1,9 @@
 <?php
-page_start(['title' => 'Inflatable Availability Checker | Live Stock | JM Inflatable Hire', 'meta' => 'Check live availability of our bouncy castles, slides, assault courses, inflatable games and rodeo bulls for your event date. Real-time stock from our booking system.', 'path' => '/availability', 'crumbs' => ['Check availability' => '/availability']]);
+page_start(['title' => t('avail.title'), 'meta' => t('avail.meta'), 'path' => '/availability', 'crumbs' => [t('avail.h1') => '/availability']]);
 ?>
 <section class="wrap page-pad split">
-  <div><h1>Check inflatable availability</h1>
-  <p class="lead">Pick an inflatable, your event date and how many days you need. Availability comes live from our booking system – the same stock our team books from.</p>
-  <p>Bookings are first come, first served, so if your date shows available we'd recommend requesting your quote straight away.</p></div>
+  <div><h1><?= e(t('avail.h1')) ?></h1>
+  <?= t('avail.intro') ?></div>
   <aside><?php availability_widget(); ?></aside>
 </section>
 <?php foreach (category_keys() as $k): if ($k === 'inflatable-hire') continue; $items = products_in(data()['pages'][$k]['cat']); if (!$items) continue; ?>

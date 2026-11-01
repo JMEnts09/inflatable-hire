@@ -39,19 +39,84 @@ function url(string $path = '/'): string { return base() . $path; }
 
 function money($n): string { return '£' . number_format((float)$n, 0); }
 
-/** Images: responsive <picture> from the pre-sized WebP set (or an uploaded file). */
+/**
+ * Images. A name is either a built-in set ("rodeo-bull-hire" → .webp, -800.webp, -480.webp in assets/img),
+ * an uploaded set ("uploads/my-photo-a1b2c3", same three sizes) or a single uploaded file with an extension
+ * ("uploads/old-photo.jpg").
+ */
+function img_has_ext(string $name): bool { return (bool)preg_match('/\.(webp|jpe?g|png|gif|svg)$/i', $name); }
 function img_src(string $name, int $w = 1600): string {
-    if (str_starts_with($name, 'uploads/')) return '/assets/img/' . $name;
+    if ($name === '') return '';
+    if (img_has_ext($name)) return '/assets/img/' . $name;
     $suf = $w >= 1600 ? '' : "-$w";
+    if ($suf !== '' && str_starts_with($name, 'uploads/') && !is_file(ROOT . "/assets/img/{$name}{$suf}.webp")) $suf = '';
     return "/assets/img/{$name}{$suf}.webp";
+}
+function img_exists(string $name): bool {
+    return $name !== '' && is_file(ROOT . (img_has_ext($name) ? '/assets/img/' . $name : "/assets/img/{$name}.webp"));
 }
 function picture(string $name, string $alt, string $class = '', bool $eager = false, string $sizes = '(max-width: 760px) 100vw, 50vw'): string {
     $load = $eager ? 'eager" fetchpriority="high' : 'lazy';
-    if (str_starts_with($name, 'uploads/')) {
-        return '<img class="' . e($class) . '" src="/assets/img/' . e($name) . '" alt="' . e($alt) . '" loading="' . $load . '" decoding="async">';
+    if (img_has_ext($name)) {
+        return '<img class="' . e($class) . '" src="' . e(img_src($name)) . '" alt="' . e($alt) . '" loading="' . $load . '" decoding="async">';
     }
     $srcset = img_src($name, 480) . ' 480w, ' . img_src($name, 800) . ' 800w, ' . img_src($name, 1600) . ' 1600w';
     return '<img class="' . e($class) . '" src="' . img_src($name, 800) . '" srcset="' . $srcset . '" sizes="' . e($sizes) . '" alt="' . e($alt) . '" width="1600" height="1200" loading="' . $load . '" decoding="async">';
+}
+
+/** Every image name available to pick in admin: built-in sets first, then uploads (newest first). */
+function media_library(): array {
+    $built = array_values(array_unique(array_map(fn($f) => preg_replace('/(-480|-800)?\.webp$/', '', basename($f)), glob(ROOT . '/assets/img/*.webp') ?: [])));
+    sort($built);
+    $up = [];
+    foreach (glob(ROOT . '/assets/img/uploads/*.{webp,jpg,jpeg,png,gif}', GLOB_BRACE) ?: [] as $f) {
+        $b = basename($f);
+        if (preg_match('/-(480|800)\.webp$/', $b)) continue;
+        $up[filemtime($f) . '|' . $b] = preg_match('/\.webp$/', $b) && is_file(dirname($f) . '/' . substr($b, 0, -5) . '-800.webp') ? 'uploads/' . substr($b, 0, -5) : 'uploads/' . $b;
+    }
+    krsort($up);
+    return array_merge(array_values($up), $built);
+}
+
+/**
+ * Save an uploaded photo into assets/img/uploads as a 1600/800/480 WebP set (re-encoding strips anything that
+ * isn't pixels). Returns the image name, or null with $err set.
+ */
+function save_upload(array $file, ?string &$err = null): ?string {
+    if (empty($file['tmp_name']) || !is_uploaded_file($file['tmp_name'])) { $err = 'No file received.'; return null; }
+    $info = @getimagesize($file['tmp_name']);
+    if (!$info || !in_array($info[2], [IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_WEBP, IMAGETYPE_GIF], true)) { $err = 'Upload a JPG, PNG, WebP or GIF photo.'; return null; }
+    if ($file['size'] > 15e6) { $err = 'That photo is over 15MB – please resize it first.'; return null; }
+    $base = trim(preg_replace('/[^a-z0-9]+/', '-', strtolower(pathinfo((string)$file['name'], PATHINFO_FILENAME))), '-') ?: 'photo';
+    $name = substr($base, 0, 60) . '-' . bin2hex(random_bytes(3));
+    $dir = ROOT . '/assets/img/uploads';
+    if (!is_dir($dir)) @mkdir($dir, 0775, true);
+    if (function_exists('imagecreatefromstring') && function_exists('imagewebp')) {
+        $im = @imagecreatefromstring((string)file_get_contents($file['tmp_name']));
+        if (!$im) { $err = 'That file could not be read as a photo.'; return null; }
+        if (function_exists('exif_read_data') && $info[2] === IMAGETYPE_JPEG) {      // respect phone camera rotation
+            $o = (int)(@exif_read_data($file['tmp_name'])['Orientation'] ?? 1);
+            if ($o === 3) $im = imagerotate($im, 180, 0); elseif ($o === 6) $im = imagerotate($im, -90, 0); elseif ($o === 8) $im = imagerotate($im, 90, 0);
+        }
+        imagepalettetotruecolor($im); imagealphablending($im, true); imagesavealpha($im, true);
+        foreach ([1600 => '', 800 => '-800', 480 => '-480'] as $w => $suf) {
+            $x = imagesx($im) > $w ? imagescale($im, $w) : $im;
+            if (!imagewebp($x, "$dir/{$name}{$suf}.webp", 80)) { $err = 'Could not save the photo – check folder permissions on assets/img/uploads.'; return null; }
+        }
+        return 'uploads/' . $name;
+    }
+    $ext = [IMAGETYPE_JPEG => 'jpg', IMAGETYPE_PNG => 'png', IMAGETYPE_WEBP => 'webp', IMAGETYPE_GIF => 'gif'][$info[2]];
+    if (!move_uploaded_file($file['tmp_name'], "$dir/$name.$ext")) { $err = 'Could not save the photo – check folder permissions on assets/img/uploads.'; return null; }
+    return "uploads/$name.$ext";
+}
+
+/** Delete an uploaded image (all sizes). Built-in images can't be deleted. */
+function delete_upload(string $name): bool {
+    if (!str_starts_with($name, 'uploads/') || str_contains($name, '..')) return false;
+    $p = ROOT . '/assets/img/' . $name;
+    $ok = false;
+    foreach (img_has_ext($name) ? [$p] : ["$p.webp", "$p-800.webp", "$p-480.webp"] as $f) if (is_file($f)) $ok = @unlink($f) || $ok;
+    return $ok;
 }
 
 /** Hire price rule: 1 day full; 2 days = 1.5x; 3 days = 1.5x (charged as 2); +0.5x per extra day; staffed = full price per day. */
@@ -131,3 +196,4 @@ function json_out($payload, int $code = 200): never {
 }
 
 require_once __DIR__ . '/crm.php';
+require_once __DIR__ . '/text.php';

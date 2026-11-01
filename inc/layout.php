@@ -2,14 +2,15 @@
 /** Shared page chrome: <head> with SEO + schema, header nav, footer. */
 
 function nav_items(): array {
-    return [
-        '/bouncy-castle-hire' => 'Bouncy Castles',
-        '/assault-course-hire' => 'Assault Courses',
-        '/inflatable-games-hire' => 'Games',
-        '/inflatable-challenge-hire' => 'Wipeout',
-        '/rodeo-bull-hire' => 'Rodeo Bulls',
-        '/availability' => 'Availability',
-    ];
+    $out = [];
+    foreach (tl('nav.items', [], true) as [$href, $label]) if ($href !== '') $out[$href] = $label !== '' ? $label : $href;
+    return $out;
+}
+
+/** Only allow site-relative or http(s) links from editable text. */
+function safe_href(string $h): string {
+    $h = trim($h);
+    return preg_match('#^(/|https?://|mailto:|tel:|\#)#i', $h) ? $h : '/' . ltrim($h, '/');
 }
 
 function org_schema(): array {
@@ -30,8 +31,9 @@ function org_schema(): array {
 function page_start(array $m): void {
     $title = $m['title'] ?? s('site_name');
     $desc = $m['meta'] ?? s('tagline');
+    if (s('noindex_site')) $m['noindex'] = true;
     $canon = url($m['path'] ?? '/');
-    $og = url(img_src($m['image'] ?? 'inflatable-hire-hero'));
+    $og = url(img_src(($m['image'] ?? '') ?: (s('default_share_image') ?: 'inflatable-hire-hero')));
     $graph = [org_schema(), ['@type' => 'WebSite', '@id' => url('/#site'), 'url' => url('/'), 'name' => s('site_name'), 'publisher' => ['@id' => url('/#business')]]];
     if (!empty($m['crumbs'])) {
         $items = []; $i = 1;
@@ -57,7 +59,7 @@ function page_start(array $m): void {
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=4">
+<link rel="stylesheet" href="/assets/css/site.css?v=5">
 <style>:root{--red:<?= e($accent) ?>}</style>
 <script type="application/ld+json"><?= json_encode(['@context' => 'https://schema.org', '@graph' => strip_nulls($graph)], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php if (s('ga4_id')): ?>
@@ -70,15 +72,15 @@ function page_start(array $m): void {
 <header class="site-header">
   <div class="wrap hdr">
     <a class="logo" href="/" aria-label="<?= e(s('site_name')) ?> home">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="15" width="32" height="20" rx="5" fill="var(--red)"/><rect x="2" y="9" width="9" height="26" rx="4.5" fill="var(--red)"/><rect x="29" y="9" width="9" height="26" rx="4.5" fill="var(--red)"/><path d="M1.5 10Q6.5 1 11.5 10ZM28.5 10Q33.5 1 38.5 10Z" fill="#FFC93C"/><path d="M14 35V26a6 6 0 0 1 12 0v9Z" fill="#0b0b0f"/><rect x="11" y="15" width="3" height="11" rx="1.5" fill="#FFC93C"/><rect x="26" y="15" width="3" height="11" rx="1.5" fill="#FFC93C"/></svg>
-      <span>JM Inflatable<b>Hire</b></span>
+      <?php if (t('brand.logo_image') !== ''): ?><img class="logo-img" src="<?= e(img_src(t('brand.logo_image'), 480)) ?>" alt=""><?php else: ?><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="15" width="32" height="20" rx="5" fill="var(--red)"/><rect x="2" y="9" width="9" height="26" rx="4.5" fill="var(--red)"/><rect x="29" y="9" width="9" height="26" rx="4.5" fill="var(--red)"/><path d="M1.5 10Q6.5 1 11.5 10ZM28.5 10Q33.5 1 38.5 10Z" fill="#FFC93C"/><path d="M14 35V26a6 6 0 0 1 12 0v9Z" fill="#0b0b0f"/><rect x="11" y="15" width="3" height="11" rx="1.5" fill="#FFC93C"/><rect x="26" y="15" width="3" height="11" rx="1.5" fill="#FFC93C"/></svg><?php endif; ?>
+      <span><?= e(t('brand.logo_text1')) ?><b><?= e(t('brand.logo_text2')) ?></b></span>
     </a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" class="nav" aria-label="Main">
       <?php foreach (nav_items() as $p => $l): ?>
-        <a href="<?= $p ?>"<?= ($m['path'] ?? '') === $p ? ' aria-current="page"' : '' ?>><?= e($l) ?></a>
+        <a href="<?= e(safe_href($p)) ?>"<?= ($m['path'] ?? '') === $p ? ' aria-current="page"' : '' ?>><?= e($l) ?></a>
       <?php endforeach; ?>
-      <a class="btn btn-sm" href="/contact">Get a quote</a>
+      <a class="btn btn-sm" href="/contact"><?= e(t('nav.cta')) ?></a>
     </nav>
   </div>
 </header>
@@ -102,33 +104,33 @@ function page_end(): void {
 </main>
 <section class="cta-band">
   <div class="wrap cta-inner">
-    <div><h2>Ready to book your inflatables?</h2><p>Check live availability for your date, then get a fixed quote within the hour (office hours).</p></div>
-    <div class="cta-btns"><a class="btn" href="/availability">Check availability</a><a class="btn btn-ghost" href="/contact">Request a quote</a></div>
+    <div><h2><?= e(t('cta.heading')) ?></h2><p><?= e(t('cta.text')) ?></p></div>
+    <div class="cta-btns"><a class="btn" href="/availability"><?= e(t('cta.btn1')) ?></a><a class="btn btn-ghost" href="/contact"><?= e(t('cta.btn2')) ?></a></div>
   </div>
 </section>
 <footer class="site-footer">
   <div class="wrap foot-grid">
     <div>
-      <p class="foot-logo">JM Inflatable <b>Hire</b></p>
-      <p><?= e(s('tagline')) ?>. A <a href="<?= e(s('parent_site')) ?>"><?= e(s('company')) ?></a> service.</p>
-      <p><a href="mailto:<?= e(s('email')) ?>"><?= e(s('email')) ?></a><?php if (s('phone')): ?><br><a href="tel:<?= e(preg_replace('/\s+/', '', (string)s('phone'))) ?>"><?= e(s('phone')) ?></a><?php endif; ?></p>
+      <p class="foot-logo"><?= e(t('brand.logo_text1')) ?> <b><?= e(t('brand.logo_text2')) ?></b></p>
+      <p><?= e(t('footer.about')) ?><?php if (s('parent_site')): ?> <a href="<?= e(s('parent_site')) ?>"><?= e(s('company')) ?></a><?php endif; ?></p>
+      <p><a href="mailto:<?= e(s('email')) ?>"><?= e(s('email')) ?></a><?php if (s('phone')): ?><br><a href="tel:<?= e(preg_replace('/\s+/', '', (string)s('phone'))) ?>"><?= e(s('phone')) ?></a><?php endif; ?><?php if (s('address')): ?><br><?= e(s('address')) ?><?php endif; ?></p>
     </div>
     <div>
-      <h3>Inflatable hire</h3>
+      <h3><?= e(t('footer.col2')) ?></h3>
       <ul>
         <?php foreach (category_keys() as $k): ?><li><a href="/<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a></li><?php endforeach; ?>
         <li><a href="/gallery">Gallery</a> · <a href="/faq">FAQ</a> · <a href="/areas">Areas</a></li>
       </ul>
     </div>
     <div class="foot-areas">
-      <h3>Areas we cover</h3>
+      <h3><?= e(t('footer.col3')) ?></h3>
       <ul>
-        <?php foreach ($locs as $l): ?><li><a href="/inflatable-hire/<?= e($l['slug']) ?>">Inflatable hire <?= e($l['city']) ?></a></li><?php endforeach; ?>
+        <?php foreach ($locs as $l): ?><li><a href="/<?= e(local_keys()[0] ?? 'inflatable-hire') ?>/<?= e($l['slug']) ?>"><?= e(tf('footer.area_link', ['city' => $l['city']])) ?></a></li><?php endforeach; ?>
         <li><a href="/areas">All areas →</a></li>
       </ul>
     </div>
   </div>
-  <div class="wrap foot-base"><p>© <?= date('Y') ?> <?= e(s('company')) ?>. All prices exclude VAT.</p></div>
+  <div class="wrap foot-base"><p>© <?= date('Y') ?> <?= e(s('company')) ?>. <?= e(t('footer.legal')) ?></p></div>
 </footer>
 <script src="/assets/js/site.js?v=1" defer></script>
 </body>
@@ -148,7 +150,7 @@ function product_card(array $p): void {
       <h3><a href="<?= e(product_url($p)) ?>"><?= e($p['name']) ?></a></h3>
       <p><?= e($p['short'] ?? '') ?></p>
       <div class="card-meta"><span class="price">From <?= money($p['price_from'] ?? 0) ?> <small>+ VAT</small></span><?php if (!empty($p['players'])): ?><span class="players"><?= e($p['players']) ?></span><?php endif; ?></div>
-      <a class="btn btn-sm btn-block" href="<?= e(product_url($p)) ?>#check">Check availability</a>
+      <a class="btn btn-sm btn-block" href="<?= e(product_url($p)) ?>#check"><?= e(t('product.card_btn')) ?></a>
     </div>
   </article>
 <?php }
@@ -169,8 +171,8 @@ function faq_schema(array $faqs): array {
 function availability_widget(?array $p = null): void {
     $all = crm_products(); ?>
   <form class="checker" data-checker id="check" novalidate>
-    <h3>Check live availability</h3>
-    <p class="muted">Live stock from our booking system.</p>
+    <h3><?= e(t('checker.heading')) ?></h3>
+    <p class="muted"><?= e(t('checker.sub')) ?></p>
     <?php if ($p): ?>
       <input type="hidden" name="product" value="<?= e($p['slug']) ?>">
     <?php else: ?>
@@ -181,7 +183,7 @@ function availability_widget(?array $p = null): void {
       <label>Days<select name="days"><?php foreach ([1, 2, 3, 4, 5, 7] as $d): ?><option value="<?= $d ?>"><?= $d ?></option><?php endforeach; ?></select></label>
       <label>Quantity<select name="qty"><?php for ($i = 1; $i <= 4; $i++): ?><option><?= $i ?></option><?php endfor; ?></select></label>
     </div>
-    <button class="btn btn-block" type="submit">Check availability</button>
+    <button class="btn btn-block" type="submit"><?= e(t('checker.button')) ?></button>
     <div class="checker-result" aria-live="polite"></div>
   </form>
 <?php }

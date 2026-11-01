@@ -1,7 +1,7 @@
 <?php
-page_start(['title' => 'Thank you | ' . s('site_name'), 'path' => '/thank-you', 'noindex' => true]);
+page_start(['title' => t('thanks.h1') . ' | ' . s('site_name'), 'path' => '/thank-you', 'noindex' => true]);
 ?>
-<section class="wrap page-pad"><h1>Thanks – we've got your enquiry</h1>
-<p class="lead">Our team will be in touch shortly with availability and a quote<?= !empty($_GET['ref']) ? ' (reference ' . e($_GET['ref']) . ')' : '' ?>.</p>
-<p><a class="btn" href="/">Back to home</a></p></section>
+<section class="wrap page-pad"><h1><?= e(t('thanks.h1')) ?></h1>
+<p class="lead"><?= e(t('thanks.text')) ?><?= !empty($_GET['ref']) ? ' Your reference is ' . e($_GET['ref']) . '.' : '' ?></p>
+<p><a class="btn" href="/"><?= e(t('thanks.btn')) ?></a></p></section>
 <?php page_end();

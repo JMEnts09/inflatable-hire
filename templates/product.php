@@ -9,11 +9,13 @@ $multi = [];
 foreach ([1, 2, 3, 4, 7] as $d) $multi[$d] = $p['prices'][(string)$d] ?? round($price * hire_multiplier($d, $staffed));
 $spec = $p['spec'] ?? [];
 $img = $p['crm_image'] ?? null;
+$extra = array_values(array_filter($p['images'] ?? [], 'img_exists'));
 $related = array_slice(array_values(array_filter(products_in($cat), fn($x) => $x['slug'] !== $p['slug'])), 0, 3);
 $imgUrl = $img ?: url(img_src($p['image']));
-page_start(['title' => $p['name'] . ' Hire | From ' . money($price) . ' | JM Inflatable Hire',
-    'meta' => mb_strimwidth(($p['short'] ?? '') . ' Hire from ' . money($price) . ' + VAT. UK delivery, set-up & collection. Check live availability.', 0, 158, '…'),
-    'path' => product_url($p), 'image' => $p['image'],
+$vars = ['name' => $p['name'], 'price' => money($price), 'short' => $p['short'] ?? ''];
+$title = trim((string)($p['seo_title'] ?? '')) ?: tf('product.title', $vars);
+$meta = trim((string)($p['seo_meta'] ?? '')) ?: mb_strimwidth(tf('product.meta', $vars), 0, 158, '…');
+page_start(['title' => $title, 'meta' => $meta, 'path' => product_url($p), 'image' => $p['image'],
     'crumbs' => [$catPage['h1'] => '/' . $catKey, $p['name'] => product_url($p)],
     'schema' => [['@type' => 'Product', 'name' => $p['name'] . ' Hire', 'description' => $p['short'] ?? '', 'image' => $imgUrl,
         'brand' => ['@type' => 'Brand', 'name' => s('company')], 'category' => 'Inflatable hire',
@@ -23,12 +25,15 @@ page_start(['title' => $p['name'] . ' Hire | From ' . money($price) . ' | JM Inf
 ?>
 <section class="page-hero">
   <div class="wrap split">
-    <div><?= $img ? '<img class="rounded" src="' . e($img) . '" alt="' . e($p['name']) . ' hire">' : picture($p['image'], $p['name'] . ' hire', 'rounded', true) ?></div>
+    <div>
+      <?= $img ? '<img class="rounded" src="' . e($img) . '" alt="' . e($p['name']) . ' hire">' : picture($p['image'], $p['image_alt'] ?? ($p['name'] . ' hire'), 'rounded', true) ?>
+      <?php if ($extra): ?><div class="thumbs-row"><?php foreach ($extra as $x): ?><a href="<?= e(img_src($x)) ?>" target="_blank" rel="noopener"><?= picture($x, $p['name'] . ' hire', '', false, '120px') ?></a><?php endforeach; ?></div><?php endif; ?>
+    </div>
     <div>
       <p class="kicker"><a href="/<?= e($catKey) ?>"><?= e($catPage['h1']) ?></a><?php if (!empty($p['crm_live'])): ?> · <span class="live">Live stock</span><?php endif; ?></p>
-      <h1><?= e($p['name']) ?> Hire</h1>
+      <h1><?= e($p['h1'] ?? '') ?: e($p['name']) . ' Hire' ?></h1>
       <p class="lead"><?= e($p['short'] ?? '') ?></p>
-      <table class="prices"><caption>Hire prices (+ VAT)</caption>
+      <table class="prices"><caption><?= e(t('product.prices_caption')) ?></caption>
         <tr><?php foreach ($multi as $d => $v): ?><th><?= $d ?> day<?= $d > 1 ? 's' : '' ?></th><?php endforeach; ?></tr>
         <tr><?php foreach ($multi as $v): ?><td><?= money($v) ?></td><?php endforeach; ?></tr>
       </table>
@@ -45,15 +50,20 @@ page_start(['title' => $p['name'] . ' Hire | From ' . money($price) . ' | JM Inf
 <section class="section alt">
   <div class="wrap split">
     <div class="prose">
-      <h2>About the <?= e($p['name']) ?></h2>
-      <p><?= e($p['short'] ?? '') ?> Every hire includes delivery, set-up, a safety check and collection by our own crew<?= $operator ? ', plus a trained operator for the whole hire' : '' ?>.</p>
-      <?= $catPage['sections'][0]['html'] ?? '' ?>
-      <h2>Space, power and safety</h2>
-      <p>Most inflatables run from one standard 13 amp socket for the blower, and we bring stakes, sandbags and safety mats. If there's no power on site we can supply a petrol blower or generator. Exact dimensions, access needs and power come with your quote, and the risk assessment and insurance are sent once your booking is confirmed.</p>
+      <h2><?= e(tf('product.about_heading', ['name' => $p['name']])) ?></h2>
+      <?php if (trim(strip_tags((string)($p['description'] ?? ''))) !== ''): ?>
+        <?= $p['description'] ?>
+      <?php else: ?>
+        <p><?= e($p['short'] ?? '') ?></p>
+      <?php endif; ?>
+      <p><?= e(t('product.included')) ?><?= $operator ? ' ' . e(t('product.operator')) : '' ?></p>
+      <?= empty($p['description']) ? ($catPage['sections'][0]['html'] ?? '') : '' ?>
+      <h2><?= e(t('product.safety_heading')) ?></h2>
+      <?= t('product.safety_text') ?>
     </div>
     <aside class="sticky"><?php availability_widget($p); ?></aside>
   </div>
 </section>
 <?php if ($related): ?>
-<section class="wrap section"><h2 class="sec-title">You might also like</h2><div class="grid3"><?php foreach ($related as $r) product_card($r); ?></div></section>
+<section class="wrap section"><h2 class="sec-title"><?= e(t('product.related_heading')) ?></h2><div class="grid3"><?php foreach ($related as $r) product_card($r); ?></div></section>
 <?php endif; page_end();

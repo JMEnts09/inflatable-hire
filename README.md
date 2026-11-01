@@ -2,6 +2,16 @@
 
 PHP site (no database) built on the same theme and CMS as the darts, sim, crane and basketball hire sites. Content lives in `data/content.json` and is edited from `/admin`.
 
+## Admin panel (/admin)
+Everything on the site can be edited from your phone or computer without touching code:
+- **Pages** – home & category pages: SEO title/description with Google preview, heading, intro, main photo, text sections (rich text editor), FAQs, town-page settings.
+- **Products** – search, add, edit, hide or delete; name, web address, categories, 1/2/3/4/7-day prices, short & full description, main photo + extra photos (upload straight from your phone), spec, SEO title/description.
+- **Site text** – every other word on the site: menu, logo, buttons, headings, hiring steps, footer, product/town page wording, availability, gallery, FAQ and areas pages.
+- **Contact page** – contact details (email, phone, address, opening hours, where enquiries go), intro, form labels, button and thank-you page.
+- **SEO** – every page and product title/description in one list with length counters, live site address, social share image, Google Analytics & Search Console, hide-from-Google switch.
+- **Photos** – upload several at once (auto-resized to fast WebP), search, delete. Any photo field can pick from here or upload new.
+- **Gallery, Towns, Settings, CRM & stock, Enquiries, Account** (password; 2-step sign-in with an authenticator app).
+
 ## Upload to IONOS
 1. Upload everything in this folder to the domain's web root (keep the hidden `.htaccess` files).
 2. Make `data/`, `data/cache/` and `assets/img/uploads/` writable (755 or 775).

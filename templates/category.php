@@ -15,10 +15,10 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/' . $key
       <p class="kicker"><?= e($pg['kicker']) ?></p>
       <h1><?= e($pg['h1']) ?></h1>
       <p class="lead"><?= e($pg['intro']) ?></p>
-      <?php if ($prices): ?><p class="from">From <b><?= money(min($prices)) ?></b> + VAT per day · delivery, set-up &amp; collection</p><?php endif; ?>
-      <div class="hero-btns"><a class="btn" href="#range">View the range</a><a class="btn btn-ghost" href="/contact?interest=<?= e(urlencode($pg['h1'])) ?>">Get a quote</a></div>
+      <?php if ($prices): ?><p class="from"><?= str_replace(e(money(min($prices))), '<b>' . e(money(min($prices))) . '</b>', e(tf('cat.from', ['price' => money(min($prices))]))) ?></p><?php endif; ?>
+      <div class="hero-btns"><a class="btn" href="#range"><?= e(t('cat.btn1')) ?></a><a class="btn btn-ghost" href="/contact?interest=<?= e(urlencode($pg['h1'])) ?>"><?= e(t('cat.btn2')) ?></a></div>
     </div>
-    <div><?= picture($pg['image'], $pg['h1'], 'rounded', true) ?></div>
+    <div><?= picture($pg['image'], $pg['image_alt'] ?? $pg['h1'], 'rounded', true) ?></div>
   </div>
 </section>
 
@@ -32,7 +32,7 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/' . $key
 <?php endforeach; ?>
 <?php else: ?>
 <section class="wrap section" id="range">
-  <h2 class="sec-title"><?= e($pg['h1']) ?> – <?= count($items) ?> to choose from</h2>
+  <h2 class="sec-title"><?= e(tf('cat.range_heading', ['h1' => $pg['h1'], 'count' => count($items)])) ?></h2>
   <div class="grid3"><?php foreach ($items as $p) product_card($p); ?></div>
 </section>
 <?php endif; ?>
@@ -46,7 +46,7 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/' . $key
 
 <?php if (!empty($pg['local'])): ?>
 <section class="wrap section">
-  <h2 class="sec-title"><?= e(page_label($key)) ?> hire across the UK</h2>
+  <h2 class="sec-title"><?= e(tf('cat.areas_heading', ['label' => page_label($key)])) ?></h2>
   <ul class="area-chips"><?php foreach (data()['locations'] as $l): ?><li><a href="/<?= e($key) ?>/<?= e($l['slug']) ?>"><?= e($l['city']) ?></a></li><?php endforeach; ?></ul>
 </section>
 <?php endif; faq_block($pg['faq'] ?? []); page_end();

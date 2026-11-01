@@ -103,7 +103,7 @@ function crm_products(): array {
         $local[] = crm_apply(['slug' => $r['slug'], 'name' => $r['name'], 'cats' => crm_guess_cats($r),
             'short' => $r['short'] ?? ($r['description'] ?? ''), 'image' => crm_guess_image(crm_guess_cats($r)), 'crm_id' => $r['id'] ?? ''], $r);
     }
-    return $merged = $local;
+    return $merged = array_values(array_filter($local, fn($p) => empty($p['hidden'])));
 }
 
 function crm_apply(array $p, array $r): array {

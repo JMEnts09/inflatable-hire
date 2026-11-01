@@ -33,6 +33,6 @@ switch (true) {
     default:
         http_response_code(404);
         page_start(['title' => 'Page not found | ' . s('site_name'), 'path' => $path, 'noindex' => true]);
-        echo '<section class="wrap page-pad"><h1>Page not found</h1><p>Try our <a href="/inflatable-hire">full inflatable range</a> or <a href="/contact">get in touch</a>.</p></section>';
+        echo '<section class="wrap page-pad"><h1>Page not found</h1>' . t('notfound.text') . '</section>';
         page_end();
 }

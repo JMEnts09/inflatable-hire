@@ -19,7 +19,10 @@
     "crm_availability_path": "/api/public/availability",
     "crm_enquiry_path": "/api/public/enquiries",
     "crm_cache_minutes": 15,
-    "prefer_crm_images": true
+    "prefer_crm_images": true,
+    "opening_hours": "Mon–Fri 9am–5:30pm",
+    "default_share_image": "",
+    "noindex_site": false
   },
   "products": [
     {
@@ -2351,5 +2354,6 @@
     "user": "admin",
     "pass_hash": "",
     "totp_secret": ""
-  }
+  },
+  "text": {}
 }

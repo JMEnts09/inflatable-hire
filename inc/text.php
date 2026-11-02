@@ -55,6 +55,7 @@ function text_fields(): array {
         'cat.from' => ['Category pages', 'Price line ({price})', 'line', 'From {price} + VAT per day · delivery, set-up & collection'],
         'cat.range_heading' => ['Category pages', 'Products heading ({h1}, {count})', 'line', '{h1} – {count} to choose from'],
         'cat.areas_heading' => ['Category pages', 'Areas heading ({label})', 'line', '{label} hire across the UK'],
+        'cat.areas_intro' => ['Category pages', 'Areas intro ({label}, {count})', 'text', 'We deliver, set up and collect {label} hire in {count} towns and cities across England, Scotland, Wales and Northern Ireland. Find your area:'],
 
         // ---------------- Product pages
         'product.title' => ['Product pages', 'Default SEO title ({name}, {price}, {site}) – each product can override this', 'line', '{name} Hire | From {price} | {site}'],
@@ -69,8 +70,8 @@ function text_fields(): array {
         'product.related_heading' => ['Product pages', '"You might also like" heading', 'line', 'You might also like'],
 
         // ---------------- Town pages
-        'town.title' => ['Town pages', 'SEO title ({label}, {city}, {price})', 'line', '{label} Hire {city} | From {price} + VAT | JM Inflatable Hire'],
-        'town.meta' => ['Town pages', 'Meta description', 'text', '{label} hire in {city} from {price} + VAT. Delivered, set up & collected across {region}. Check live availability & get a quote today.'],
+        'town.title' => ['Town pages', 'SEO title ({label}, {city}, {price}, {region})', 'line', '{label} Hire {city} | From {price} + VAT | JM Inflatable Hire'],
+        'town.meta' => ['Town pages', 'Meta description', 'text', '{label} hire in {city} from {price} + VAT – delivered, set up & collected across {city}, {near1}, {near2} and {region}. Live availability & fast quotes.'],
         'town.intro1' => ['Town pages', 'Intro version 1 (pages rotate 3 versions so they aren\'t identical)', 'text', 'Looking for {label} hire in {city}? We deliver {angle} to venues across {city} and {region}, with set-up, safety checks and collection included.'],
         'town.intro2' => ['Town pages', 'Intro version 2', 'text', 'Our {city} {label} hire service brings {angle} straight to your event – from gardens, schools and sports clubs to parks and event venues across {region}.'],
         'town.intro3' => ['Town pages', 'Intro version 3', 'text', 'Book {angle} anywhere in {city}. Our crew covers the whole of {region}, including {nearby}.'],

@@ -1,6 +1,6 @@
 <?php
 $pg = data()['pages'][$key];
-$items = products_in($pg['cat']);
+$items = page_products($pg);
 $prices = array_column($items, 'price_from');
 $schema = [['@type' => 'Service', 'name' => $pg['h1'], 'serviceType' => $pg['h1'], 'description' => $pg['meta'],
     'provider' => ['@id' => url('/#business')], 'areaServed' => ['@type' => 'Country', 'name' => 'United Kingdom'],
@@ -23,8 +23,8 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/' . $key
 </section>
 
 <?php if ($pg['cat'] === 'all'): ?>
-<nav class="wrap cat-jump" aria-label="Categories"><?php foreach (category_keys() as $k): if ($k === $key) continue; ?><a href="#<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a><?php endforeach; ?></nav>
-<?php foreach (category_keys() as $k): if ($k === $key) continue; $sub = products_in(data()['pages'][$k]['cat']); if (!$sub) continue; ?>
+<nav class="wrap cat-jump" aria-label="Categories"><?php foreach (category_keys() as $k): if ($k === $key || !empty(data()['pages'][$k]['match'])) continue; ?><a href="#<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a><?php endforeach; ?></nav>
+<?php foreach (category_keys() as $k): if ($k === $key || !empty(data()['pages'][$k]['match'])) continue; $sub = page_products(data()['pages'][$k]); if (!$sub) continue; ?>
 <section class="wrap section" id="<?= e($k) ?>">
   <h2 class="sec-title"><a href="/<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a> <small><?= count($sub) ?> items</small></h2>
   <div class="grid3"><?php foreach ($sub as $p) product_card($p); ?></div>
@@ -47,6 +47,10 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/' . $key
 <?php if (!empty($pg['local'])): ?>
 <section class="wrap section">
   <h2 class="sec-title"><?= e(tf('cat.areas_heading', ['label' => page_label($key)])) ?></h2>
-  <ul class="area-chips"><?php foreach (data()['locations'] as $l): ?><li><a href="/<?= e($key) ?>/<?= e($l['slug']) ?>"><?= e($l['city']) ?></a></li><?php endforeach; ?></ul>
+  <p><?= e(tf('cat.areas_intro', ['label' => page_label($key), 'count' => count(all_locations())])) ?></p>
+  <div class="region-list"><?php foreach (locations_by_region() as $region => $ls): ?>
+    <details<?= in_array($region, ['Greater London', 'West Midlands', 'Greater Manchester', 'West Yorkshire', 'Scotland'], true) ? ' open' : '' ?>><summary><?= e(page_label($key)) ?> hire in <?= e($region) ?> <small>(<?= count($ls) ?>)</small></summary>
+    <ul class="area-chips"><?php foreach ($ls as $l): ?><li><a href="/<?= e($key) ?>/<?= e($l['slug']) ?>"><?= e($l['city']) ?></a></li><?php endforeach; ?></ul></details>
+  <?php endforeach; ?></div>
 </section>
 <?php endif; faq_block($pg['faq'] ?? []); page_end();

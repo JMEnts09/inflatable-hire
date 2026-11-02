@@ -130,3 +130,8 @@ details[open] summary:after{transform:rotate(45deg)}details div{color:#cfcfd8;pa
 .logo-img{height:40px;width:auto;max-width:160px}
 .thumbs-row{display:flex;gap:8px;margin-top:10px;overflow-x:auto}.thumbs-row a{flex:0 0 88px}.thumbs-row img{width:88px;height:66px;object-fit:cover;border-radius:8px}
 .lead-html p:first-child{font-size:1.15rem;color:var(--mut)}
+.area-row h3{font-size:1.2rem;margin:0 0 .3em}.area-row h3 a{text-decoration:none}
+.area-jump{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.9rem}
+.region-list details{border:1px solid var(--line);border-radius:var(--r);padding:10px 14px;margin:8px 0;background:var(--ink2)}
+.region-list summary{cursor:pointer;font-weight:700}.region-list summary small{color:var(--mut);font-weight:400}
+.region-list .area-chips{margin:10px 0 4px}

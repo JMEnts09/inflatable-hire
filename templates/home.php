@@ -4,7 +4,7 @@ $cats = [];
 foreach (category_keys() as $k) {
     if (data()['pages'][$k]['cat'] === 'all') continue;
     $c = data()['pages'][$k];
-    $cats[] = ['/' . $k, $c['h1'], $c['kicker'] ?? '', $c['image'], count(products_in($c['cat']))];
+    $cats[] = ['/' . $k, $c['h1'], $c['kicker'] ?? '', $c['image'], count(page_products($c))];
 }
 $all = crm_products();
 $featured = [];
@@ -61,5 +61,6 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/', 'imag
 <section class="wrap section">
   <h2 class="sec-title"><?= e(t('home.areas_heading')) ?></h2>
   <ul class="area-chips"><?php foreach (data()['locations'] as $l): ?><li><a href="/<?= e(local_keys()[0] ?? 'inflatable-hire') ?>/<?= e($l['slug']) ?>"><?= e($l['city']) ?></a></li><?php endforeach; ?></ul>
+  <p class="center"><a class="btn btn-ghost" href="/areas">All <?= count(all_locations()) ?> towns &amp; cities we cover</a></p>
 </section>
 <?php faq_block($pg['faq'] ?? []); page_end();

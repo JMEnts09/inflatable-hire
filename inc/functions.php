@@ -14,7 +14,29 @@ function data(): array {
     }
     if ($d === null) {
         $d = json_decode((string)file_get_contents(DATA_FILE), true) ?: [];
+        $d = content_upgrade($d);
     }
+    return $d;
+}
+
+/** One-off upgrades for sites whose content.json was created before a new feature shipped (admin edits are kept). */
+function content_upgrade(array $d): array {
+    $rev = (int)($d['settings']['content_rev'] ?? 1);
+    if ($rev >= 2 || !is_file(ROOT . '/data/content.default.json')) return $d;
+    $def = json_decode((string)file_get_contents(ROOT . '/data/content.default.json'), true) ?: [];
+    if ($rev < 2) {   // rev 2: Wipeout, Bungee Run and Gladiator Duel pages; town pages for slides and challenges
+        foreach ($def['pages'] ?? [] as $k => $pg) if (!isset($d['pages'][$k])) $d['pages'][$k] = $pg;
+        foreach (['inflatable-slide-hire', 'inflatable-challenge-hire'] as $k) if (isset($d['pages'][$k])) $d['pages'][$k]['local'] = true;
+        foreach ($d['pages'] as $k => &$pg) {
+            foreach (['town_intro', 'town_body', 'town_faq', 'keywords'] as $f) if (!isset($pg[$f]) && isset($def['pages'][$k][$f])) $pg[$f] = $def['pages'][$k][$f];
+            if (($pg['label'] ?? '') === 'Wipeout & Challenge Inflatable') $pg['label'] = 'Inflatable Challenge';
+        }
+        unset($pg);
+        foreach (['home', 'inflatable-hire'] as $k) foreach (['title', 'meta'] as $f)
+            if (isset($def['pages'][$k][$f], $d['pages'][$k])) $d['pages'][$k][$f] = $def['pages'][$k][$f];
+    }
+    $d['settings']['content_rev'] = 2;
+    if (is_writable(DATA_FILE)) save_data($d);
     return $d;
 }
 
@@ -155,9 +177,56 @@ function find_product(string $slug): ?array {
     foreach (crm_products() as $p) if ($p['slug'] === $slug) return $p;
     return null;
 }
+/** Products for a landing page: its category, optionally narrowed by a "match" pattern (e.g. Wipeout, Bungee Run). */
+function page_products(array $pg): array {
+    $items = products_in($pg['cat'] ?? 'all');
+    if (!empty($pg['match'])) {
+        $re = '/' . str_replace('/', '\/', $pg['match']) . '/i';
+        $all = $pg['cat'] === 'all' ? $items : crm_products();
+        $items = array_values(array_filter($all, fn($p) => @preg_match($re, $p['slug'] . ' ' . $p['name'])));
+    }
+    return $items;
+}
+
+/** Every town/city with a page: the towns edited in the admin plus the built-in UK list (data/places.json). */
+function all_locations(): array {
+    static $all = null;
+    if ($all !== null) return $all;
+    $places = is_file(ROOT . '/data/places.json') ? (json_decode((string)file_get_contents(ROOT . '/data/places.json'), true) ?: []) : [];
+    $geo = []; foreach ($places as $pl) $geo[$pl['slug']] = $pl;
+    $all = [];
+    foreach (data()['locations'] ?? [] as $l) { if (empty($l['slug'])) continue; $all[$l['slug']] = $l + ['lat' => $geo[$l['slug']]['lat'] ?? null, 'lng' => $geo[$l['slug']]['lng'] ?? null]; }
+    foreach ($places as $pl) if (!isset($all[$pl['slug']])) $all[$pl['slug']] = $pl + ['nearby' => '', 'venues' => '', 'intro' => ''];
+    foreach ($all as $slug => &$l) {
+        $near = nearest_locations($l, $all, 6);
+        $l['near'] = $near;
+        if (trim((string)($l['nearby'] ?? '')) === '') $l['nearby'] = implode(', ', array_map(fn($x) => $x['city'], array_slice($near, 0, 4)));
+        if (trim((string)($l['venues'] ?? '')) === '') $l['venues'] = 'local schools, sports clubs, parks, hotels and community venues';
+    }
+    unset($l);
+    uasort($all, fn($a, $b) => strcmp($a['city'], $b['city']));
+    return $all;
+}
+function nearest_locations(array $l, array $all, int $n): array {
+    if (!isset($l['lat'], $l['lng'])) return [];
+    $d = [];
+    foreach ($all as $o) {
+        if ($o['slug'] === $l['slug'] || !isset($o['lat'], $o['lng']) || $o['region'] === $o['city']) continue;
+        $d[$o['slug']] = (($o['lat'] - $l['lat']) ** 2) + ((($o['lng'] - $l['lng']) * cos(deg2rad($l['lat']))) ** 2);
+    }
+    asort($d);
+    return array_map(fn($s) => ['slug' => $s, 'city' => $all[$s]['city'], 'miles' => (int)round(sqrt($d[$s]) * 69)], array_slice(array_keys($d), 0, $n));
+}
+/** Towns grouped by region, for the areas lists. */
+function locations_by_region(): array {
+    $g = [];
+    foreach (all_locations() as $l) $g[$l['region']][] = $l;
+    ksort($g);
+    return $g;
+}
+function slugify(string $s): string { return trim(preg_replace('/[^a-z0-9]+/', '-', strtolower($s)), '-'); }
 function find_location(string $slug): ?array {
-    foreach (data()['locations'] ?? [] as $l) if ($l['slug'] === $slug) return $l;
-    return null;
+    return all_locations()[$slug] ?? null;
 }
 
 function csrf_token(): string {

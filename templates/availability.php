@@ -6,7 +6,7 @@ page_start(['title' => t('avail.title'), 'meta' => t('avail.meta'), 'path' => '/
   <?= t('avail.intro') ?></div>
   <aside><?php availability_widget(); ?></aside>
 </section>
-<?php foreach (category_keys() as $k): if ($k === 'inflatable-hire') continue; $items = products_in(data()['pages'][$k]['cat']); if (!$items) continue; ?>
+<?php foreach (category_keys() as $k): if ($k === 'inflatable-hire' || !empty(data()['pages'][$k]['match'])) continue; $items = page_products(data()['pages'][$k]); if (!$items) continue; ?>
 <section class="wrap section"><h2 class="sec-title"><a href="/<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a></h2>
   <div class="grid3"><?php foreach ($items as $p) product_card($p); ?></div>
 </section>

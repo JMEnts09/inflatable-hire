@@ -1,2363 +1,2637 @@
 {
-  "settings": {
-    "site_name": "JM Inflatable Hire",
-    "tagline": "Bouncy castles, assault courses, inflatable games and rodeo bulls across the UK",
-    "base_url": "",
-    "company": "JM Entertainment",
-    "phone": "",
-    "email": "info@jmentertainment.co.uk",
-    "notify_email": "info@jmentertainment.co.uk",
-    "address": "",
-    "parent_site": "https://www.jmentertainment.co.uk",
-    "accent": "#D7141A",
-    "ga4_id": "",
-    "gsc_verification": "",
-    "crm_enabled": true,
-    "crm_base_url": "https://jm-crm-feed.plain-wood-3958.workers.dev",
-    "crm_api_key": "",
-    "crm_products_path": "/products?ids={ids}&category={categories}",
-    "crm_availability_path": "/availability",
-    "crm_enquiry_path": "",
-    "prefer_crm_images": true,
-    "opening_hours": "Mon–Fri 9am–5:30pm",
-    "default_share_image": "",
-    "noindex_site": false,
-    "crm_cache_seconds": 30,
-    "crm_use_descriptions": true,
-    "crm_auto_add": true,
-    "crm_categories": "Bouncy Castles & Slides|Action Inflatables|Assault Courses|Bungee Runs|Climbing Walls|Inflatables|Wipeout & Last Man Standing|Rodeo Bull Hire|Surf Simulator Hire",
-    "crm_exclude": "90581,90827,90828,90217,90281,90677,90788"
+ "settings": {
+  "site_name": "JM Inflatable Hire",
+  "tagline": "Bouncy castles, assault courses, inflatable games and rodeo bulls across the UK",
+  "base_url": "",
+  "company": "JM Entertainment",
+  "phone": "",
+  "email": "info@jmentertainment.co.uk",
+  "notify_email": "info@jmentertainment.co.uk",
+  "address": "",
+  "parent_site": "https://www.jmentertainment.co.uk",
+  "accent": "#D7141A",
+  "ga4_id": "",
+  "gsc_verification": "",
+  "crm_enabled": true,
+  "crm_base_url": "https://jm-crm-feed.plain-wood-3958.workers.dev",
+  "crm_api_key": "",
+  "crm_products_path": "/products?ids={ids}&category={categories}",
+  "crm_availability_path": "/availability",
+  "crm_enquiry_path": "",
+  "prefer_crm_images": true,
+  "opening_hours": "Mon–Fri 9am–5:30pm",
+  "default_share_image": "",
+  "noindex_site": false,
+  "crm_cache_seconds": 30,
+  "crm_use_descriptions": true,
+  "crm_auto_add": true,
+  "crm_categories": "Bouncy Castles & Slides|Action Inflatables|Assault Courses|Bungee Runs|Climbing Walls|Inflatables|Wipeout & Last Man Standing|Rodeo Bull Hire|Surf Simulator Hire",
+  "crm_exclude": "90581,90827,90828,90217,90281,90677,90788",
+  "content_rev": 2
+ },
+ "products": [
+  {
+   "slug": "adult-bouncy-castle-red-and-black-with-roof",
+   "name": "Adult Bouncy Castle – Red & Black with Roof",
+   "cats": [
+    "bouncy-castles"
+   ],
+   "price_from": 250,
+   "prices": {
+    "1": 250,
+    "2": 395,
+    "3": 490,
+    "7": 725
+   },
+   "players": "Adults & children",
+   "image": "adult-bouncy-castle-red-and-black-with-roof-hire",
+   "short": "Grown-up sized castle in red and black with a full rain roof – ideal for parties, weddings and corporate fun days.",
+   "spec": {},
+   "crm_id": "90024",
+   "staffed": false
   },
-  "products": [
-    {
-      "slug": "adult-bouncy-castle-red-and-black-with-roof",
-      "name": "Adult Bouncy Castle – Red & Black with Roof",
-      "cats": [
-        "bouncy-castles"
-      ],
-      "price_from": 250,
-      "prices": {
-        "1": 250,
-        "2": 395,
-        "3": 490,
-        "7": 725
-      },
-      "players": "Adults & children",
-      "image": "adult-bouncy-castle-red-and-black-with-roof-hire",
-      "short": "Grown-up sized castle in red and black with a full rain roof – ideal for parties, weddings and corporate fun days.",
-      "spec": {},
-      "crm_id": "90024",
-      "staffed": false
-    },
-    {
-      "slug": "camelot-adult-bouncy-castle",
-      "name": "Camelot Adult Bouncy Castle",
-      "cats": [
-        "bouncy-castles"
-      ],
-      "price_from": 195,
-      "prices": {
-        "1": 195,
-        "2": 305,
-        "3": 380,
-        "7": 565
-      },
-      "players": "Adults & children",
-      "image": "camelot-adult-bouncy-castle-hire",
-      "short": "Classic Camelot-style castle built for adults as well as kids, with high walls and a covered roof.",
-      "spec": {},
-      "crm_id": "90224",
-      "staffed": false
-    },
-    {
-      "slug": "adult-and-childrens-jungle-bouncy-castle",
-      "name": "Adult & Children's Jungle Bouncy Castle",
-      "cats": [
-        "bouncy-castles"
-      ],
-      "price_from": 125,
-      "prices": {
-        "1": 125,
-        "2": 195,
-        "3": 245,
-        "7": 365
-      },
-      "players": "Adults & children",
-      "image": "adult-and-childrens-jungle-bouncy-castle-hire",
-      "short": "Jungle-themed castle strong enough for adults and children alike.",
-      "spec": {},
-      "crm_id": "90026",
-      "staffed": false
-    },
-    {
-      "slug": "adults-and-childrens-disco-dome",
-      "name": "Adults & Children's Disco Dome",
-      "cats": [
-        "bouncy-castles"
-      ],
-      "price_from": 140,
-      "prices": {
-        "1": 140,
-        "2": 220,
-        "3": 275,
-        "7": 405
-      },
-      "players": "Adults & children",
-      "image": "adults-and-childrens-disco-dome-hire",
-      "short": "Enclosed disco dome bouncy castle with party lights and speaker – a night-time favourite.",
-      "spec": {},
-      "crm_id": "90027",
-      "staffed": false
-    },
-    {
-      "slug": "disco-dome-with-slide-adults-and-children",
-      "name": "Disco Dome with Slide – Adults & Children",
-      "cats": [
-        "bouncy-castles",
-        "slides"
-      ],
-      "price_from": 150,
-      "prices": {
-        "1": 150,
-        "2": 235,
-        "3": 295,
-        "7": 435
-      },
-      "players": "Adults & children",
-      "image": "disco-dome-with-slide-adults-and-children-hire",
-      "short": "Disco dome castle with a built-in slide, lights and music for all-ages parties.",
-      "spec": {},
-      "crm_id": "90332",
-      "staffed": false
-    },
-    {
-      "slug": "dinosaur-front-slide-castle",
-      "name": "Dinosaur Front Slide Castle",
-      "cats": [
-        "bouncy-castles",
-        "slides"
-      ],
-      "price_from": 125,
-      "prices": {
-        "1": 125,
-        "2": 195,
-        "3": 245,
-        "7": 365
-      },
-      "players": "Children",
-      "image": "dinosaur-front-slide-castle-hire",
-      "short": "Dinosaur-themed bounce and slide combi with a front slide.",
-      "spec": {},
-      "crm_id": "90328",
-      "staffed": false
-    },
-    {
-      "slug": "elephant-bounce-and-slide-a-frame",
-      "name": "Elephant Bounce & Slide (A-Frame)",
-      "cats": [
-        "bouncy-castles",
-        "slides"
-      ],
-      "price_from": 100,
-      "prices": {
-        "1": 100,
-        "2": 155,
-        "3": 195,
-        "7": 290
-      },
-      "players": "Children",
-      "image": "elephant-bounce-and-slide-a-frame-hire",
-      "short": "Bright elephant A-frame castle with a front slide – perfect for younger children's parties.",
-      "spec": {},
-      "crm_id": "90339",
-      "staffed": false
-    },
-    {
-      "slug": "farmyard-front-slide-castle",
-      "name": "Farmyard Front Slide Castle",
-      "cats": [
-        "bouncy-castles",
-        "slides"
-      ],
-      "price_from": 175,
-      "prices": {
-        "1": 175,
-        "2": 275,
-        "3": 340,
-        "7": 510
-      },
-      "players": "Children",
-      "image": "farmyard-front-slide-castle-hire",
-      "short": "Farmyard-themed bounce and slide with a generous front slide.",
-      "spec": {},
-      "crm_id": "90358",
-      "staffed": false
-    },
-    {
-      "slug": "farmyard-bouncy-castle-10ft-x-10ft",
-      "name": "Farmyard Bouncy Castle 10ft x 10ft",
-      "cats": [
-        "bouncy-castles"
-      ],
-      "price_from": 85,
-      "prices": {
-        "1": 85,
-        "2": 135,
-        "3": 165,
-        "7": 245
-      },
-      "players": "Children",
-      "image": "farmyard-bouncy-castle-10ft-x-10ft-hire",
-      "short": "Compact 10ft x 10ft farmyard castle that fits most gardens and halls.",
-      "spec": {
-        "dimensions": "10ft x 10ft"
-      },
-      "crm_id": "90357",
-      "staffed": false
-    },
-    {
-      "slug": "jungle-bounce-and-slide-front-slide",
-      "name": "Jungle Bounce & Slide (Front Slide)",
-      "cats": [
-        "bouncy-castles",
-        "slides"
-      ],
-      "price_from": 175,
-      "prices": {
-        "1": 175,
-        "2": 275,
-        "3": 340,
-        "7": 510
-      },
-      "players": "Children",
-      "image": "jungle-bounce-and-slide-front-slide-hire",
-      "short": "Jungle bounce area with a front slide – lots of play in one inflatable.",
-      "spec": {},
-      "crm_id": "90491",
-      "staffed": false
-    },
-    {
-      "slug": "jungle-themed-a-frame-castle",
-      "name": "Jungle Themed A-Frame Castle",
-      "cats": [
-        "bouncy-castles"
-      ],
-      "price_from": 120,
-      "prices": {
-        "1": 120,
-        "2": 190,
-        "3": 235,
-        "7": 350
-      },
-      "players": "Children",
-      "image": "jungle-themed-a-frame-castle-hire",
-      "short": "Jungle A-frame bouncy castle with themed artwork panels.",
-      "spec": {},
-      "crm_id": "90494",
-      "staffed": false
-    },
-    {
-      "slug": "party-bounce-and-slide",
-      "name": "Party Bounce & Slide",
-      "cats": [
-        "bouncy-castles",
-        "slides"
-      ],
-      "price_from": 120,
-      "prices": {
-        "1": 120,
-        "2": 190,
-        "3": 235,
-        "7": 350
-      },
-      "players": "Children",
-      "image": "party-bounce-and-slide-hire",
-      "short": "Colourful party-themed bounce and slide combi for birthdays and fun days.",
-      "spec": {},
-      "crm_id": "90590",
-      "staffed": false
-    },
-    {
-      "slug": "peppa-pig-bouncy-castle",
-      "name": "Peppa Pig Bouncy Castle",
-      "cats": [
-        "bouncy-castles"
-      ],
-      "price_from": 105,
-      "prices": {
-        "1": 105,
-        "2": 165,
-        "3": 205,
-        "7": 305
-      },
-      "players": "Children",
-      "image": "peppa-pig-bouncy-castle-hire",
-      "short": "Peppa Pig themed bouncy castle for little ones' birthday parties.",
-      "spec": {},
-      "crm_id": "90601",
-      "staffed": false
-    },
-    {
-      "slug": "princess-a-frame-and-slide",
-      "name": "Princess A-Frame & Slide",
-      "cats": [
-        "bouncy-castles",
-        "slides"
-      ],
-      "price_from": 100,
-      "prices": {
-        "1": 100,
-        "2": 155,
-        "3": 195,
-        "7": 290
-      },
-      "players": "Children",
-      "image": "princess-a-frame-and-slide-hire",
-      "short": "Pink princess A-frame castle with a front slide.",
-      "spec": {},
-      "crm_id": "90633",
-      "staffed": false
-    },
-    {
-      "slug": "undersea-a-frame-castle",
-      "name": "Undersea A-Frame Castle",
-      "cats": [
-        "bouncy-castles"
-      ],
-      "price_from": 85,
-      "prices": {
-        "1": 85,
-        "2": 135,
-        "3": 165,
-        "7": 245
-      },
-      "players": "Children",
-      "image": "undersea-a-frame-castle-hire",
-      "short": "Under-the-sea themed A-frame bouncy castle.",
-      "spec": {},
-      "crm_id": "90836",
-      "staffed": false
-    },
-    {
-      "slug": "undersea-bounce-and-slide",
-      "name": "Undersea Bounce & Slide",
-      "cats": [
-        "bouncy-castles",
-        "slides"
-      ],
-      "price_from": 100,
-      "prices": {
-        "1": 100,
-        "2": 155,
-        "3": 195,
-        "7": 290
-      },
-      "players": "Children",
-      "image": "undersea-bounce-and-slide-hire",
-      "short": "Undersea bounce and slide combi with ocean artwork.",
-      "spec": {},
-      "crm_id": "90838",
-      "staffed": false
-    },
-    {
-      "slug": "activity-toddler-inflatable-event-style",
-      "name": "Activity Toddler Inflatable (Event Style)",
-      "cats": [
-        "bouncy-castles"
-      ],
-      "price_from": 895,
-      "prices": {
-        "1": 895,
-        "2": 1405,
-        "3": 1745,
-        "7": 2595
-      },
-      "players": "Toddlers",
-      "image": "activity-toddler-inflatable-event-style-hire",
-      "short": "Event-sized toddler activity inflatable with soft climbs, pop-ups and a mini slide – great for family zones.",
-      "spec": {},
-      "crm_id": "90022",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-helter-skelter-slide",
-      "name": "Inflatable Helter Skelter Slide",
-      "cats": [
-        "slides"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "inflatable-helter-skelter-slide-hire",
-      "short": "Traditional helter skelter as a giant inflatable – a centrepiece for fêtes, festivals and fun days.",
-      "spec": {},
-      "crm_id": "90463",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-platform-slide",
-      "name": "Inflatable Platform Slide",
-      "cats": [
-        "slides"
-      ],
-      "price_from": 495,
-      "prices": {
-        "1": 495,
-        "2": 775,
-        "3": 965,
-        "7": 1435
-      },
-      "players": "All ages",
-      "image": "inflatable-platform-slide-hire",
-      "short": "Tall platform slide that keeps a fast-moving queue going all day at larger events.",
-      "spec": {},
-      "crm_id": "90465",
-      "staffed": false
-    },
-    {
-      "slug": "twin-premium-inflatable-slide",
-      "name": "Twin Premium Inflatable Slide",
-      "cats": [
-        "slides"
-      ],
-      "price_from": 550,
-      "prices": {
-        "1": 550,
-        "2": 865,
-        "3": 1075,
-        "7": 1595
-      },
-      "players": "All ages",
-      "image": "twin-premium-inflatable-slide-hire",
-      "short": "Two side-by-side lanes so friends can race each other to the bottom.",
-      "spec": {},
-      "crm_id": "90832",
-      "staffed": false
-    },
-    {
-      "slug": "mega-obstacle-course-220ft",
-      "name": "Mega Obstacle Course 220ft",
-      "cats": [
-        "assault-courses"
-      ],
-      "price_from": 1995,
-      "prices": {
-        "1": 1995,
-        "2": 3130,
-        "3": 3890,
-        "7": 5785
-      },
-      "players": "Adults & children",
-      "image": "mega-obstacle-course-220ft-hire",
-      "short": "Our biggest course – 220ft of inflatable obstacles for big corporate, school and festival events.",
-      "spec": {
-        "dimensions": "220ft long"
-      },
-      "crm_id": "90543",
-      "staffed": false
-    },
-    {
-      "slug": "army-theme-assault-course-100ft",
-      "name": "Army Theme Assault Course 100ft",
-      "cats": [
-        "assault-courses"
-      ],
-      "price_from": 850,
-      "prices": {
-        "1": 850,
-        "2": 1335,
-        "3": 1660,
-        "7": 2465
-      },
-      "players": "Adults & children",
-      "image": "army-theme-assault-course-100ft-hire",
-      "short": "100ft army-style assault course with crawl-throughs, climbs and pop-ups – race side by side.",
-      "spec": {
-        "dimensions": "100ft long"
-      },
-      "crm_id": "90048",
-      "staffed": false
-    },
-    {
-      "slug": "army-theme-obstacle-course-75ft",
-      "name": "Army Theme Obstacle Course 75ft",
-      "cats": [
-        "assault-courses"
-      ],
-      "price_from": 650,
-      "prices": {
-        "1": 650,
-        "2": 1020,
-        "3": 1270,
-        "7": 1885
-      },
-      "players": "Adults & children",
-      "image": "army-theme-obstacle-course-75ft-hire",
-      "short": "75ft army-themed obstacle course for team challenges and sports days.",
-      "spec": {
-        "dimensions": "75ft long"
-      },
-      "crm_id": "90577",
-      "staffed": false
-    },
-    {
-      "slug": "red-and-black-obstacle-course-50ft",
-      "name": "Red & Black Obstacle Course 50ft",
-      "cats": [
-        "assault-courses"
-      ],
-      "price_from": 450,
-      "prices": {
-        "1": 450,
-        "2": 705,
-        "3": 880,
-        "7": 1305
-      },
-      "players": "Adults & children",
-      "image": "red-and-black-obstacle-course-50ft-hire",
-      "short": "50ft red and black obstacle course – a great fit for smaller sites and corporate branding.",
-      "spec": {
-        "dimensions": "50ft long"
-      },
-      "crm_id": "90578",
-      "staffed": false
-    },
-    {
-      "slug": "bootcamp-assault-course",
-      "name": "Bootcamp Assault Course",
-      "cats": [
-        "assault-courses"
-      ],
-      "price_from": 925,
-      "prices": {
-        "1": 925,
-        "2": 1450,
-        "3": 1805,
-        "7": 2685
-      },
-      "players": "Adults & children",
-      "image": "bootcamp-assault-course-hire",
-      "short": "Bootcamp-style assault course packed with obstacles for team-building and fitness events.",
-      "spec": {},
-      "crm_id": "90108",
-      "staffed": false
-    },
-    {
-      "slug": "its-a-knockout-style-assault-course",
-      "name": "It's a Knockout Style Assault Course",
-      "cats": [
-        "assault-courses"
-      ],
-      "price_from": 695,
-      "prices": {
-        "1": 695,
-        "2": 1090,
-        "3": 1355,
-        "7": 2015
-      },
-      "players": "Adults & children",
-      "image": "its-a-knockout-style-assault-course-hire",
-      "short": "It's a Knockout style course for heats, relays and team competitions.",
-      "spec": {},
-      "crm_id": "90479",
-      "staffed": false
-    },
-    {
-      "slug": "jungle-assault-course-fun-run",
-      "name": "Jungle Assault Course Fun Run",
-      "cats": [
-        "assault-courses"
-      ],
-      "price_from": 225,
-      "prices": {
-        "1": 225,
-        "2": 355,
-        "3": 440,
-        "7": 655
-      },
-      "players": "Children",
-      "image": "jungle-assault-course-fun-run-hire",
-      "short": "Jungle-themed fun run for children's parties and school sports days.",
-      "spec": {},
-      "crm_id": "90488",
-      "staffed": false
-    },
-    {
-      "slug": "3-in-1-sports-inflatable-game",
-      "name": "3 in 1 Sports Inflatable Game",
-      "cats": [
-        "games"
-      ],
-      "price_from": 495,
-      "prices": {
-        "1": 495,
-        "2": 775,
-        "3": 965,
-        "7": 1435
-      },
-      "players": "Groups",
-      "image": "inflatable-games-hire",
-      "short": "Three sports challenges in one inflatable – swap between games to keep players coming back.",
-      "spec": {
-        "dimensions": "6250 × 2500 × 2850 mm",
-        "power": "1 x 13A socket",
-        "setup": "30 minutes"
-      },
-      "crm_id": "90005",
-      "staffed": false
-    },
-    {
-      "slug": "giant-inflatable-dartboard-7ft",
-      "name": "Giant Inflatable Dartboard 7ft",
-      "cats": [
-        "games"
-      ],
-      "price_from": 175,
-      "prices": {
-        "1": 175,
-        "2": 275,
-        "3": 340,
-        "7": 510
-      },
-      "players": "All ages",
-      "image": "giant-inflatable-dartboard-7ft-hire",
-      "short": "7ft inflatable dartboard with Velcro balls – safe, simple and endlessly competitive.",
-      "spec": {
-        "dimensions": "7ft"
-      },
-      "crm_id": "90396",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-football-darts",
-      "name": "Inflatable Football Darts",
-      "cats": [
-        "games"
-      ],
-      "price_from": 475,
-      "prices": {
-        "1": 475,
-        "2": 745,
-        "3": 925,
-        "7": 1380
-      },
-      "players": "All ages",
-      "image": "inflatable-football-darts-hire",
-      "short": "Kick footballs at a giant dartboard – perfect for football-themed events and fun days.",
-      "spec": {},
-      "crm_id": "90460",
-      "staffed": false
-    },
-    {
-      "slug": "rugby-darts-kick-n-stick",
-      "name": "Rugby Darts / Kick n' Stick",
-      "cats": [
-        "games"
-      ],
-      "price_from": 525,
-      "prices": {
-        "1": 525,
-        "2": 825,
-        "3": 1025,
-        "7": 1525
-      },
-      "players": "All ages",
-      "image": "rugby-darts-kick-n-stick-hire",
-      "short": "Kick rugby balls at a giant target – a hit at rugby clubs and sports events.",
-      "spec": {},
-      "crm_id": "90716",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-penalty-shootout",
-      "name": "Inflatable Penalty Shootout",
-      "cats": [
-        "games"
-      ],
-      "price_from": 350,
-      "prices": {
-        "1": 350,
-        "2": 550,
-        "3": 685,
-        "7": 1015
-      },
-      "players": "All ages",
-      "image": "inflatable-penalty-shootout-hire",
-      "short": "Beat the keeper and score through the target holes – easy to understand, great for queues.",
-      "spec": {},
-      "crm_id": "90597",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-connect-4-2-games-in-1",
-      "name": "Inflatable Connect 4 (2 Games in 1)",
-      "cats": [
-        "games"
-      ],
-      "price_from": 295,
-      "prices": {
-        "1": 295,
-        "2": 465,
-        "3": 575,
-        "7": 855
-      },
-      "players": "2 players",
-      "image": "inflatable-connect-4-2-games-in-1-hire",
-      "short": "Giant inflatable Connect 4 with a second game built in.",
-      "spec": {},
-      "crm_id": "90458",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-twister",
-      "name": "Inflatable Twister",
-      "cats": [
-        "games"
-      ],
-      "price_from": 395,
-      "prices": {
-        "1": 395,
-        "2": 620,
-        "3": 770,
-        "7": 1145
-      },
-      "players": "Groups",
-      "image": "inflatable-twister-hire",
-      "short": "Giant inflatable Twister – left hand red, right foot yellow, lots of laughs.",
-      "spec": {},
-      "crm_id": "90467",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-volleyball-court",
-      "name": "Inflatable Volleyball Court",
-      "cats": [
-        "games"
-      ],
-      "price_from": 725,
-      "prices": {
-        "1": 725,
-        "2": 1140,
-        "3": 1415,
-        "7": 2105
-      },
-      "players": "Teams",
-      "image": "inflatable-volleyball-court-hire",
-      "short": "Enclosed inflatable volleyball court for team tournaments and corporate sports days.",
-      "spec": {},
-      "crm_id": "90849",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-curling-lane",
-      "name": "Inflatable Curling Lane",
-      "cats": [
-        "games"
-      ],
-      "price_from": 695,
-      "prices": {
-        "1": 695,
-        "2": 1090,
-        "3": 1355,
-        "7": 2015
-      },
-      "players": "Teams",
-      "image": "inflatable-curling-lane-hire",
-      "short": "Slide the stones down the inflatable lane – a wintry favourite for Christmas and corporate events.",
-      "spec": {},
-      "crm_id": "90296",
-      "staffed": false
-    },
-    {
-      "slug": "basketball-inflatable",
-      "name": "Basketball Inflatable",
-      "cats": [
-        "games"
-      ],
-      "price_from": 395,
-      "prices": {
-        "1": 395,
-        "2": 620,
-        "3": 770,
-        "7": 1145
-      },
-      "players": "2+ players",
-      "image": "basketball-inflatable-hire",
-      "short": "Giant inflatable basketball challenge for fun days, schools and outdoor events.",
-      "spec": {},
-      "crm_id": "90075",
-      "staffed": false
-    },
-    {
-      "slug": "dash-n-grab-inflatable-6-player",
-      "name": "Dash N Grab Inflatable (6 Player)",
-      "cats": [
-        "games"
-      ],
-      "price_from": 795,
-      "prices": {
-        "1": 795,
-        "2": 1250,
-        "3": 1550,
-        "7": 2305
-      },
-      "players": "6 players",
-      "image": "dash-n-grab-inflatable-6-player-hire",
-      "short": "Six players race on bungees to grab the balls from the centre – fast, frantic team fun.",
-      "spec": {},
-      "crm_id": "90309",
-      "staffed": false
-    },
-    {
-      "slug": "grand-national-inflatable",
-      "name": "Grand National Inflatable",
-      "cats": [
-        "games"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "Groups",
-      "image": "grand-national-inflatable-hire",
-      "short": "Bounce your way round the course on space-hopper horses – ideal for race-day themes.",
-      "spec": {},
-      "crm_id": "90430",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-grand-national-horse-race",
-      "name": "Inflatable Grand National Horse Race",
-      "cats": [
-        "games"
-      ],
-      "price_from": 695,
-      "prices": {
-        "1": 695,
-        "2": 1090,
-        "3": 1355,
-        "7": 2015
-      },
-      "players": "Groups",
-      "image": "inflatable-grand-national-horse-race-hire",
-      "short": "A larger Grand National course for horse-racing themed parties and family fun days.",
-      "spec": {},
-      "crm_id": "90462",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-axe-throwing",
-      "name": "Inflatable Axe Throwing",
-      "cats": [
-        "games"
-      ],
-      "price_from": 495,
-      "prices": {
-        "1": 495,
-        "2": 775,
-        "3": 965,
-        "7": 1435
-      },
-      "players": "All ages",
-      "image": "inflatable-axe-throwing-hire",
-      "short": "Safe soft-axe throwing at an inflatable target – the axe-throwing craze, made event-friendly.",
-      "spec": {},
-      "crm_id": "90456",
-      "staffed": false
-    },
-    {
-      "slug": "human-table-football-inflatable",
-      "name": "Human Table Football Inflatable",
-      "cats": [
-        "games"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "Up to 10 players",
-      "image": "human-table-football-inflatable-hire",
-      "short": "Become the players in a giant game of table football – brilliant for team building.",
-      "spec": {},
-      "crm_id": "90448",
-      "staffed": false
-    },
-    {
-      "slug": "adult-sumo-suits",
-      "name": "Adult Sumo Suits",
-      "cats": [
-        "games"
-      ],
-      "price_from": 195,
-      "prices": {
-        "1": 195,
-        "2": 305,
-        "3": 380,
-        "7": 565
-      },
-      "players": "2 players",
-      "image": "adult-sumo-suits-hire",
-      "short": "Padded adult sumo suits with helmets and mat for hilarious head-to-head wrestling.",
-      "spec": {},
-      "crm_id": "90025",
-      "staffed": false
-    },
-    {
-      "slug": "childrens-sumo-suits",
-      "name": "Children's Sumo Suits",
-      "cats": [
-        "games"
-      ],
-      "price_from": 175,
-      "prices": {
-        "1": 175,
-        "2": 275,
-        "3": 340,
-        "7": 510
-      },
-      "players": "2 players",
-      "image": "childrens-sumo-suits-hire",
-      "short": "Child-sized sumo suits and mat for parties and fun days.",
-      "spec": {},
-      "crm_id": "90257",
-      "staffed": false
-    },
-    {
-      "slug": "hamster-caterpillar-track",
-      "name": "Hamster Caterpillar Track",
-      "cats": [
-        "games"
-      ],
-      "price_from": 95,
-      "prices": {
-        "1": 95,
-        "2": 150,
-        "3": 185,
-        "7": 275
-      },
-      "players": "Children",
-      "image": "hamster-caterpillar-track-hire",
-      "short": "Inflatable caterpillar wheels for sports-day races.",
-      "spec": {},
-      "crm_id": "90435",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-stepping-stones",
-      "name": "Inflatable Stepping Stones",
-      "cats": [
-        "games"
-      ],
-      "price_from": 95,
-      "prices": {
-        "1": 95,
-        "2": 150,
-        "3": 185,
-        "7": 275
-      },
-      "players": "Children",
-      "image": "inflatable-stepping-stones-hire",
-      "short": "Inflatable stepping stones for races and obstacle relays.",
-      "spec": {},
-      "crm_id": "90798",
-      "staffed": false
-    },
-    {
-      "slug": "walk-the-plank",
-      "name": "Walk the Plank",
-      "cats": [
-        "games"
-      ],
-      "price_from": 95,
-      "prices": {
-        "1": 95,
-        "2": 150,
-        "3": 185,
-        "7": 275
-      },
-      "players": "Children",
-      "image": "walk-the-plank-hire",
-      "short": "Inflatable walk-the-plank balance challenge for pirate parties and sports days.",
-      "spec": {},
-      "crm_id": "90852",
-      "staffed": false
-    },
-    {
-      "slug": "giant-inflatable-christmas-snow-globe",
-      "name": "Giant Inflatable Christmas Snow Globe",
-      "cats": [
-        "games"
-      ],
-      "price_from": 1450,
-      "prices": {
-        "1": 1450,
-        "2": 2275,
-        "3": 2830,
-        "7": 4205
-      },
-      "players": "Walk-in",
-      "image": "giant-inflatable-christmas-snow-globe-hire",
-      "short": "Walk-in giant snow globe for Christmas markets, grottos and festive photo opportunities.",
-      "spec": {},
-      "crm_id": "90261",
-      "staffed": false
-    },
-    {
-      "slug": "gladiators-duel",
-      "name": "Gladiators Duel",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 495,
-      "prices": {
-        "1": 495,
-        "2": 775,
-        "3": 965,
-        "7": 1435
-      },
-      "players": "2 players",
-      "image": "gladiators-duel-hire",
-      "short": "Battle it out on podiums with padded jousting sticks – the classic Gladiators duel.",
-      "spec": {},
-      "crm_id": "90419",
-      "staffed": false
-    },
-    {
-      "slug": "wipeout-challenge-inflatable",
-      "name": "Wipeout Challenge Inflatable",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 675,
-      "prices": {
-        "1": 675,
-        "2": 1060,
-        "3": 1315,
-        "7": 1960
-      },
-      "players": "Up to 6 players",
-      "image": "wipeout-challenge-inflatable-hire",
-      "short": "Jump the spinning sweeper arm and be the last one standing.",
-      "spec": {},
-      "crm_id": "90862",
-      "staffed": false
-    },
-    {
-      "slug": "ultimate-wipeout-sweeper-last-man-standing",
-      "name": "Ultimate Wipeout Sweeper / Last Man Standing",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 675,
-      "prices": {
-        "1": 675,
-        "2": 1060,
-        "3": 1315,
-        "7": 1960
-      },
-      "players": "Up to 8 players",
-      "image": "ultimate-wipeout-sweeper-last-man-standing-hire",
-      "short": "The ultimate Last Man Standing sweeper – duck and jump or you're out.",
-      "spec": {},
-      "crm_id": "90833",
-      "staffed": false
-    },
-    {
-      "slug": "total-wipeout-big-red-balls",
-      "name": "Total Wipeout Big Red Balls",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 695,
-      "prices": {
-        "1": 695,
-        "2": 1090,
-        "3": 1355,
-        "7": 2015
-      },
-      "players": "1 at a time",
-      "image": "total-wipeout-big-red-balls-hire",
-      "short": "Can you cross the Big Red Balls? The TV challenge everyone wants to try.",
-      "spec": {},
-      "crm_id": "90823",
-      "staffed": false
-    },
-    {
-      "slug": "bungee-run-inflatable",
-      "name": "Bungee Run Inflatable",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "2 players",
-      "image": "bungee-run-inflatable-hire",
-      "short": "Race against the bungee cord to place your marker furthest down the lane.",
-      "spec": {},
-      "crm_id": "90216",
-      "staffed": false
-    },
-    {
-      "slug": "bungee-run-3-lane-inflatable",
-      "name": "Bungee Run 3 Lane Inflatable",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 550,
-      "prices": {
-        "1": 550,
-        "2": 865,
-        "3": 1075,
-        "7": 1595
-      },
-      "players": "3 players",
-      "image": "bungee-run-3-lane-inflatable-hire",
-      "short": "Three-lane bungee run for bigger groups and team tournaments.",
-      "spec": {},
-      "crm_id": "90215",
-      "staffed": false
-    },
-    {
-      "slug": "wrecking-ball-inflatable",
-      "name": "Wrecking Ball Inflatable",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "Up to 4 players",
-      "image": "wrecking-ball-inflatable-hire",
-      "short": "Stay on your podium while the swinging wrecking ball tries to knock you off.",
-      "spec": {},
-      "crm_id": "90868",
-      "staffed": false
-    },
-    {
-      "slug": "human-demolition-zone",
-      "name": "Human Demolition Zone",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "Up to 4 players",
-      "image": "human-demolition-zone-hire",
-      "short": "Dodge the giant demolition ball to be the last player standing.",
-      "spec": {},
-      "crm_id": "90446",
-      "staffed": false
-    },
-    {
-      "slug": "leap-of-faith-inflatable",
-      "name": "Leap of Faith Inflatable",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 650,
-      "prices": {
-        "1": 650,
-        "2": 1020,
-        "3": 1270,
-        "7": 1885
-      },
-      "players": "1 at a time",
-      "image": "leap-of-faith-inflatable-hire",
-      "short": "Climb the tower and leap for the bar – a true test of nerve.",
-      "spec": {},
-      "crm_id": "90508",
-      "staffed": false
-    },
-    {
-      "slug": "base-jump-inflatable",
-      "name": "Base Jump Inflatable",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 695,
-      "prices": {
-        "1": 695,
-        "2": 1090,
-        "3": 1355,
-        "7": 2015
-      },
-      "players": "1 at a time",
-      "image": "base-jump-inflatable-hire",
-      "short": "Free-fall onto a giant air cushion from the jump platform.",
-      "spec": {},
-      "crm_id": "90073",
-      "staffed": false
-    },
-    {
-      "slug": "unclimbable-ladder",
-      "name": "Unclimbable Ladder",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "2 players",
-      "image": "unclimbable-ladder-hire",
-      "short": "Race to the top of the wobbly rope ladder – much harder than it looks.",
-      "spec": {},
-      "crm_id": "90835",
-      "staffed": false
-    },
-    {
-      "slug": "velcro-fly-wall",
-      "name": "Velcro Fly Wall",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 425,
-      "prices": {
-        "1": 425,
-        "2": 665,
-        "3": 830,
-        "7": 1235
-      },
-      "players": "1 at a time",
-      "image": "velcro-fly-wall-hire",
-      "short": "Pull on a Velcro suit, bounce and stick yourself to the wall.",
-      "spec": {},
-      "crm_id": "90845",
-      "staffed": false
-    },
-    {
-      "slug": "pillow-bash",
-      "name": "Pillow Bash",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 395,
-      "prices": {
-        "1": 395,
-        "2": 620,
-        "3": 770,
-        "7": 1145
-      },
-      "players": "2 players",
-      "image": "pillow-bash-hire",
-      "short": "Balance on the beam and knock your opponent off with a pillow.",
-      "spec": {},
-      "crm_id": "90608",
-      "staffed": false
-    },
-    {
-      "slug": "rock-and-roller-zone",
-      "name": "Rock & Roller Zone",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 495,
-      "prices": {
-        "1": 495,
-        "2": 775,
-        "3": 965,
-        "7": 1435
-      },
-      "players": "Up to 4 players",
-      "image": "rock-and-roller-zone-hire",
-      "short": "Roll, race and bump around the arena inside giant inflatable rollers.",
-      "spec": {
-        "power": "1 x 13A socket per set-up"
-      },
-      "crm_id": "90676",
-      "staffed": false
-    },
-    {
-      "slug": "human-hamster-balls",
-      "name": "Human Hamster Balls",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 1295,
-      "prices": {
-        "1": 1295,
-        "2": 2035,
-        "3": 2525,
-        "7": 3755
-      },
-      "players": "1 per ball",
-      "image": "human-hamster-balls-hire",
-      "short": "Climb inside a giant inflatable ball and roll around the arena.",
-      "spec": {},
-      "crm_id": "90449",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-climbing-wall",
-      "name": "Inflatable Climbing Wall",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "2 climbers",
-      "image": "inflatable-climbing-wall-hire",
-      "short": "Inflatable climbing wall with handholds and a soft landing for younger climbers.",
-      "spec": {},
-      "crm_id": "90457",
-      "staffed": false
-    },
-    {
-      "slug": "inflatable-maze",
-      "name": "Inflatable Maze",
-      "cats": [
-        "challenges"
-      ],
-      "price_from": 995,
-      "prices": {
-        "1": 995,
-        "2": 1560,
-        "3": 1940,
-        "7": 2885
-      },
-      "players": "Groups",
-      "image": "inflatable-maze-hire",
-      "short": "Find your way through the inflatable maze – great with laser tag or as a stand-alone attraction.",
-      "spec": {},
-      "crm_id": "90464",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-bull",
-      "name": "Rodeo Bull",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "Ages 5+",
-      "image": "rodeo-bull-hire",
-      "short": "Mechanical rodeo bull on an inflatable safety bed, with an operator controlling the speed for every rider.",
-      "spec": {},
-      "crm_id": "90678",
-      "staffed": false
-    },
-    {
-      "slug": "childrens-rodeo-bull-buffalo-billy",
-      "name": "Children's Rodeo Bull (Buffalo Billy)",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "Children",
-      "image": "childrens-rodeo-bull-buffalo-billy-hire",
-      "short": "Junior rodeo bull with gentler speeds, ideal for children's parties and family fun days.",
-      "spec": {},
-      "crm_id": "90256",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-horse",
-      "name": "Rodeo Horse",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "rodeo-horse-hire",
-      "short": "Ride the rodeo horse – a gentler, race-day themed alternative to the bull.",
-      "spec": {},
-      "crm_id": "90682",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-sheep",
-      "name": "Rodeo Sheep",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "rodeo-sheep-hire",
-      "short": "A woolly twist on the rodeo ride – great for country shows and farm themes.",
-      "spec": {},
-      "crm_id": "90688",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-pig",
-      "name": "Rodeo Pig",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "rodeo-bull-hire",
-      "short": "Hang on to the rodeo pig – fun for farm days and family events.",
-      "spec": {},
-      "crm_id": "90684",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-football",
-      "name": "Rodeo Football",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "rodeo-bull-hire",
-      "short": "A giant rodeo football for football clubs, World Cup and sports-themed parties.",
-      "spec": {},
-      "crm_id": "90681",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-rugby-ball",
-      "name": "Rodeo Rugby Ball",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "rodeo-rugby-ball-hire",
-      "short": "Rodeo rugby ball for rugby clubs, Six Nations and sports events.",
-      "spec": {},
-      "crm_id": "90687",
-      "staffed": false
-    },
-    {
-      "slug": "champagne-bottle-rodeo",
-      "name": "Champagne Bottle Rodeo",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "Adults",
-      "image": "champagne-bottle-rodeo-hire",
-      "short": "Ride the giant champagne bottle – made for weddings, launches and celebrations.",
-      "spec": {},
-      "crm_id": "90252",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-pumpkin",
-      "name": "Rodeo Pumpkin",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "rodeo-pumpkin-hire",
-      "short": "Halloween-themed rodeo pumpkin for spooky parties and October events.",
-      "spec": {},
-      "crm_id": "90685",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-christmas-pudding",
-      "name": "Rodeo Christmas Pudding",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "rodeo-christmas-pudding-hire",
-      "short": "Festive rodeo Christmas pudding for Christmas parties and markets.",
-      "spec": {},
-      "crm_id": "90679",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-reindeer",
-      "name": "Rodeo Reindeer",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "rodeo-reindeer-hire",
-      "short": "Ride Rudolph! A rodeo reindeer for Christmas events.",
-      "spec": {},
-      "crm_id": "90686",
-      "staffed": false
-    },
-    {
-      "slug": "rodeo-easter-egg",
-      "name": "Rodeo Easter Egg",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "All ages",
-      "image": "rodeo-easter-egg-hire",
-      "short": "Easter-themed rodeo egg for spring fairs and Easter events.",
-      "spec": {},
-      "crm_id": "90680",
-      "staffed": false
-    },
-    {
-      "slug": "surf-simulator-rodeo-surf-machine",
-      "name": "Surf Simulator / Rodeo Surf Machine",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "Ages 5+",
-      "image": "surf-simulator-rodeo-surf-machine-hire",
-      "short": "Catch a wave on dry land – a rodeo-style surf board on an inflatable bed.",
-      "spec": {},
-      "crm_id": "90814",
-      "staffed": false
-    },
-    {
-      "slug": "snowboard-simulator",
-      "name": "Snowboard Simulator",
-      "cats": [
-        "rodeo"
-      ],
-      "price_from": 595,
-      "prices": {
-        "1": 595,
-        "2": 935,
-        "3": 1160,
-        "7": 1725
-      },
-      "players": "Ages 5+",
-      "image": "snowboard-simulator-hire",
-      "short": "Rodeo-style snowboard simulator on an inflatable bed – great for winter and ski themes.",
-      "spec": {},
-      "crm_id": "90776",
-      "staffed": false
-    }
-  ],
-  "pages": {
-    "home": {
-      "title": "Inflatable Hire UK | Bouncy Castles, Assault Courses & Rodeo Bulls",
-      "meta": "Inflatable hire across the UK from JM Entertainment – bouncy castles, slides, assault courses, inflatable games, Wipeout and rodeo bulls. Check live availability.",
-      "h1": "Inflatable Hire",
-      "kicker": "UK-wide delivery · set-up · collection",
-      "intro": "Bouncy castles, giant slides, assault courses, inflatable games, Wipeout challenges and rodeo bulls for corporate fun days, schools, festivals and family parties. Every hire is delivered, set up and collected by our own crew, with live availability straight from our booking system.",
-      "image": "twin-premium-inflatable-slide-hire",
-      "sections": [
-        {
-          "h2": "Inflatable hire for every kind of event",
-          "html": "<p>From a single <strong>bouncy castle</strong> for a garden party to a 220ft <strong>obstacle course</strong>, rodeo bull and a field full of <strong>inflatable games</strong> for a corporate fun day, JM Inflatable Hire has the stock and the crew to make it happen. Everything you see on this site is our own stock, kept in our own warehouse and set up by our own team.</p><p>Every hire includes delivery, professional set-up, a full safety check and collection. Add operators and staff so your guests are looked after all day, or combine inflatables with arcade games, simulators and side stalls from the wider JM Entertainment range.</p>"
-        },
-        {
-          "h2": "Why event organisers choose JM",
-          "html": "<ul><li><strong>Huge range in one place</strong> – castles, slides, assault courses, games, challenges and rodeo rides.</li><li><strong>Live stock and availability</strong> straight from our booking system, so you know what's free before you call.</li><li><strong>Fixed, clear pricing</strong> with multi-day discounts shown on every product.</li><li><strong>Safety first</strong> – PIPA-tested inflatables, PAT-tested blowers and trained, DBS-checked crew.</li><li><strong>Nationwide coverage</strong> for corporate events, schools, councils, festivals and private parties.</li><li><strong>Fully insured</strong>, with risk assessments supplied once you've booked.</li></ul>"
-        },
-        {
-          "h2": "Popular for corporate fun days, schools and festivals",
-          "html": "<p>Our inflatables are booked for staff summer parties, family fun days, team building, school sports days and summer fairs, university freshers' events, shopping-centre activations, council events, festivals, weddings and birthday parties. Mix and match – assault course races, a Gladiators duel and a rodeo bull together make a brilliant It's-a-Knockout style day.</p>"
-        }
-      ],
-      "faq": [
-        {
-          "q": "How much does inflatable hire cost?",
-          "a": "Bouncy castles start from £85 + VAT per day and larger event inflatables such as assault courses, Wipeout and rodeo bulls start from around £450–£695 + VAT. Delivery, set-up and collection are included on most UK bookings. Multi-day hires are discounted – a two-day hire costs roughly 1.5 days and longer hires work out cheaper per day. Each inflatable's page shows 1, 2, 3, 4 and 7-day prices."
-        },
-        {
-          "q": "Do you deliver inflatables nationwide?",
-          "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
-        },
-        {
-          "q": "What power do inflatables need?",
-          "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
-        },
-        {
-          "q": "Can inflatables be used outdoors on grass?",
-          "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
-        },
-        {
-          "q": "Are your inflatables safety tested?",
-          "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
-        }
-      ]
-    },
-    "inflatable-hire": {
-      "title": "All Inflatables for Hire | Full Range & Prices | JM Inflatable Hire",
-      "meta": "Browse our full inflatable hire range – bouncy castles, slides, assault courses, inflatable games, Wipeout and rodeo bulls. Prices, specs & live availability.",
-      "h1": "Inflatable Hire",
-      "label": "Inflatable",
-      "kicker": "Our full inflatable range",
-      "intro": "Every inflatable in our stock in one place – bouncy castles, slides, assault courses, inflatable games, challenge inflatables and rodeo rides. Pick a category or check availability on any item for your date.",
-      "image": "adult-bouncy-castle-red-and-black-with-roof-hire",
-      "cat": "all",
-      "local": true,
-      "angle": "bouncy castles, giant slides, assault courses, inflatable games, Wipeout challenges and rodeo bulls",
-      "sections": [
-        {
-          "h2": "Choosing the right inflatables",
-          "html": "<p>For children's parties a <strong>bounce and slide combi</strong> gives the most play in the smallest space. For corporate fun days and family events we'd recommend a headline attraction – an <a href=\"/assault-course-hire\">assault course</a>, <a href=\"/rodeo-bull-hire\">rodeo bull</a> or <a href=\"/inflatable-challenge-hire\">Wipeout</a> – plus two or three <a href=\"/inflatable-games-hire\">inflatable games</a> to spread the crowd.</p><p>Not sure what will fit? Tell us your venue and guest numbers and we'll put a package together with the space and power needed for each item.</p>"
-        },
-        {
-          "h2": "What's included with every hire",
-          "html": "<ul><li>Delivery, set-up and collection by our own crew</li><li>Electric blower, stakes or sandbags and safety mats</li><li>PIPA-tested inflatables and PAT-tested equipment</li><li>Public liability insurance</li><li>Optional operators for rodeo rides and challenge inflatables</li></ul>"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Do you deliver inflatables nationwide?",
-          "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
-        },
-        {
-          "q": "What power do inflatables need?",
-          "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
-        },
-        {
-          "q": "Can inflatables be used outdoors on grass?",
-          "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
-        },
-        {
-          "q": "Are your inflatables safety tested?",
-          "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
-        }
-      ]
-    },
-    "bouncy-castle-hire": {
-      "title": "Bouncy Castle Hire | Adult & Kids Bouncy Castles | JM",
-      "meta": "Bouncy castle hire for adults and children – disco domes, bounce & slides and themed castles from £85 + VAT. Delivered, set up & collected. Check availability.",
-      "h1": "Bouncy Castle Hire",
-      "label": "Bouncy Castle",
-      "kicker": "Adult, children's & disco bouncy castles",
-      "intro": "Themed children's castles, bounce and slide combis, disco domes and adult-sized bouncy castles with rain roofs. Perfect for birthdays, weddings, school fairs and corporate family days.",
-      "image": "camelot-adult-bouncy-castle-hire",
-      "cat": "bouncy-castles",
-      "local": true,
-      "angle": "children's and adult bouncy castles, bounce and slide combis and disco domes",
-      "sections": [
-        {
-          "h2": "Bouncy castles for adults and children",
-          "html": "<p>Our range runs from compact <strong>10ft x 10ft garden castles</strong> to <strong>adult bouncy castles</strong> with full rain roofs. Themed castles – jungle, farmyard, undersea, princess, dinosaur and Peppa Pig – are perfect for children's birthday parties, while disco domes with lights and music turn any evening do into a party.</p>"
-        },
-        {
-          "h2": "How much space does a bouncy castle need?",
-          "html": "<p>Allow the size of the castle plus around 1–2 metres on each side for the blower, safety mats and access. A typical children's castle needs about 4m x 5m and roughly 3.5m of height; adult castles need more. Exact sizes come with your quote so you can be sure it fits your garden, hall or marquee.</p>"
-        },
-        {
-          "h2": "Safe, clean and professionally installed",
-          "html": "<p>Every castle is PIPA tested, cleaned after each hire and installed by our crew with stakes or sandbags and safety mats. We'll talk you through safe use when we set up, and collect at the agreed time.</p>"
-        }
-      ],
-      "faq": [
-        {
-          "q": "How much is bouncy castle hire?",
-          "a": "Children's bouncy castles start from £85 + VAT per day, bounce and slide combis from £100 and adult bouncy castles from £125. Multi-day hires are discounted – a two-day hire costs roughly 1.5 days and longer hires work out cheaper per day. Each inflatable's page shows 1, 2, 3, 4 and 7-day prices."
-        },
-        {
-          "q": "Can adults use your bouncy castles?",
-          "a": "Yes – our adult and adult & children's castles, including the Camelot, red & black castle with roof and the disco domes, are built for grown-ups. Children's castles are for children only."
-        },
-        {
-          "q": "Do you deliver inflatables nationwide?",
-          "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
-        },
-        {
-          "q": "What power do inflatables need?",
-          "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
-        },
-        {
-          "q": "Can inflatables be used outdoors on grass?",
-          "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
-        },
-        {
-          "q": "Are your inflatables safety tested?",
-          "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
-        }
-      ]
-    },
-    "inflatable-slide-hire": {
-      "title": "Inflatable Slide Hire | Giant Slides & Bounce and Slides | JM",
-      "meta": "Inflatable slide hire – helter skelter, twin racing slides, platform slides and bounce & slide combis. Delivered, set up & collected UK-wide.",
-      "h1": "Inflatable Slide Hire",
-      "label": "Inflatable Slide",
-      "kicker": "Giant slides & bounce-and-slide combis",
-      "intro": "From a traditional inflatable helter skelter to twin racing slides and platform slides, plus bounce and slide combis for younger children – slides keep the queue moving at any event.",
-      "image": "inflatable-platform-slide-hire",
-      "cat": "slides",
-      "local": false,
-      "angle": "giant inflatable slides, helter skelters and bounce and slide combis",
-      "sections": [
-        {
-          "h2": "Giant inflatable slides for events",
-          "html": "<p>Our <strong>helter skelter</strong>, <strong>platform slide</strong> and <strong>twin premium slide</strong> are built for high-footfall events – fêtes, festivals, school fairs and corporate family days – where you need an attraction that handles a constant queue. Twin lanes let friends race each other to the bottom.</p>"
-        },
-        {
-          "h2": "Bounce and slide combis",
-          "html": "<p>For birthday parties, a combi gives a bouncing area and a slide in one inflatable. Choose from jungle, farmyard, princess, undersea, dinosaur, elephant and party themes.</p>"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Do you deliver inflatables nationwide?",
-          "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
-        },
-        {
-          "q": "What power do inflatables need?",
-          "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
-        }
-      ]
-    },
-    "assault-course-hire": {
-      "title": "Assault Course Hire | Inflatable Obstacle Courses 50ft–220ft",
-      "meta": "Inflatable assault course hire – 50ft, 75ft, 100ft and 220ft obstacle courses for corporate events, schools & fun days. UK delivery. Check availability.",
-      "h1": "Assault Course Hire",
-      "label": "Assault Course",
-      "kicker": "Inflatable obstacle courses from 50ft to 220ft",
-      "intro": "Race side by side through crawl-throughs, climbs, pop-ups and slides. Our inflatable assault courses range from a 50ft red and black course to the 220ft Mega Obstacle Course – the ultimate team challenge.",
-      "image": "its-a-knockout-style-assault-course-hire",
-      "cat": "assault-courses",
-      "local": true,
-      "angle": "inflatable assault courses and obstacle courses from 50ft to 220ft",
-      "sections": [
-        {
-          "h2": "Inflatable obstacle courses for all ages",
-          "html": "<p>An <strong>inflatable assault course</strong> is one of the best attractions for getting groups moving and competing. Two players race side by side, so heats, relays and knockout tournaments are easy to run – ideal for team building, sports days and It's-a-Knockout style events.</p>"
-        },
-        {
-          "h2": "Which size assault course?",
-          "html": "<ul><li><strong>50ft</strong> – smaller sites, schools and branded corporate events</li><li><strong>75ft–100ft</strong> – our most popular sizes for fun days and team building</li><li><strong>220ft Mega Obstacle Course</strong> – the headline attraction for festivals and large corporate events</li></ul><p>Bigger courses can be split into sections to fit your site. Exact dimensions come with your quote.</p>"
-        }
-      ],
-      "faq": [
-        {
-          "q": "How much is assault course hire?",
-          "a": "Inflatable assault courses start from £225 + VAT for the children's Jungle Fun Run and £450 + VAT for the 50ft red and black course, up to £1,995 + VAT for the 220ft Mega Obstacle Course. Multi-day hires are discounted – a two-day hire costs roughly 1.5 days and longer hires work out cheaper per day. Each inflatable's page shows 1, 2, 3, 4 and 7-day prices."
-        },
-        {
-          "q": "Can adults use the assault courses?",
-          "a": "Yes – our assault courses are designed for adults and children, which is why they're so popular for team building and corporate fun days."
-        },
-        {
-          "q": "Do you deliver inflatables nationwide?",
-          "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
-        },
-        {
-          "q": "What power do inflatables need?",
-          "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
-        },
-        {
-          "q": "Can inflatables be used outdoors on grass?",
-          "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
-        },
-        {
-          "q": "Are your inflatables safety tested?",
-          "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
-        }
-      ]
-    },
-    "inflatable-games-hire": {
-      "title": "Inflatable Games Hire | Giant Darts, Football, Sumo & More",
-      "meta": "Inflatable games hire – giant darts, football darts, penalty shootout, human table football, sumo suits, Twister, Connect 4 and more. UK delivery.",
-      "h1": "Inflatable Games Hire",
-      "label": "Inflatable Games",
-      "kicker": "Sports, party and team games",
-      "intro": "Giant inflatable dartboards, football and rugby darts, penalty shootouts, human table football, sumo suits, Connect 4, Twister, volleyball and more – quick to play and perfect for sports days, fun days and team building.",
-      "image": "inflatable-football-darts-hire",
-      "cat": "games",
-      "local": true,
-      "angle": "inflatable games such as giant darts, football darts, penalty shootouts, human table football and sumo suits",
-      "sections": [
-        {
-          "h2": "Inflatable games for sports days and fun days",
-          "html": "<p><strong>Inflatable games</strong> are short, simple and competitive, so they keep crowds moving and everyone joining in. Sports games like <strong>football darts</strong>, <strong>rugby darts</strong> and the <strong>penalty shootout</strong> are favourites at sports clubs and World Cup parties, while <strong>human table football</strong>, <strong>Dash N Grab</strong> and <strong>sumo suits</strong> are made for team building.</p>"
-        },
-        {
-          "h2": "Seasonal and themed games",
-          "html": "<p>Add an inflatable curling lane or the giant walk-in snow globe for Christmas, or the Grand National space-hopper race for race-day parties. Ask about packages if you'd like several games together.</p>"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Do you deliver inflatables nationwide?",
-          "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
-        },
-        {
-          "q": "What power do inflatables need?",
-          "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
-        },
-        {
-          "q": "Can inflatables be used outdoors on grass?",
-          "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
-        },
-        {
-          "q": "Are your inflatables safety tested?",
-          "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
-        }
-      ]
-    },
-    "inflatable-challenge-hire": {
-      "title": "Wipeout & Inflatable Challenge Hire | Gladiators, Bungee Run",
-      "meta": "Hire Wipeout, Last Man Standing, Gladiators duel, bungee runs, Total Wipeout Big Red Balls, wrecking ball and more. UK delivery, set-up & operators.",
-      "h1": "Wipeout & Challenge Inflatables",
-      "label": "Wipeout & Challenge Inflatable",
-      "kicker": "Wipeout · Gladiators · Bungee runs · Last Man Standing",
-      "intro": "TV-style challenge inflatables for the ultimate competition – Wipeout and Last Man Standing sweepers, Gladiators duels, bungee runs, Total Wipeout Big Red Balls, wrecking balls, Leap of Faith and more.",
-      "image": "gladiators-duel-hire",
-      "cat": "challenges",
-      "local": false,
-      "angle": "Wipeout, Last Man Standing, Gladiators, bungee run and other challenge inflatables",
-      "sections": [
-        {
-          "h2": "Challenge inflatables that draw a crowd",
-          "html": "<p>Nothing gathers spectators like a <strong>Wipeout sweeper</strong> or a <strong>Gladiators duel</strong>. These inflatables turn your event into a competition, with heats, leaderboards and plenty of cheering from the side-lines. Most can be staffed by our operators so you can relax and enjoy the action.</p>"
-        },
-        {
-          "h2": "Popular combinations",
-          "html": "<p>For an It's-a-Knockout day, combine a challenge inflatable with an <a href=\"/assault-course-hire\">assault course</a> and a few <a href=\"/inflatable-games-hire\">inflatable games</a>. For evening parties, the <a href=\"/rodeo-bull-hire\">rodeo bull</a> and Gladiators duel are a winning pair.</p>"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Do you deliver inflatables nationwide?",
-          "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
-        },
-        {
-          "q": "What power do inflatables need?",
-          "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
-        },
-        {
-          "q": "Can inflatables be used outdoors on grass?",
-          "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
-        },
-        {
-          "q": "Are your inflatables safety tested?",
-          "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
-        }
-      ]
-    },
-    "rodeo-bull-hire": {
-      "title": "Rodeo Bull Hire | Rodeo Rides & Surf Simulators | JM",
-      "meta": "Rodeo bull hire with operator – plus rodeo horse, sheep, champagne bottle, football, Christmas & Halloween rodeos and surf simulators. UK delivery.",
-      "h1": "Rodeo Bull Hire",
-      "label": "Rodeo Bull",
-      "kicker": "Rodeo bulls, themed rodeos & surf simulators",
-      "intro": "Our mechanical rodeo bull is a party classic – plus themed rodeo rides from champagne bottles and footballs to Christmas puddings, reindeer and pumpkins, and surf and snowboard simulators. Every ride comes on a full inflatable safety bed with a trained operator.",
-      "image": "childrens-rodeo-bull-buffalo-billy-hire",
-      "cat": "rodeo",
-      "local": true,
-      "angle": "mechanical rodeo bulls, themed rodeo rides and surf simulators – each on an inflatable safety bed with a trained operator",
-      "sections": [
-        {
-          "h2": "Rodeo bull hire with operator",
-          "html": "<p>Every <strong>rodeo bull hire</strong> includes a trained operator who controls the speed for each rider, from gentle for children to fast for the brave. The bull sits on a large <strong>inflatable safety bed</strong>, and we set up, run and pack away so you don't have to do a thing.</p>"
-        },
-        {
-          "h2": "Themed rodeo rides",
-          "html": "<p>Match the ride to your event: a <strong>champagne bottle</strong> for weddings and launches, <strong>football</strong> or <strong>rugby ball</strong> for sports clubs, <strong>horse</strong>, <strong>sheep</strong> or <strong>pig</strong> for country shows, a <strong>pumpkin</strong> for Halloween, <strong>Easter egg</strong> for spring and a <strong>Christmas pudding</strong> or <strong>reindeer</strong> for festive parties. Prefer to stand up? Try the surf or snowboard simulator.</p>"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Is an operator included with rodeo bull hire?",
-          "a": "Yes. Every rodeo ride comes with a trained operator who runs the ride and keeps riders safe for the whole hire period."
-        },
-        {
-          "q": "How much space does a rodeo bull need?",
-          "a": "Allow roughly 6m x 6m for the inflatable bed plus access, with around 3.5m of height indoors and a 13 amp socket nearby. Exact dimensions come with your quote."
-        },
-        {
-          "q": "Do you deliver inflatables nationwide?",
-          "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
-        }
-      ]
-    }
+  {
+   "slug": "camelot-adult-bouncy-castle",
+   "name": "Camelot Adult Bouncy Castle",
+   "cats": [
+    "bouncy-castles"
+   ],
+   "price_from": 195,
+   "prices": {
+    "1": 195,
+    "2": 305,
+    "3": 380,
+    "7": 565
+   },
+   "players": "Adults & children",
+   "image": "camelot-adult-bouncy-castle-hire",
+   "short": "Classic Camelot-style castle built for adults as well as kids, with high walls and a covered roof.",
+   "spec": {},
+   "crm_id": "90224",
+   "staffed": false
   },
-  "locations": [
-    {
-      "slug": "london",
-      "city": "London",
-      "region": "Greater London",
-      "nearby": "Westminster, the City, Canary Wharf, Croydon, Stratford",
-      "venues": "ExCeL London, Olympia, Business Design Centre, QEII Centre, Tobacco Dock",
-      "intro": ""
-    },
-    {
-      "slug": "birmingham",
-      "city": "Birmingham",
-      "region": "West Midlands",
-      "nearby": "Solihull, Coventry, Wolverhampton, Sutton Coldfield",
-      "venues": "NEC Birmingham, ICC Birmingham, Resorts World",
-      "intro": ""
-    },
-    {
-      "slug": "manchester",
-      "city": "Manchester",
-      "region": "Greater Manchester",
-      "nearby": "Salford, Stockport, Trafford, Bolton, Oldham",
-      "venues": "Manchester Central, EventCity, AO Arena, Old Trafford",
-      "intro": ""
-    },
-    {
-      "slug": "leeds",
-      "city": "Leeds",
-      "region": "West Yorkshire",
-      "nearby": "Bradford, Wakefield, Harrogate, Huddersfield",
-      "venues": "First Direct Arena, Royal Armouries, Harrogate Convention Centre",
-      "intro": ""
-    },
-    {
-      "slug": "liverpool",
-      "city": "Liverpool",
-      "region": "Merseyside",
-      "nearby": "Wirral, St Helens, Southport, Warrington",
-      "venues": "ACC Liverpool, Exhibition Centre Liverpool",
-      "intro": ""
-    },
-    {
-      "slug": "glasgow",
-      "city": "Glasgow",
-      "region": "Scotland",
-      "nearby": "Paisley, East Kilbride, Hamilton, Motherwell",
-      "venues": "SEC Glasgow, OVO Hydro",
-      "intro": ""
-    },
-    {
-      "slug": "edinburgh",
-      "city": "Edinburgh",
-      "region": "Scotland",
-      "nearby": "Leith, Livingston, Musselburgh, Dalkeith",
-      "venues": "EICC, Royal Highland Centre",
-      "intro": ""
-    },
-    {
-      "slug": "cardiff",
-      "city": "Cardiff",
-      "region": "Wales",
-      "nearby": "Newport, Barry, Penarth, Caerphilly",
-      "venues": "ICC Wales, Cardiff City Hall, Principality Stadium",
-      "intro": ""
-    },
-    {
-      "slug": "bristol",
-      "city": "Bristol",
-      "region": "South West",
-      "nearby": "Bath, Weston-super-Mare, Clifton, Filton",
-      "venues": "Brunel's Old Station, Ashton Gate, UWE Exhibition Centre",
-      "intro": ""
-    },
-    {
-      "slug": "newcastle",
-      "city": "Newcastle",
-      "region": "Tyne and Wear",
-      "nearby": "Gateshead, Sunderland, Durham, North Shields",
-      "venues": "Utilita Arena, The Glasshouse, St James' Park",
-      "intro": ""
-    },
-    {
-      "slug": "sheffield",
-      "city": "Sheffield",
-      "region": "South Yorkshire",
-      "nearby": "Rotherham, Doncaster, Barnsley, Chesterfield",
-      "venues": "Sheffield Arena, Magna Science Adventure Centre",
-      "intro": ""
-    },
-    {
-      "slug": "nottingham",
-      "city": "Nottingham",
-      "region": "East Midlands",
-      "nearby": "Derby, Beeston, West Bridgford, Mansfield",
-      "venues": "Motorpoint Arena, East Midlands Conference Centre",
-      "intro": ""
-    },
-    {
-      "slug": "leicester",
-      "city": "Leicester",
-      "region": "East Midlands",
-      "nearby": "Loughborough, Hinckley, Market Harborough",
-      "venues": "Athena, King Power Stadium",
-      "intro": ""
-    },
-    {
-      "slug": "reading",
-      "city": "Reading",
-      "region": "Berkshire",
-      "nearby": "Bracknell, Wokingham, Newbury, Maidenhead",
-      "venues": "Madejski Stadium, Reading Town Hall",
-      "intro": ""
-    },
-    {
-      "slug": "milton-keynes",
-      "city": "Milton Keynes",
-      "region": "Buckinghamshire",
-      "nearby": "Bletchley, Newport Pagnell, Bedford, Luton",
-      "venues": "MK Dons Stadium, Bletchley Park",
-      "intro": ""
-    },
-    {
-      "slug": "oxford",
-      "city": "Oxford",
-      "region": "Oxfordshire",
-      "nearby": "Abingdon, Didcot, Bicester, Witney",
-      "venues": "Oxford Town Hall, Kassam Stadium",
-      "intro": ""
-    },
-    {
-      "slug": "cambridge",
-      "city": "Cambridge",
-      "region": "Cambridgeshire",
-      "nearby": "Ely, Huntingdon, St Neots, Newmarket",
-      "venues": "Cambridge Corn Exchange, Duxford",
-      "intro": ""
-    },
-    {
-      "slug": "brighton",
-      "city": "Brighton",
-      "region": "East Sussex",
-      "nearby": "Hove, Worthing, Lewes, Eastbourne",
-      "venues": "Brighton Centre, Amex Stadium",
-      "intro": ""
-    },
-    {
-      "slug": "southampton",
-      "city": "Southampton",
-      "region": "Hampshire",
-      "nearby": "Eastleigh, Winchester, Fareham, Portsmouth",
-      "venues": "St Mary's Stadium, Southampton Guildhall",
-      "intro": ""
-    },
-    {
-      "slug": "kent",
-      "city": "Kent",
-      "region": "South East",
-      "nearby": "Maidstone, Canterbury, Ashford, Tunbridge Wells",
-      "venues": "Kent Event Centre, Detling Showground",
-      "intro": ""
-    },
-    {
-      "slug": "surrey",
-      "city": "Surrey",
-      "region": "South East",
-      "nearby": "Guildford, Woking, Epsom, Farnham",
-      "venues": "Sandown Park, Epsom Downs",
-      "intro": ""
-    },
-    {
-      "slug": "essex",
-      "city": "Essex",
-      "region": "East of England",
-      "nearby": "Chelmsford, Colchester, Southend, Basildon",
-      "venues": "Brentwood Centre, Chelmsford City Racecourse",
-      "intro": ""
-    },
-    {
-      "slug": "hertfordshire",
-      "city": "Hertfordshire",
-      "region": "East of England",
-      "nearby": "Watford, St Albans, Hatfield, Stevenage",
-      "venues": "Knebworth House, Hertfordshire County Showground",
-      "intro": ""
-    },
-    {
-      "slug": "hampshire",
-      "city": "Hampshire",
-      "region": "South East",
-      "nearby": "Basingstoke, Farnborough, Andover, Aldershot",
-      "venues": "Farnborough International, Hampshire Court",
-      "intro": ""
-    },
-    {
-      "slug": "cheshire",
-      "city": "Cheshire",
-      "region": "North West",
-      "nearby": "Chester, Crewe, Macclesfield, Warrington",
-      "venues": "Chester Racecourse, Cheshire Showground",
-      "intro": ""
-    },
-    {
-      "slug": "yorkshire",
-      "city": "Yorkshire",
-      "region": "Yorkshire",
-      "nearby": "York, Hull, Leeds, Sheffield, Harrogate",
-      "venues": "Great Yorkshire Showground, York Racecourse",
-      "intro": ""
-    },
-    {
-      "slug": "norwich",
-      "city": "Norwich",
-      "region": "Norfolk",
-      "nearby": "Great Yarmouth, Wymondham, Dereham",
-      "venues": "Norfolk Showground, Carrow Road",
-      "intro": ""
-    },
-    {
-      "slug": "exeter",
-      "city": "Exeter",
-      "region": "Devon",
-      "nearby": "Plymouth, Torquay, Exmouth, Taunton",
-      "venues": "Westpoint Exeter, Sandy Park",
-      "intro": ""
-    },
-    {
-      "slug": "coventry",
-      "city": "Coventry",
-      "region": "West Midlands",
-      "nearby": "Warwick, Leamington Spa, Rugby, Nuneaton",
-      "venues": "Coventry Building Society Arena, Stoneleigh Park",
-      "intro": ""
-    },
-    {
-      "slug": "peterborough",
-      "city": "Peterborough",
-      "region": "Cambridgeshire",
-      "nearby": "Stamford, Huntingdon, Wisbech",
-      "venues": "East of England Showground",
-      "intro": ""
-    },
-    {
-      "slug": "swindon",
-      "city": "Swindon",
-      "region": "Wiltshire",
-      "nearby": "Chippenham, Marlborough, Cirencester",
-      "venues": "STEAM Museum, County Ground",
-      "intro": ""
-    },
-    {
-      "slug": "northampton",
-      "city": "Northampton",
-      "region": "Northamptonshire",
-      "nearby": "Kettering, Wellingborough, Corby, Daventry",
-      "venues": "Silverstone, Sixfields",
-      "intro": ""
-    },
-    {
-      "slug": "aberdeen",
-      "city": "Aberdeen",
-      "region": "Scotland",
-      "nearby": "Dyce, Stonehaven, Inverurie",
-      "venues": "P&J Live",
-      "intro": ""
-    },
-    {
-      "slug": "belfast",
-      "city": "Belfast",
-      "region": "Northern Ireland",
-      "nearby": "Lisburn, Bangor, Newtownabbey",
-      "venues": "ICC Belfast, SSE Arena",
-      "intro": ""
-    },
-    {
-      "slug": "stoke-on-trent",
-      "city": "Stoke-on-Trent",
-      "region": "Staffordshire",
-      "nearby": "Newcastle-under-Lyme, Stafford, Leek",
-      "venues": "Bet365 Stadium, Trentham Estate",
-      "intro": ""
-    },
-    {
-      "slug": "derby",
-      "city": "Derby",
-      "region": "East Midlands",
-      "nearby": "Burton upon Trent, Ilkeston, Belper",
-      "venues": "Derby Arena, Pride Park",
-      "intro": ""
-    },
-    {
-      "slug": "hull",
-      "city": "Hull",
-      "region": "East Yorkshire",
-      "nearby": "Beverley, Bridlington, Cottingham",
-      "venues": "Connexin Live, MKM Stadium",
-      "intro": ""
-    },
-    {
-      "slug": "york",
-      "city": "York",
-      "region": "North Yorkshire",
-      "nearby": "Selby, Malton, Tadcaster",
-      "venues": "York Racecourse, York Barbican",
-      "intro": ""
-    },
-    {
-      "slug": "bournemouth",
-      "city": "Bournemouth",
-      "region": "Dorset",
-      "nearby": "Poole, Christchurch, Wimborne",
-      "venues": "Bournemouth International Centre",
-      "intro": ""
-    },
-    {
-      "slug": "swansea",
-      "city": "Swansea",
-      "region": "Wales",
-      "nearby": "Neath, Llanelli, Port Talbot",
-      "venues": "Swansea Arena, Swansea.com Stadium",
-      "intro": ""
-    }
-  ],
-  "gallery": [
-    {
-      "img": "twin-premium-inflatable-slide-hire",
-      "alt": "Twin premium inflatable racing slide set up on grass"
-    },
-    {
-      "img": "camelot-adult-bouncy-castle-hire",
-      "alt": "Camelot adult bouncy castle at an outdoor event"
-    },
-    {
-      "img": "disco-dome-with-slide-adults-and-children-hire",
-      "alt": "Disco dome bouncy castle with slide"
-    },
-    {
-      "img": "princess-a-frame-and-slide-hire",
-      "alt": "Pink princess A-frame bouncy castle with slide"
-    },
-    {
-      "img": "its-a-knockout-style-assault-course-hire",
-      "alt": "It's a Knockout style inflatable assault course"
-    },
-    {
-      "img": "army-theme-obstacle-course-75ft-hire",
-      "alt": "75ft army theme inflatable obstacle course in a sports hall"
-    },
-    {
-      "img": "inflatable-football-darts-hire",
-      "alt": "Giant inflatable football darts board"
-    },
-    {
-      "img": "human-table-football-inflatable-hire",
-      "alt": "Team playing human table football inflatable at a fun day"
-    },
-    {
-      "img": "gladiators-duel-hire",
-      "alt": "Gladiators duel inflatable with podiums and jousting sticks"
-    },
-    {
-      "img": "wipeout-challenge-inflatable-hire",
-      "alt": "Wipeout challenge inflatable with players jumping the sweeper"
-    },
-    {
-      "img": "human-hamster-balls-hire",
-      "alt": "Human hamster balls in an inflatable arena"
-    },
-    {
-      "img": "childrens-rodeo-bull-buffalo-billy-hire",
-      "alt": "Rider on the rodeo bull with inflatable safety bed"
-    },
-    {
-      "img": "giant-inflatable-christmas-snow-globe-hire",
-      "alt": "Giant walk-in inflatable Christmas snow globe"
-    },
-    {
-      "img": "inflatable-helter-skelter-slide-hire",
-      "alt": "Inflatable helter skelter slide at a summer fair"
-    },
-    {
-      "img": "velcro-fly-wall-hire",
-      "alt": "Child sticking to the inflatable Velcro fly wall"
-    }
-  ],
-  "admin": {
-    "user": "admin",
-    "pass_hash": "",
-    "totp_secret": ""
+  {
+   "slug": "adult-and-childrens-jungle-bouncy-castle",
+   "name": "Adult & Children's Jungle Bouncy Castle",
+   "cats": [
+    "bouncy-castles"
+   ],
+   "price_from": 125,
+   "prices": {
+    "1": 125,
+    "2": 195,
+    "3": 245,
+    "7": 365
+   },
+   "players": "Adults & children",
+   "image": "adult-and-childrens-jungle-bouncy-castle-hire",
+   "short": "Jungle-themed castle strong enough for adults and children alike.",
+   "spec": {},
+   "crm_id": "90026",
+   "staffed": false
   },
-  "text": {}
+  {
+   "slug": "adults-and-childrens-disco-dome",
+   "name": "Adults & Children's Disco Dome",
+   "cats": [
+    "bouncy-castles"
+   ],
+   "price_from": 140,
+   "prices": {
+    "1": 140,
+    "2": 220,
+    "3": 275,
+    "7": 405
+   },
+   "players": "Adults & children",
+   "image": "adults-and-childrens-disco-dome-hire",
+   "short": "Enclosed disco dome bouncy castle with party lights and speaker – a night-time favourite.",
+   "spec": {},
+   "crm_id": "90027",
+   "staffed": false
+  },
+  {
+   "slug": "disco-dome-with-slide-adults-and-children",
+   "name": "Disco Dome with Slide – Adults & Children",
+   "cats": [
+    "bouncy-castles",
+    "slides"
+   ],
+   "price_from": 150,
+   "prices": {
+    "1": 150,
+    "2": 235,
+    "3": 295,
+    "7": 435
+   },
+   "players": "Adults & children",
+   "image": "disco-dome-with-slide-adults-and-children-hire",
+   "short": "Disco dome castle with a built-in slide, lights and music for all-ages parties.",
+   "spec": {},
+   "crm_id": "90332",
+   "staffed": false
+  },
+  {
+   "slug": "dinosaur-front-slide-castle",
+   "name": "Dinosaur Front Slide Castle",
+   "cats": [
+    "bouncy-castles",
+    "slides"
+   ],
+   "price_from": 125,
+   "prices": {
+    "1": 125,
+    "2": 195,
+    "3": 245,
+    "7": 365
+   },
+   "players": "Children",
+   "image": "dinosaur-front-slide-castle-hire",
+   "short": "Dinosaur-themed bounce and slide combi with a front slide.",
+   "spec": {},
+   "crm_id": "90328",
+   "staffed": false
+  },
+  {
+   "slug": "elephant-bounce-and-slide-a-frame",
+   "name": "Elephant Bounce & Slide (A-Frame)",
+   "cats": [
+    "bouncy-castles",
+    "slides"
+   ],
+   "price_from": 100,
+   "prices": {
+    "1": 100,
+    "2": 155,
+    "3": 195,
+    "7": 290
+   },
+   "players": "Children",
+   "image": "elephant-bounce-and-slide-a-frame-hire",
+   "short": "Bright elephant A-frame castle with a front slide – perfect for younger children's parties.",
+   "spec": {},
+   "crm_id": "90339",
+   "staffed": false
+  },
+  {
+   "slug": "farmyard-front-slide-castle",
+   "name": "Farmyard Front Slide Castle",
+   "cats": [
+    "bouncy-castles",
+    "slides"
+   ],
+   "price_from": 175,
+   "prices": {
+    "1": 175,
+    "2": 275,
+    "3": 340,
+    "7": 510
+   },
+   "players": "Children",
+   "image": "farmyard-front-slide-castle-hire",
+   "short": "Farmyard-themed bounce and slide with a generous front slide.",
+   "spec": {},
+   "crm_id": "90358",
+   "staffed": false
+  },
+  {
+   "slug": "farmyard-bouncy-castle-10ft-x-10ft",
+   "name": "Farmyard Bouncy Castle 10ft x 10ft",
+   "cats": [
+    "bouncy-castles"
+   ],
+   "price_from": 85,
+   "prices": {
+    "1": 85,
+    "2": 135,
+    "3": 165,
+    "7": 245
+   },
+   "players": "Children",
+   "image": "farmyard-bouncy-castle-10ft-x-10ft-hire",
+   "short": "Compact 10ft x 10ft farmyard castle that fits most gardens and halls.",
+   "spec": {
+    "dimensions": "10ft x 10ft"
+   },
+   "crm_id": "90357",
+   "staffed": false
+  },
+  {
+   "slug": "jungle-bounce-and-slide-front-slide",
+   "name": "Jungle Bounce & Slide (Front Slide)",
+   "cats": [
+    "bouncy-castles",
+    "slides"
+   ],
+   "price_from": 175,
+   "prices": {
+    "1": 175,
+    "2": 275,
+    "3": 340,
+    "7": 510
+   },
+   "players": "Children",
+   "image": "jungle-bounce-and-slide-front-slide-hire",
+   "short": "Jungle bounce area with a front slide – lots of play in one inflatable.",
+   "spec": {},
+   "crm_id": "90491",
+   "staffed": false
+  },
+  {
+   "slug": "jungle-themed-a-frame-castle",
+   "name": "Jungle Themed A-Frame Castle",
+   "cats": [
+    "bouncy-castles"
+   ],
+   "price_from": 120,
+   "prices": {
+    "1": 120,
+    "2": 190,
+    "3": 235,
+    "7": 350
+   },
+   "players": "Children",
+   "image": "jungle-themed-a-frame-castle-hire",
+   "short": "Jungle A-frame bouncy castle with themed artwork panels.",
+   "spec": {},
+   "crm_id": "90494",
+   "staffed": false
+  },
+  {
+   "slug": "party-bounce-and-slide",
+   "name": "Party Bounce & Slide",
+   "cats": [
+    "bouncy-castles",
+    "slides"
+   ],
+   "price_from": 120,
+   "prices": {
+    "1": 120,
+    "2": 190,
+    "3": 235,
+    "7": 350
+   },
+   "players": "Children",
+   "image": "party-bounce-and-slide-hire",
+   "short": "Colourful party-themed bounce and slide combi for birthdays and fun days.",
+   "spec": {},
+   "crm_id": "90590",
+   "staffed": false
+  },
+  {
+   "slug": "peppa-pig-bouncy-castle",
+   "name": "Peppa Pig Bouncy Castle",
+   "cats": [
+    "bouncy-castles"
+   ],
+   "price_from": 105,
+   "prices": {
+    "1": 105,
+    "2": 165,
+    "3": 205,
+    "7": 305
+   },
+   "players": "Children",
+   "image": "peppa-pig-bouncy-castle-hire",
+   "short": "Peppa Pig themed bouncy castle for little ones' birthday parties.",
+   "spec": {},
+   "crm_id": "90601",
+   "staffed": false
+  },
+  {
+   "slug": "princess-a-frame-and-slide",
+   "name": "Princess A-Frame & Slide",
+   "cats": [
+    "bouncy-castles",
+    "slides"
+   ],
+   "price_from": 100,
+   "prices": {
+    "1": 100,
+    "2": 155,
+    "3": 195,
+    "7": 290
+   },
+   "players": "Children",
+   "image": "princess-a-frame-and-slide-hire",
+   "short": "Pink princess A-frame castle with a front slide.",
+   "spec": {},
+   "crm_id": "90633",
+   "staffed": false
+  },
+  {
+   "slug": "undersea-a-frame-castle",
+   "name": "Undersea A-Frame Castle",
+   "cats": [
+    "bouncy-castles"
+   ],
+   "price_from": 85,
+   "prices": {
+    "1": 85,
+    "2": 135,
+    "3": 165,
+    "7": 245
+   },
+   "players": "Children",
+   "image": "undersea-a-frame-castle-hire",
+   "short": "Under-the-sea themed A-frame bouncy castle.",
+   "spec": {},
+   "crm_id": "90836",
+   "staffed": false
+  },
+  {
+   "slug": "undersea-bounce-and-slide",
+   "name": "Undersea Bounce & Slide",
+   "cats": [
+    "bouncy-castles",
+    "slides"
+   ],
+   "price_from": 100,
+   "prices": {
+    "1": 100,
+    "2": 155,
+    "3": 195,
+    "7": 290
+   },
+   "players": "Children",
+   "image": "undersea-bounce-and-slide-hire",
+   "short": "Undersea bounce and slide combi with ocean artwork.",
+   "spec": {},
+   "crm_id": "90838",
+   "staffed": false
+  },
+  {
+   "slug": "activity-toddler-inflatable-event-style",
+   "name": "Activity Toddler Inflatable (Event Style)",
+   "cats": [
+    "bouncy-castles"
+   ],
+   "price_from": 895,
+   "prices": {
+    "1": 895,
+    "2": 1405,
+    "3": 1745,
+    "7": 2595
+   },
+   "players": "Toddlers",
+   "image": "activity-toddler-inflatable-event-style-hire",
+   "short": "Event-sized toddler activity inflatable with soft climbs, pop-ups and a mini slide – great for family zones.",
+   "spec": {},
+   "crm_id": "90022",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-helter-skelter-slide",
+   "name": "Inflatable Helter Skelter Slide",
+   "cats": [
+    "slides"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "inflatable-helter-skelter-slide-hire",
+   "short": "Traditional helter skelter as a giant inflatable – a centrepiece for fêtes, festivals and fun days.",
+   "spec": {},
+   "crm_id": "90463",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-platform-slide",
+   "name": "Inflatable Platform Slide",
+   "cats": [
+    "slides"
+   ],
+   "price_from": 495,
+   "prices": {
+    "1": 495,
+    "2": 775,
+    "3": 965,
+    "7": 1435
+   },
+   "players": "All ages",
+   "image": "inflatable-platform-slide-hire",
+   "short": "Tall platform slide that keeps a fast-moving queue going all day at larger events.",
+   "spec": {},
+   "crm_id": "90465",
+   "staffed": false
+  },
+  {
+   "slug": "twin-premium-inflatable-slide",
+   "name": "Twin Premium Inflatable Slide",
+   "cats": [
+    "slides"
+   ],
+   "price_from": 550,
+   "prices": {
+    "1": 550,
+    "2": 865,
+    "3": 1075,
+    "7": 1595
+   },
+   "players": "All ages",
+   "image": "twin-premium-inflatable-slide-hire",
+   "short": "Two side-by-side lanes so friends can race each other to the bottom.",
+   "spec": {},
+   "crm_id": "90832",
+   "staffed": false
+  },
+  {
+   "slug": "mega-obstacle-course-220ft",
+   "name": "Mega Obstacle Course 220ft",
+   "cats": [
+    "assault-courses"
+   ],
+   "price_from": 1995,
+   "prices": {
+    "1": 1995,
+    "2": 3130,
+    "3": 3890,
+    "7": 5785
+   },
+   "players": "Adults & children",
+   "image": "mega-obstacle-course-220ft-hire",
+   "short": "Our biggest course – 220ft of inflatable obstacles for big corporate, school and festival events.",
+   "spec": {
+    "dimensions": "220ft long"
+   },
+   "crm_id": "90543",
+   "staffed": false
+  },
+  {
+   "slug": "army-theme-assault-course-100ft",
+   "name": "Army Theme Assault Course 100ft",
+   "cats": [
+    "assault-courses"
+   ],
+   "price_from": 850,
+   "prices": {
+    "1": 850,
+    "2": 1335,
+    "3": 1660,
+    "7": 2465
+   },
+   "players": "Adults & children",
+   "image": "army-theme-assault-course-100ft-hire",
+   "short": "100ft army-style assault course with crawl-throughs, climbs and pop-ups – race side by side.",
+   "spec": {
+    "dimensions": "100ft long"
+   },
+   "crm_id": "90048",
+   "staffed": false
+  },
+  {
+   "slug": "army-theme-obstacle-course-75ft",
+   "name": "Army Theme Obstacle Course 75ft",
+   "cats": [
+    "assault-courses"
+   ],
+   "price_from": 650,
+   "prices": {
+    "1": 650,
+    "2": 1020,
+    "3": 1270,
+    "7": 1885
+   },
+   "players": "Adults & children",
+   "image": "army-theme-obstacle-course-75ft-hire",
+   "short": "75ft army-themed obstacle course for team challenges and sports days.",
+   "spec": {
+    "dimensions": "75ft long"
+   },
+   "crm_id": "90577",
+   "staffed": false
+  },
+  {
+   "slug": "red-and-black-obstacle-course-50ft",
+   "name": "Red & Black Obstacle Course 50ft",
+   "cats": [
+    "assault-courses"
+   ],
+   "price_from": 450,
+   "prices": {
+    "1": 450,
+    "2": 705,
+    "3": 880,
+    "7": 1305
+   },
+   "players": "Adults & children",
+   "image": "red-and-black-obstacle-course-50ft-hire",
+   "short": "50ft red and black obstacle course – a great fit for smaller sites and corporate branding.",
+   "spec": {
+    "dimensions": "50ft long"
+   },
+   "crm_id": "90578",
+   "staffed": false
+  },
+  {
+   "slug": "bootcamp-assault-course",
+   "name": "Bootcamp Assault Course",
+   "cats": [
+    "assault-courses"
+   ],
+   "price_from": 925,
+   "prices": {
+    "1": 925,
+    "2": 1450,
+    "3": 1805,
+    "7": 2685
+   },
+   "players": "Adults & children",
+   "image": "bootcamp-assault-course-hire",
+   "short": "Bootcamp-style assault course packed with obstacles for team-building and fitness events.",
+   "spec": {},
+   "crm_id": "90108",
+   "staffed": false
+  },
+  {
+   "slug": "its-a-knockout-style-assault-course",
+   "name": "It's a Knockout Style Assault Course",
+   "cats": [
+    "assault-courses"
+   ],
+   "price_from": 695,
+   "prices": {
+    "1": 695,
+    "2": 1090,
+    "3": 1355,
+    "7": 2015
+   },
+   "players": "Adults & children",
+   "image": "its-a-knockout-style-assault-course-hire",
+   "short": "It's a Knockout style course for heats, relays and team competitions.",
+   "spec": {},
+   "crm_id": "90479",
+   "staffed": false
+  },
+  {
+   "slug": "jungle-assault-course-fun-run",
+   "name": "Jungle Assault Course Fun Run",
+   "cats": [
+    "assault-courses"
+   ],
+   "price_from": 225,
+   "prices": {
+    "1": 225,
+    "2": 355,
+    "3": 440,
+    "7": 655
+   },
+   "players": "Children",
+   "image": "jungle-assault-course-fun-run-hire",
+   "short": "Jungle-themed fun run for children's parties and school sports days.",
+   "spec": {},
+   "crm_id": "90488",
+   "staffed": false
+  },
+  {
+   "slug": "3-in-1-sports-inflatable-game",
+   "name": "3 in 1 Sports Inflatable Game",
+   "cats": [
+    "games"
+   ],
+   "price_from": 495,
+   "prices": {
+    "1": 495,
+    "2": 775,
+    "3": 965,
+    "7": 1435
+   },
+   "players": "Groups",
+   "image": "inflatable-games-hire",
+   "short": "Three sports challenges in one inflatable – swap between games to keep players coming back.",
+   "spec": {
+    "dimensions": "6250 × 2500 × 2850 mm",
+    "power": "1 x 13A socket",
+    "setup": "30 minutes"
+   },
+   "crm_id": "90005",
+   "staffed": false
+  },
+  {
+   "slug": "giant-inflatable-dartboard-7ft",
+   "name": "Giant Inflatable Dartboard 7ft",
+   "cats": [
+    "games"
+   ],
+   "price_from": 175,
+   "prices": {
+    "1": 175,
+    "2": 275,
+    "3": 340,
+    "7": 510
+   },
+   "players": "All ages",
+   "image": "giant-inflatable-dartboard-7ft-hire",
+   "short": "7ft inflatable dartboard with Velcro balls – safe, simple and endlessly competitive.",
+   "spec": {
+    "dimensions": "7ft"
+   },
+   "crm_id": "90396",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-football-darts",
+   "name": "Inflatable Football Darts",
+   "cats": [
+    "games"
+   ],
+   "price_from": 475,
+   "prices": {
+    "1": 475,
+    "2": 745,
+    "3": 925,
+    "7": 1380
+   },
+   "players": "All ages",
+   "image": "inflatable-football-darts-hire",
+   "short": "Kick footballs at a giant dartboard – perfect for football-themed events and fun days.",
+   "spec": {},
+   "crm_id": "90460",
+   "staffed": false
+  },
+  {
+   "slug": "rugby-darts-kick-n-stick",
+   "name": "Rugby Darts / Kick n' Stick",
+   "cats": [
+    "games"
+   ],
+   "price_from": 525,
+   "prices": {
+    "1": 525,
+    "2": 825,
+    "3": 1025,
+    "7": 1525
+   },
+   "players": "All ages",
+   "image": "rugby-darts-kick-n-stick-hire",
+   "short": "Kick rugby balls at a giant target – a hit at rugby clubs and sports events.",
+   "spec": {},
+   "crm_id": "90716",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-penalty-shootout",
+   "name": "Inflatable Penalty Shootout",
+   "cats": [
+    "games"
+   ],
+   "price_from": 350,
+   "prices": {
+    "1": 350,
+    "2": 550,
+    "3": 685,
+    "7": 1015
+   },
+   "players": "All ages",
+   "image": "inflatable-penalty-shootout-hire",
+   "short": "Beat the keeper and score through the target holes – easy to understand, great for queues.",
+   "spec": {},
+   "crm_id": "90597",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-connect-4-2-games-in-1",
+   "name": "Inflatable Connect 4 (2 Games in 1)",
+   "cats": [
+    "games"
+   ],
+   "price_from": 295,
+   "prices": {
+    "1": 295,
+    "2": 465,
+    "3": 575,
+    "7": 855
+   },
+   "players": "2 players",
+   "image": "inflatable-connect-4-2-games-in-1-hire",
+   "short": "Giant inflatable Connect 4 with a second game built in.",
+   "spec": {},
+   "crm_id": "90458",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-twister",
+   "name": "Inflatable Twister",
+   "cats": [
+    "games"
+   ],
+   "price_from": 395,
+   "prices": {
+    "1": 395,
+    "2": 620,
+    "3": 770,
+    "7": 1145
+   },
+   "players": "Groups",
+   "image": "inflatable-twister-hire",
+   "short": "Giant inflatable Twister – left hand red, right foot yellow, lots of laughs.",
+   "spec": {},
+   "crm_id": "90467",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-volleyball-court",
+   "name": "Inflatable Volleyball Court",
+   "cats": [
+    "games"
+   ],
+   "price_from": 725,
+   "prices": {
+    "1": 725,
+    "2": 1140,
+    "3": 1415,
+    "7": 2105
+   },
+   "players": "Teams",
+   "image": "inflatable-volleyball-court-hire",
+   "short": "Enclosed inflatable volleyball court for team tournaments and corporate sports days.",
+   "spec": {},
+   "crm_id": "90849",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-curling-lane",
+   "name": "Inflatable Curling Lane",
+   "cats": [
+    "games"
+   ],
+   "price_from": 695,
+   "prices": {
+    "1": 695,
+    "2": 1090,
+    "3": 1355,
+    "7": 2015
+   },
+   "players": "Teams",
+   "image": "inflatable-curling-lane-hire",
+   "short": "Slide the stones down the inflatable lane – a wintry favourite for Christmas and corporate events.",
+   "spec": {},
+   "crm_id": "90296",
+   "staffed": false
+  },
+  {
+   "slug": "basketball-inflatable",
+   "name": "Basketball Inflatable",
+   "cats": [
+    "games"
+   ],
+   "price_from": 395,
+   "prices": {
+    "1": 395,
+    "2": 620,
+    "3": 770,
+    "7": 1145
+   },
+   "players": "2+ players",
+   "image": "basketball-inflatable-hire",
+   "short": "Giant inflatable basketball challenge for fun days, schools and outdoor events.",
+   "spec": {},
+   "crm_id": "90075",
+   "staffed": false
+  },
+  {
+   "slug": "dash-n-grab-inflatable-6-player",
+   "name": "Dash N Grab Inflatable (6 Player)",
+   "cats": [
+    "games"
+   ],
+   "price_from": 795,
+   "prices": {
+    "1": 795,
+    "2": 1250,
+    "3": 1550,
+    "7": 2305
+   },
+   "players": "6 players",
+   "image": "dash-n-grab-inflatable-6-player-hire",
+   "short": "Six players race on bungees to grab the balls from the centre – fast, frantic team fun.",
+   "spec": {},
+   "crm_id": "90309",
+   "staffed": false
+  },
+  {
+   "slug": "grand-national-inflatable",
+   "name": "Grand National Inflatable",
+   "cats": [
+    "games"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Groups",
+   "image": "grand-national-inflatable-hire",
+   "short": "Bounce your way round the course on space-hopper horses – ideal for race-day themes.",
+   "spec": {},
+   "crm_id": "90430",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-grand-national-horse-race",
+   "name": "Inflatable Grand National Horse Race",
+   "cats": [
+    "games"
+   ],
+   "price_from": 695,
+   "prices": {
+    "1": 695,
+    "2": 1090,
+    "3": 1355,
+    "7": 2015
+   },
+   "players": "Groups",
+   "image": "inflatable-grand-national-horse-race-hire",
+   "short": "A larger Grand National course for horse-racing themed parties and family fun days.",
+   "spec": {},
+   "crm_id": "90462",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-axe-throwing",
+   "name": "Inflatable Axe Throwing",
+   "cats": [
+    "games"
+   ],
+   "price_from": 495,
+   "prices": {
+    "1": 495,
+    "2": 775,
+    "3": 965,
+    "7": 1435
+   },
+   "players": "All ages",
+   "image": "inflatable-axe-throwing-hire",
+   "short": "Safe soft-axe throwing at an inflatable target – the axe-throwing craze, made event-friendly.",
+   "spec": {},
+   "crm_id": "90456",
+   "staffed": false
+  },
+  {
+   "slug": "human-table-football-inflatable",
+   "name": "Human Table Football Inflatable",
+   "cats": [
+    "games"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Up to 10 players",
+   "image": "human-table-football-inflatable-hire",
+   "short": "Become the players in a giant game of table football – brilliant for team building.",
+   "spec": {},
+   "crm_id": "90448",
+   "staffed": false
+  },
+  {
+   "slug": "adult-sumo-suits",
+   "name": "Adult Sumo Suits",
+   "cats": [
+    "games"
+   ],
+   "price_from": 195,
+   "prices": {
+    "1": 195,
+    "2": 305,
+    "3": 380,
+    "7": 565
+   },
+   "players": "2 players",
+   "image": "adult-sumo-suits-hire",
+   "short": "Padded adult sumo suits with helmets and mat for hilarious head-to-head wrestling.",
+   "spec": {},
+   "crm_id": "90025",
+   "staffed": false
+  },
+  {
+   "slug": "childrens-sumo-suits",
+   "name": "Children's Sumo Suits",
+   "cats": [
+    "games"
+   ],
+   "price_from": 175,
+   "prices": {
+    "1": 175,
+    "2": 275,
+    "3": 340,
+    "7": 510
+   },
+   "players": "2 players",
+   "image": "childrens-sumo-suits-hire",
+   "short": "Child-sized sumo suits and mat for parties and fun days.",
+   "spec": {},
+   "crm_id": "90257",
+   "staffed": false
+  },
+  {
+   "slug": "hamster-caterpillar-track",
+   "name": "Hamster Caterpillar Track",
+   "cats": [
+    "games"
+   ],
+   "price_from": 95,
+   "prices": {
+    "1": 95,
+    "2": 150,
+    "3": 185,
+    "7": 275
+   },
+   "players": "Children",
+   "image": "hamster-caterpillar-track-hire",
+   "short": "Inflatable caterpillar wheels for sports-day races.",
+   "spec": {},
+   "crm_id": "90435",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-stepping-stones",
+   "name": "Inflatable Stepping Stones",
+   "cats": [
+    "games"
+   ],
+   "price_from": 95,
+   "prices": {
+    "1": 95,
+    "2": 150,
+    "3": 185,
+    "7": 275
+   },
+   "players": "Children",
+   "image": "inflatable-stepping-stones-hire",
+   "short": "Inflatable stepping stones for races and obstacle relays.",
+   "spec": {},
+   "crm_id": "90798",
+   "staffed": false
+  },
+  {
+   "slug": "walk-the-plank",
+   "name": "Walk the Plank",
+   "cats": [
+    "games"
+   ],
+   "price_from": 95,
+   "prices": {
+    "1": 95,
+    "2": 150,
+    "3": 185,
+    "7": 275
+   },
+   "players": "Children",
+   "image": "walk-the-plank-hire",
+   "short": "Inflatable walk-the-plank balance challenge for pirate parties and sports days.",
+   "spec": {},
+   "crm_id": "90852",
+   "staffed": false
+  },
+  {
+   "slug": "giant-inflatable-christmas-snow-globe",
+   "name": "Giant Inflatable Christmas Snow Globe",
+   "cats": [
+    "games"
+   ],
+   "price_from": 1450,
+   "prices": {
+    "1": 1450,
+    "2": 2275,
+    "3": 2830,
+    "7": 4205
+   },
+   "players": "Walk-in",
+   "image": "giant-inflatable-christmas-snow-globe-hire",
+   "short": "Walk-in giant snow globe for Christmas markets, grottos and festive photo opportunities.",
+   "spec": {},
+   "crm_id": "90261",
+   "staffed": false
+  },
+  {
+   "slug": "gladiators-duel",
+   "name": "Gladiators Duel",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 495,
+   "prices": {
+    "1": 495,
+    "2": 775,
+    "3": 965,
+    "7": 1435
+   },
+   "players": "2 players",
+   "image": "gladiators-duel-hire",
+   "short": "Battle it out on podiums with padded jousting sticks – the classic Gladiators duel.",
+   "spec": {},
+   "crm_id": "90419",
+   "staffed": false
+  },
+  {
+   "slug": "wipeout-challenge-inflatable",
+   "name": "Wipeout Challenge Inflatable",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 675,
+   "prices": {
+    "1": 675,
+    "2": 1060,
+    "3": 1315,
+    "7": 1960
+   },
+   "players": "Up to 6 players",
+   "image": "wipeout-challenge-inflatable-hire",
+   "short": "Jump the spinning sweeper arm and be the last one standing.",
+   "spec": {},
+   "crm_id": "90862",
+   "staffed": false
+  },
+  {
+   "slug": "ultimate-wipeout-sweeper-last-man-standing",
+   "name": "Ultimate Wipeout Sweeper / Last Man Standing",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 675,
+   "prices": {
+    "1": 675,
+    "2": 1060,
+    "3": 1315,
+    "7": 1960
+   },
+   "players": "Up to 8 players",
+   "image": "ultimate-wipeout-sweeper-last-man-standing-hire",
+   "short": "The ultimate Last Man Standing sweeper – duck and jump or you're out.",
+   "spec": {},
+   "crm_id": "90833",
+   "staffed": false
+  },
+  {
+   "slug": "total-wipeout-big-red-balls",
+   "name": "Total Wipeout Big Red Balls",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 695,
+   "prices": {
+    "1": 695,
+    "2": 1090,
+    "3": 1355,
+    "7": 2015
+   },
+   "players": "1 at a time",
+   "image": "total-wipeout-big-red-balls-hire",
+   "short": "Can you cross the Big Red Balls? The TV challenge everyone wants to try.",
+   "spec": {},
+   "crm_id": "90823",
+   "staffed": false
+  },
+  {
+   "slug": "bungee-run-inflatable",
+   "name": "Bungee Run Inflatable",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "2 players",
+   "image": "bungee-run-inflatable-hire",
+   "short": "Race against the bungee cord to place your marker furthest down the lane.",
+   "spec": {},
+   "crm_id": "90216",
+   "staffed": false
+  },
+  {
+   "slug": "bungee-run-3-lane-inflatable",
+   "name": "Bungee Run 3 Lane Inflatable",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 550,
+   "prices": {
+    "1": 550,
+    "2": 865,
+    "3": 1075,
+    "7": 1595
+   },
+   "players": "3 players",
+   "image": "bungee-run-3-lane-inflatable-hire",
+   "short": "Three-lane bungee run for bigger groups and team tournaments.",
+   "spec": {},
+   "crm_id": "90215",
+   "staffed": false
+  },
+  {
+   "slug": "wrecking-ball-inflatable",
+   "name": "Wrecking Ball Inflatable",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Up to 4 players",
+   "image": "wrecking-ball-inflatable-hire",
+   "short": "Stay on your podium while the swinging wrecking ball tries to knock you off.",
+   "spec": {},
+   "crm_id": "90868",
+   "staffed": false
+  },
+  {
+   "slug": "human-demolition-zone",
+   "name": "Human Demolition Zone",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Up to 4 players",
+   "image": "human-demolition-zone-hire",
+   "short": "Dodge the giant demolition ball to be the last player standing.",
+   "spec": {},
+   "crm_id": "90446",
+   "staffed": false
+  },
+  {
+   "slug": "leap-of-faith-inflatable",
+   "name": "Leap of Faith Inflatable",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 650,
+   "prices": {
+    "1": 650,
+    "2": 1020,
+    "3": 1270,
+    "7": 1885
+   },
+   "players": "1 at a time",
+   "image": "leap-of-faith-inflatable-hire",
+   "short": "Climb the tower and leap for the bar – a true test of nerve.",
+   "spec": {},
+   "crm_id": "90508",
+   "staffed": false
+  },
+  {
+   "slug": "base-jump-inflatable",
+   "name": "Base Jump Inflatable",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 695,
+   "prices": {
+    "1": 695,
+    "2": 1090,
+    "3": 1355,
+    "7": 2015
+   },
+   "players": "1 at a time",
+   "image": "base-jump-inflatable-hire",
+   "short": "Free-fall onto a giant air cushion from the jump platform.",
+   "spec": {},
+   "crm_id": "90073",
+   "staffed": false
+  },
+  {
+   "slug": "unclimbable-ladder",
+   "name": "Unclimbable Ladder",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "2 players",
+   "image": "unclimbable-ladder-hire",
+   "short": "Race to the top of the wobbly rope ladder – much harder than it looks.",
+   "spec": {},
+   "crm_id": "90835",
+   "staffed": false
+  },
+  {
+   "slug": "velcro-fly-wall",
+   "name": "Velcro Fly Wall",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 425,
+   "prices": {
+    "1": 425,
+    "2": 665,
+    "3": 830,
+    "7": 1235
+   },
+   "players": "1 at a time",
+   "image": "velcro-fly-wall-hire",
+   "short": "Pull on a Velcro suit, bounce and stick yourself to the wall.",
+   "spec": {},
+   "crm_id": "90845",
+   "staffed": false
+  },
+  {
+   "slug": "pillow-bash",
+   "name": "Pillow Bash",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 395,
+   "prices": {
+    "1": 395,
+    "2": 620,
+    "3": 770,
+    "7": 1145
+   },
+   "players": "2 players",
+   "image": "pillow-bash-hire",
+   "short": "Balance on the beam and knock your opponent off with a pillow.",
+   "spec": {},
+   "crm_id": "90608",
+   "staffed": false
+  },
+  {
+   "slug": "rock-and-roller-zone",
+   "name": "Rock & Roller Zone",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 495,
+   "prices": {
+    "1": 495,
+    "2": 775,
+    "3": 965,
+    "7": 1435
+   },
+   "players": "Up to 4 players",
+   "image": "rock-and-roller-zone-hire",
+   "short": "Roll, race and bump around the arena inside giant inflatable rollers.",
+   "spec": {
+    "power": "1 x 13A socket per set-up"
+   },
+   "crm_id": "90676",
+   "staffed": false
+  },
+  {
+   "slug": "human-hamster-balls",
+   "name": "Human Hamster Balls",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 1295,
+   "prices": {
+    "1": 1295,
+    "2": 2035,
+    "3": 2525,
+    "7": 3755
+   },
+   "players": "1 per ball",
+   "image": "human-hamster-balls-hire",
+   "short": "Climb inside a giant inflatable ball and roll around the arena.",
+   "spec": {},
+   "crm_id": "90449",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-climbing-wall",
+   "name": "Inflatable Climbing Wall",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "2 climbers",
+   "image": "inflatable-climbing-wall-hire",
+   "short": "Inflatable climbing wall with handholds and a soft landing for younger climbers.",
+   "spec": {},
+   "crm_id": "90457",
+   "staffed": false
+  },
+  {
+   "slug": "inflatable-maze",
+   "name": "Inflatable Maze",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 995,
+   "prices": {
+    "1": 995,
+    "2": 1560,
+    "3": 1940,
+    "7": 2885
+   },
+   "players": "Groups",
+   "image": "inflatable-maze-hire",
+   "short": "Find your way through the inflatable maze – great with laser tag or as a stand-alone attraction.",
+   "spec": {},
+   "crm_id": "90464",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-bull",
+   "name": "Rodeo Bull",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Ages 5+",
+   "image": "rodeo-bull-hire",
+   "short": "Mechanical rodeo bull on an inflatable safety bed, with an operator controlling the speed for every rider.",
+   "spec": {},
+   "crm_id": "90678",
+   "staffed": false
+  },
+  {
+   "slug": "childrens-rodeo-bull-buffalo-billy",
+   "name": "Children's Rodeo Bull (Buffalo Billy)",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Children",
+   "image": "childrens-rodeo-bull-buffalo-billy-hire",
+   "short": "Junior rodeo bull with gentler speeds, ideal for children's parties and family fun days.",
+   "spec": {},
+   "crm_id": "90256",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-horse",
+   "name": "Rodeo Horse",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "rodeo-horse-hire",
+   "short": "Ride the rodeo horse – a gentler, race-day themed alternative to the bull.",
+   "spec": {},
+   "crm_id": "90682",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-sheep",
+   "name": "Rodeo Sheep",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "rodeo-sheep-hire",
+   "short": "A woolly twist on the rodeo ride – great for country shows and farm themes.",
+   "spec": {},
+   "crm_id": "90688",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-pig",
+   "name": "Rodeo Pig",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "rodeo-bull-hire",
+   "short": "Hang on to the rodeo pig – fun for farm days and family events.",
+   "spec": {},
+   "crm_id": "90684",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-football",
+   "name": "Rodeo Football",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "rodeo-bull-hire",
+   "short": "A giant rodeo football for football clubs, World Cup and sports-themed parties.",
+   "spec": {},
+   "crm_id": "90681",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-rugby-ball",
+   "name": "Rodeo Rugby Ball",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "rodeo-rugby-ball-hire",
+   "short": "Rodeo rugby ball for rugby clubs, Six Nations and sports events.",
+   "spec": {},
+   "crm_id": "90687",
+   "staffed": false
+  },
+  {
+   "slug": "champagne-bottle-rodeo",
+   "name": "Champagne Bottle Rodeo",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Adults",
+   "image": "champagne-bottle-rodeo-hire",
+   "short": "Ride the giant champagne bottle – made for weddings, launches and celebrations.",
+   "spec": {},
+   "crm_id": "90252",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-pumpkin",
+   "name": "Rodeo Pumpkin",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "rodeo-pumpkin-hire",
+   "short": "Halloween-themed rodeo pumpkin for spooky parties and October events.",
+   "spec": {},
+   "crm_id": "90685",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-christmas-pudding",
+   "name": "Rodeo Christmas Pudding",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "rodeo-christmas-pudding-hire",
+   "short": "Festive rodeo Christmas pudding for Christmas parties and markets.",
+   "spec": {},
+   "crm_id": "90679",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-reindeer",
+   "name": "Rodeo Reindeer",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "rodeo-reindeer-hire",
+   "short": "Ride Rudolph! A rodeo reindeer for Christmas events.",
+   "spec": {},
+   "crm_id": "90686",
+   "staffed": false
+  },
+  {
+   "slug": "rodeo-easter-egg",
+   "name": "Rodeo Easter Egg",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "All ages",
+   "image": "rodeo-easter-egg-hire",
+   "short": "Easter-themed rodeo egg for spring fairs and Easter events.",
+   "spec": {},
+   "crm_id": "90680",
+   "staffed": false
+  },
+  {
+   "slug": "surf-simulator-rodeo-surf-machine",
+   "name": "Surf Simulator / Rodeo Surf Machine",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Ages 5+",
+   "image": "surf-simulator-rodeo-surf-machine-hire",
+   "short": "Catch a wave on dry land – a rodeo-style surf board on an inflatable bed.",
+   "spec": {},
+   "crm_id": "90814",
+   "staffed": false
+  },
+  {
+   "slug": "snowboard-simulator",
+   "name": "Snowboard Simulator",
+   "cats": [
+    "rodeo"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Ages 5+",
+   "image": "snowboard-simulator-hire",
+   "short": "Rodeo-style snowboard simulator on an inflatable bed – great for winter and ski themes.",
+   "spec": {},
+   "crm_id": "90776",
+   "staffed": false
+  }
+ ],
+ "pages": {
+  "home": {
+   "title": "Inflatable Hire UK | Assault Course, Wipeout, Rodeo Bull & Bouncy Castle Hire",
+   "meta": "UK inflatable hire: bouncy castles, inflatable slides, assault courses, Wipeout, bungee runs, Gladiator duels, inflatable games & rodeo bulls. Delivered, set up & collected nationwide.",
+   "h1": "Inflatable Hire",
+   "kicker": "UK-wide delivery · set-up · collection",
+   "intro": "Bouncy castles, giant slides, assault courses, inflatable games, Wipeout challenges and rodeo bulls for corporate fun days, schools, festivals and family parties. Every hire is delivered, set up and collected by our own crew, with live availability straight from our booking system.",
+   "image": "twin-premium-inflatable-slide-hire",
+   "sections": [
+    {
+     "h2": "Inflatable hire for every kind of event",
+     "html": "<p>From a single <strong>bouncy castle</strong> for a garden party to a 220ft <strong>obstacle course</strong>, rodeo bull and a field full of <strong>inflatable games</strong> for a corporate fun day, JM Inflatable Hire has the stock and the crew to make it happen. Everything you see on this site is our own stock, kept in our own warehouse and set up by our own team.</p><p>Every hire includes delivery, professional set-up, a full safety check and collection. Add operators and staff so your guests are looked after all day, or combine inflatables with arcade games, simulators and side stalls from the wider JM Entertainment range.</p>"
+    },
+    {
+     "h2": "Why event organisers choose JM",
+     "html": "<ul><li><strong>Huge range in one place</strong> – castles, slides, assault courses, games, challenges and rodeo rides.</li><li><strong>Live stock and availability</strong> straight from our booking system, so you know what's free before you call.</li><li><strong>Fixed, clear pricing</strong> with multi-day discounts shown on every product.</li><li><strong>Safety first</strong> – PIPA-tested inflatables, PAT-tested blowers and trained, DBS-checked crew.</li><li><strong>Nationwide coverage</strong> for corporate events, schools, councils, festivals and private parties.</li><li><strong>Fully insured</strong>, with risk assessments supplied once you've booked.</li></ul>"
+    },
+    {
+     "h2": "Popular for corporate fun days, schools and festivals",
+     "html": "<p>Our inflatables are booked for staff summer parties, family fun days, team building, school sports days and summer fairs, university freshers' events, shopping-centre activations, council events, festivals, weddings and birthday parties. Mix and match – assault course races, a Gladiators duel and a rodeo bull together make a brilliant It's-a-Knockout style day.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "How much does inflatable hire cost?",
+     "a": "Bouncy castles start from £85 + VAT per day and larger event inflatables such as assault courses, Wipeout and rodeo bulls start from around £450–£695 + VAT. Delivery, set-up and collection are included on most UK bookings. Multi-day hires are discounted – a two-day hire costs roughly 1.5 days and longer hires work out cheaper per day. Each inflatable's page shows 1, 2, 3, 4 and 7-day prices."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ]
+  },
+  "inflatable-hire": {
+   "title": "Inflatable Hire Near You | 79+ Inflatables to Hire UK-Wide | JM",
+   "meta": "Inflatable hire near you across the UK – bouncy castles, slides, assault courses, Wipeout, bungee runs, Gladiator duels, inflatable games and rodeo bulls. Live prices & availability.",
+   "h1": "Inflatable Hire",
+   "label": "Inflatable",
+   "kicker": "Our full inflatable range",
+   "intro": "Every inflatable in our stock in one place – bouncy castles, slides, assault courses, inflatable games, challenge inflatables and rodeo rides. Pick a category or check availability on any item for your date.",
+   "image": "adult-bouncy-castle-red-and-black-with-roof-hire",
+   "cat": "all",
+   "local": true,
+   "angle": "bouncy castles, giant slides, assault courses, inflatable games, Wipeout challenges and rodeo bulls",
+   "sections": [
+    {
+     "h2": "Choosing the right inflatables",
+     "html": "<p>For children's parties a <strong>bounce and slide combi</strong> gives the most play in the smallest space. For corporate fun days and family events we'd recommend a headline attraction – an <a href=\"/assault-course-hire\">assault course</a>, <a href=\"/rodeo-bull-hire\">rodeo bull</a> or <a href=\"/inflatable-challenge-hire\">Wipeout</a> – plus two or three <a href=\"/inflatable-games-hire\">inflatable games</a> to spread the crowd.</p><p>Not sure what will fit? Tell us your venue and guest numbers and we'll put a package together with the space and power needed for each item.</p>"
+    },
+    {
+     "h2": "What's included with every hire",
+     "html": "<ul><li>Delivery, set-up and collection by our own crew</li><li>Electric blower, stakes or sandbags and safety mats</li><li>PIPA-tested inflatables and PAT-tested equipment</li><li>Public liability insurance</li><li>Optional operators for rodeo rides and challenge inflatables</li></ul>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "keywords": "inflatable hire, inflatables hire near me, party inflatable hire, corporate inflatable hire, event inflatable hire",
+   "town_intro": [
+    "Inflatable hire in {city} for every kind of event – bouncy castles, slides, assault courses, Wipeout, bungee runs, Gladiator duels, inflatable games and rodeo bulls, all delivered, set up and collected by our own crew.",
+    "Searching for inflatable hire near {city}? Choose from {count} inflatables – from a garden bouncy castle to a 220ft obstacle course – delivered anywhere in {city}, {near1} and {near2}.",
+    "From school fairs to corporate fun days, our {city} inflatable hire covers castles, slides, assault courses, inflatable games, Wipeout challenges and rodeo rides across {region}."
+   ],
+   "town_body": "<h2>Inflatable hire in {city} – the whole range in one booking</h2><p>Book a single bouncy castle for a birthday or build a full It's-a-Knockout day for a {city} company fun day with an assault course, Wipeout sweeper, bungee run, Gladiator duel and rodeo bull. One supplier, one delivery and one crew to set everything up.</p>",
+   "town_faq": [
+    {
+     "q": "Who does inflatable hire near me in {city}?",
+     "a": "JM Inflatable Hire delivers inflatables throughout {city} and {region}, including {nearby}. Check live availability on this page or ask for a quote."
+    }
+   ]
+  },
+  "bouncy-castle-hire": {
+   "title": "Bouncy Castle Hire | Adult & Kids Bouncy Castles | JM",
+   "meta": "Bouncy castle hire for adults and children – disco domes, bounce & slides and themed castles from £85 + VAT. Delivered, set up & collected. Check availability.",
+   "h1": "Bouncy Castle Hire",
+   "label": "Bouncy Castle",
+   "kicker": "Adult, children's & disco bouncy castles",
+   "intro": "Themed children's castles, bounce and slide combis, disco domes and adult-sized bouncy castles with rain roofs. Perfect for birthdays, weddings, school fairs and corporate family days.",
+   "image": "camelot-adult-bouncy-castle-hire",
+   "cat": "bouncy-castles",
+   "local": true,
+   "angle": "children's and adult bouncy castles, bounce and slide combis and disco domes",
+   "sections": [
+    {
+     "h2": "Bouncy castles for adults and children",
+     "html": "<p>Our range runs from compact <strong>10ft x 10ft garden castles</strong> to <strong>adult bouncy castles</strong> with full rain roofs. Themed castles – jungle, farmyard, undersea, princess, dinosaur and Peppa Pig – are perfect for children's birthday parties, while disco domes with lights and music turn any evening do into a party.</p>"
+    },
+    {
+     "h2": "How much space does a bouncy castle need?",
+     "html": "<p>Allow the size of the castle plus around 1–2 metres on each side for the blower, safety mats and access. A typical children's castle needs about 4m x 5m and roughly 3.5m of height; adult castles need more. Exact sizes come with your quote so you can be sure it fits your garden, hall or marquee.</p>"
+    },
+    {
+     "h2": "Safe, clean and professionally installed",
+     "html": "<p>Every castle is PIPA tested, cleaned after each hire and installed by our crew with stakes or sandbags and safety mats. We'll talk you through safe use when we set up, and collect at the agreed time.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "How much is bouncy castle hire?",
+     "a": "Children's bouncy castles start from £85 + VAT per day, bounce and slide combis from £100 and adult bouncy castles from £125. Multi-day hires are discounted – a two-day hire costs roughly 1.5 days and longer hires work out cheaper per day. Each inflatable's page shows 1, 2, 3, 4 and 7-day prices."
+    },
+    {
+     "q": "Can adults use your bouncy castles?",
+     "a": "Yes – our adult and adult & children's castles, including the Camelot, red & black castle with roof and the disco domes, are built for grown-ups. Children's castles are for children only."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "keywords": "bouncy castle hire, adult bouncy castle hire, kids bouncy castle hire, bouncy castle hire near me",
+   "town_intro": [
+    "Bouncy castle hire in {city} for kids' parties, adult birthdays, weddings and fun days – themed castles, bounce and slides and disco domes delivered across {region}.",
+    "Need a bouncy castle in {city}? Our children's and adult bouncy castles are delivered, set up and collected in {city}, {near1}, {near2} and the rest of {region}.",
+    "Book a bouncy castle anywhere in {city} – from toddler castles to adult disco domes, every castle is PIPA tested and safety-checked on site."
+   ],
+   "town_body": "<h2>Kids' and adult bouncy castle hire in {city}</h2><p>Choose from themed children's castles, bounce-and-slide combos and adult-sized castles and disco domes for {city} birthday parties, garden parties, weddings, school fairs and corporate family days.</p>",
+   "town_faq": [
+    {
+     "q": "Do you hire adult bouncy castles in {city}?",
+     "a": "Yes – our adult bouncy castles and disco domes are available in {city} and across {region} for birthdays, weddings and staff parties."
+    }
+   ]
+  },
+  "inflatable-slide-hire": {
+   "title": "Inflatable Slide Hire | Giant Slides & Bounce and Slides | JM",
+   "meta": "Inflatable slide hire – helter skelter, twin racing slides, platform slides and bounce & slide combis. Delivered, set up & collected UK-wide.",
+   "h1": "Inflatable Slide Hire",
+   "label": "Inflatable Slide",
+   "kicker": "Giant slides & bounce-and-slide combis",
+   "intro": "From a traditional inflatable helter skelter to twin racing slides and platform slides, plus bounce and slide combis for younger children – slides keep the queue moving at any event.",
+   "image": "inflatable-platform-slide-hire",
+   "cat": "slides",
+   "local": true,
+   "angle": "giant inflatable slides, helter skelters and bounce and slide combis",
+   "sections": [
+    {
+     "h2": "Giant inflatable slides for events",
+     "html": "<p>Our <strong>helter skelter</strong>, <strong>platform slide</strong> and <strong>twin premium slide</strong> are built for high-footfall events – fêtes, festivals, school fairs and corporate family days – where you need an attraction that handles a constant queue. Twin lanes let friends race each other to the bottom.</p>"
+    },
+    {
+     "h2": "Bounce and slide combis",
+     "html": "<p>For birthday parties, a combi gives a bouncing area and a slide in one inflatable. Choose from jungle, farmyard, princess, undersea, dinosaur, elephant and party themes.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    }
+   ],
+   "keywords": "inflatable slide hire, giant inflatable slide hire, bounce and slide hire, helter skelter hire",
+   "town_intro": [
+    "Inflatable slide hire in {city} – giant slides, helter skelters and bounce-and-slide castles delivered and set up across {region}.",
+    "Add a giant inflatable slide to your {city} event – we deliver to {city}, {near1}, {near2} and all of {region}.",
+    "Big drops, big smiles: hire an inflatable slide in {city} for fun days, school fairs, festivals and family parties."
+   ],
+   "town_body": "<h2>Giant slides for {city} events</h2><p>Inflatable slides keep queues moving at busy {city} events. Pick a platform slide or helter skelter for crowds, or a bounce-and-slide castle for younger children.</p>",
+   "town_faq": [
+    {
+     "q": "How much space does an inflatable slide need in {city}?",
+     "a": "Each slide page lists its size. Allow an extra metre or two around it for staking and safe access – we check your space when you book."
+    }
+   ]
+  },
+  "assault-course-hire": {
+   "title": "Assault Course Hire | Inflatable Obstacle Courses 50ft–220ft",
+   "meta": "Inflatable assault course hire – 50ft, 75ft, 100ft and 220ft obstacle courses for corporate events, schools & fun days. UK delivery. Check availability.",
+   "h1": "Assault Course Hire",
+   "label": "Assault Course",
+   "kicker": "Inflatable obstacle courses from 50ft to 220ft",
+   "intro": "Race side by side through crawl-throughs, climbs, pop-ups and slides. Our inflatable assault courses range from a 50ft red and black course to the 220ft Mega Obstacle Course – the ultimate team challenge.",
+   "image": "its-a-knockout-style-assault-course-hire",
+   "cat": "assault-courses",
+   "local": true,
+   "angle": "inflatable assault courses and obstacle courses from 50ft to 220ft",
+   "sections": [
+    {
+     "h2": "Inflatable obstacle courses for all ages",
+     "html": "<p>An <strong>inflatable assault course</strong> is one of the best attractions for getting groups moving and competing. Two players race side by side, so heats, relays and knockout tournaments are easy to run – ideal for team building, sports days and It's-a-Knockout style events.</p>"
+    },
+    {
+     "h2": "Which size assault course?",
+     "html": "<ul><li><strong>50ft</strong> – smaller sites, schools and branded corporate events</li><li><strong>75ft–100ft</strong> – our most popular sizes for fun days and team building</li><li><strong>220ft Mega Obstacle Course</strong> – the headline attraction for festivals and large corporate events</li></ul><p>Bigger courses can be split into sections to fit your site. Exact dimensions come with your quote.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "How much is assault course hire?",
+     "a": "Inflatable assault courses start from £225 + VAT for the children's Jungle Fun Run and £450 + VAT for the 50ft red and black course, up to £1,995 + VAT for the 220ft Mega Obstacle Course. Multi-day hires are discounted – a two-day hire costs roughly 1.5 days and longer hires work out cheaper per day. Each inflatable's page shows 1, 2, 3, 4 and 7-day prices."
+    },
+    {
+     "q": "Can adults use the assault courses?",
+     "a": "Yes – our assault courses are designed for adults and children, which is why they're so popular for team building and corporate fun days."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "keywords": "assault course hire, inflatable assault course hire, obstacle course hire, inflatable obstacle course hire, adult assault course hire",
+   "town_intro": [
+    "Inflatable assault course hire in {city} – race head-to-head through obstacle courses from 50ft to 220ft, delivered and staffed across {region}.",
+    "Looking for obstacle course hire in {city}? Our inflatable assault courses suit corporate fun days, schools, sports days and festivals in {city}, {near1} and {near2}.",
+    "Bring the ultimate race to {city}: inflatable assault courses for children and adults, set up and safety-checked by our crew."
+   ],
+   "town_body": "<h2>Inflatable obstacle courses for {city} fun days and team building</h2><p>Assault courses are one of the most popular team-building activities we supply in {city}. Run timed heats, link two courses for a longer race, or combine with Wipeout and a bungee run for an It's-a-Knockout style day.</p>",
+   "town_faq": [
+    {
+     "q": "Can adults use your assault courses in {city}?",
+     "a": "Yes – most of our inflatable assault courses are suitable for adults and children. Each product page shows sizes and who it suits."
+    }
+   ]
+  },
+  "inflatable-games-hire": {
+   "title": "Inflatable Games Hire | Giant Darts, Football, Sumo & More",
+   "meta": "Inflatable games hire – giant darts, football darts, penalty shootout, human table football, sumo suits, Twister, Connect 4 and more. UK delivery.",
+   "h1": "Inflatable Games Hire",
+   "label": "Inflatable Games",
+   "kicker": "Sports, party and team games",
+   "intro": "Giant inflatable dartboards, football and rugby darts, penalty shootouts, human table football, sumo suits, Connect 4, Twister, volleyball and more – quick to play and perfect for sports days, fun days and team building.",
+   "image": "inflatable-football-darts-hire",
+   "cat": "games",
+   "local": true,
+   "angle": "inflatable games such as giant darts, football darts, penalty shootouts, human table football and sumo suits",
+   "sections": [
+    {
+     "h2": "Inflatable games for sports days and fun days",
+     "html": "<p><strong>Inflatable games</strong> are short, simple and competitive, so they keep crowds moving and everyone joining in. Sports games like <strong>football darts</strong>, <strong>rugby darts</strong> and the <strong>penalty shootout</strong> are favourites at sports clubs and World Cup parties, while <strong>human table football</strong>, <strong>Dash N Grab</strong> and <strong>sumo suits</strong> are made for team building.</p>"
+    },
+    {
+     "h2": "Seasonal and themed games",
+     "html": "<p>Add an inflatable curling lane or the giant walk-in snow globe for Christmas, or the Grand National space-hopper race for race-day parties. Ask about packages if you'd like several games together.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "keywords": "inflatable games hire, giant inflatable games hire, inflatable football darts hire, sumo suit hire, inflatable sports games",
+   "town_intro": [
+    "Inflatable games hire in {city} – giant darts, football darts, penalty shoot-outs, sumo suits, human table football and more for events across {region}.",
+    "Keep guests competing all day with inflatable games in {city}: we deliver to {city}, {near1}, {near2} and across {region}.",
+    "From sports days to staff parties, hire giant inflatable games in {city} with delivery, set-up and collection included."
+   ],
+   "town_body": "<h2>Giant inflatable games for {city} events</h2><p>Inflatable games are quick to play and easy to run, so they are ideal for {city} fun days, school sports days, freshers' fairs and corporate events. Mix several games to build your own festival of challenges.</p>",
+   "town_faq": [
+    {
+     "q": "Which inflatable games are most popular in {city}?",
+     "a": "Inflatable football darts, giant dartboards, penalty shoot-outs, sumo suits and human table football are booked most often for {city} events."
+    }
+   ]
+  },
+  "inflatable-challenge-hire": {
+   "title": "Wipeout & Inflatable Challenge Hire | Gladiators, Bungee Run",
+   "meta": "Hire Wipeout, Last Man Standing, Gladiators duel, bungee runs, Total Wipeout Big Red Balls, wrecking ball and more. UK delivery, set-up & operators.",
+   "h1": "Wipeout & Challenge Inflatables",
+   "label": "Inflatable Challenge",
+   "kicker": "Wipeout · Gladiators · Bungee runs · Last Man Standing",
+   "intro": "TV-style challenge inflatables for the ultimate competition – Wipeout and Last Man Standing sweepers, Gladiators duels, bungee runs, Total Wipeout Big Red Balls, wrecking balls, Leap of Faith and more.",
+   "image": "gladiators-duel-hire",
+   "cat": "challenges",
+   "local": true,
+   "angle": "Wipeout, Last Man Standing, Gladiators, bungee run and other challenge inflatables",
+   "sections": [
+    {
+     "h2": "Challenge inflatables that draw a crowd",
+     "html": "<p>Nothing gathers spectators like a <strong>Wipeout sweeper</strong> or a <strong>Gladiators duel</strong>. These inflatables turn your event into a competition, with heats, leaderboards and plenty of cheering from the side-lines. Most can be staffed by our operators so you can relax and enjoy the action.</p>"
+    },
+    {
+     "h2": "Popular combinations",
+     "html": "<p>For an It's-a-Knockout day, combine a challenge inflatable with an <a href=\"/assault-course-hire\">assault course</a> and a few <a href=\"/inflatable-games-hire\">inflatable games</a>. For evening parties, the <a href=\"/rodeo-bull-hire\">rodeo bull</a> and Gladiators duel are a winning pair.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "keywords": "inflatable challenge hire, Wipeout hire, Gladiators hire, bungee run hire, Last Man Standing hire, Total Wipeout hire",
+   "town_intro": [
+    "Inflatable challenge hire in {city} – Wipeout sweepers, Gladiator duels, bungee runs, Big Red Balls and more, delivered and operated across {region}.",
+    "Turn your {city} event into a TV-style competition with Wipeout, Gladiators and bungee run inflatables – delivered to {city}, {near1} and {near2}.",
+    "The crowd-pullers: hire Wipeout, Last Man Standing, Gladiators and bungee run inflatables anywhere in {city}."
+   ],
+   "town_body": "<h2>TV-style challenges for {city} events</h2><p>Our challenge inflatables are perfect for {city} team building, corporate fun days, university events and festivals. Add operators so your guests just turn up and play.</p>",
+   "town_faq": [
+    {
+     "q": "Do you provide operators for challenge inflatables in {city}?",
+     "a": "Yes – trained operators can run your Wipeout, Gladiators or bungee run in {city} so you can enjoy the event."
+    }
+   ]
+  },
+  "rodeo-bull-hire": {
+   "title": "Rodeo Bull Hire | Rodeo Rides & Surf Simulators | JM",
+   "meta": "Rodeo bull hire with operator – plus rodeo horse, sheep, champagne bottle, football, Christmas & Halloween rodeos and surf simulators. UK delivery.",
+   "h1": "Rodeo Bull Hire",
+   "label": "Rodeo Bull",
+   "kicker": "Rodeo bulls, themed rodeos & surf simulators",
+   "intro": "Our mechanical rodeo bull is a party classic – plus themed rodeo rides from champagne bottles and footballs to Christmas puddings, reindeer and pumpkins, and surf and snowboard simulators. Every ride comes on a full inflatable safety bed with a trained operator.",
+   "image": "childrens-rodeo-bull-buffalo-billy-hire",
+   "cat": "rodeo",
+   "local": true,
+   "angle": "mechanical rodeo bulls, themed rodeo rides and surf simulators – each on an inflatable safety bed with a trained operator",
+   "sections": [
+    {
+     "h2": "Rodeo bull hire with operator",
+     "html": "<p>Every <strong>rodeo bull hire</strong> includes a trained operator who controls the speed for each rider, from gentle for children to fast for the brave. The bull sits on a large <strong>inflatable safety bed</strong>, and we set up, run and pack away so you don't have to do a thing.</p>"
+    },
+    {
+     "h2": "Themed rodeo rides",
+     "html": "<p>Match the ride to your event: a <strong>champagne bottle</strong> for weddings and launches, <strong>football</strong> or <strong>rugby ball</strong> for sports clubs, <strong>horse</strong>, <strong>sheep</strong> or <strong>pig</strong> for country shows, a <strong>pumpkin</strong> for Halloween, <strong>Easter egg</strong> for spring and a <strong>Christmas pudding</strong> or <strong>reindeer</strong> for festive parties. Prefer to stand up? Try the surf or snowboard simulator.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Is an operator included with rodeo bull hire?",
+     "a": "Yes. Every rodeo ride comes with a trained operator who runs the ride and keeps riders safe for the whole hire period."
+    },
+    {
+     "q": "How much space does a rodeo bull need?",
+     "a": "Allow roughly 6m x 6m for the inflatable bed plus access, with around 3.5m of height indoors and a 13 amp socket nearby. Exact dimensions come with your quote."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    }
+   ],
+   "keywords": "rodeo bull hire, bucking bronco hire, mechanical bull hire, rodeo bull hire near me, surf simulator hire",
+   "town_intro": [
+    "Rodeo bull hire in {city} – mechanical bucking broncos with a trained operator, delivered across {region} for parties, weddings and corporate events.",
+    "Mechanical bull hire in {city}, {near1} and {near2}: rodeo bulls plus themed rodeo rides, surf and snowboard simulators.",
+    "Who can last the longest? Book a rodeo bull for your {city} event, complete with inflatable crash bed and operator."
+   ],
+   "town_body": "<h2>Mechanical bull and bucking bronco hire in {city}</h2><p>A rodeo bull is a guaranteed crowd-pleaser at {city} birthday parties, weddings, Christmas parties, stag and hen dos and corporate events. Every hire comes with an operator who adjusts the speed for each rider.</p>",
+   "town_faq": [
+    {
+     "q": "Does rodeo bull hire in {city} include an operator?",
+     "a": "Yes – every rodeo bull hire includes a trained operator, the inflatable safety bed, delivery, set-up and collection."
+    }
+   ]
+  },
+  "wipeout-hire": {
+   "title": "Wipeout Hire UK | Last Man Standing & Total Wipeout Inflatable Hire | JM",
+   "meta": "Wipeout inflatable hire across the UK – Last Man Standing sweeper, Wipeout challenge and Total Wipeout Big Red Balls with operator, delivery & set-up. Live prices & availability.",
+   "h1": "Wipeout Hire",
+   "label": "Wipeout",
+   "kicker": "Last Man Standing · Sweeper arm · Total Wipeout Big Red Balls",
+   "intro": "Hire the TV-style Wipeout challenge for your event – Last Man Standing sweepers, the Wipeout challenge inflatable and Total Wipeout Big Red Balls, delivered, set up and run by our crew anywhere in the UK.",
+   "image": "ultimate-wipeout-sweeper-last-man-standing-hire",
+   "cat": "challenges",
+   "match": "wipeout|sweeper|last-man|big-red|demolition",
+   "local": true,
+   "angle": "Wipeout and Last Man Standing inflatables",
+   "sections": [
+    {
+     "h2": "Wipeout inflatable hire for corporate events, parties and festivals",
+     "html": "<p><strong>Wipeout hire</strong> brings the TV show to your event. Players stand on the podiums while the padded <strong>sweeper arm</strong> spins faster and faster – jump, duck or get knocked off. The last player standing wins, which is why it's also known as <strong>Last Man Standing</strong>.</p><p>We also hire the <strong>Total Wipeout Big Red Balls</strong> – try to bounce across without falling in. Every Wipeout hire includes delivery, set-up, safety mats and collection, and we can supply operators for the day.</p>"
+    },
+    {
+     "h2": "Combine Wipeout with other challenges",
+     "html": "<p>Pair Wipeout with a <a href=\"/bungee-run-hire\">bungee run</a>, a <a href=\"/gladiator-duel-hire\">Gladiator duel</a> and an <a href=\"/assault-course-hire\">assault course</a> for an It's-a-Knockout day, or add a <a href=\"/rodeo-bull-hire\">rodeo bull</a> for evening parties.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "How much does Wipeout hire cost?",
+     "a": "Wipeout hire is priced per day with delivery, set-up and collection included on most UK bookings. Live prices for 1, 2, 3, 4 and 7-day hires are shown on each product above – multi-day hires are discounted."
+    },
+    {
+     "q": "What is a Last Man Standing inflatable?",
+     "a": "It's a Wipeout-style inflatable with a rotating padded sweeper arm. Players jump or duck as it passes – fall off and you're out. The last player standing wins."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "keywords": "Wipeout hire, Wipeout inflatable hire, Total Wipeout hire, Last Man Standing hire, sweeper arm inflatable hire, Big Red Balls hire",
+   "town_intro": [
+    "Wipeout hire in {city} – Last Man Standing sweepers, the Wipeout challenge and Total Wipeout Big Red Balls, delivered and run across {region}.",
+    "Bring the TV show to {city}: Wipeout inflatables for corporate events, festivals and parties in {city}, {near1} and {near2}.",
+    "Duck, jump or get knocked off – book Wipeout inflatable hire anywhere in {city} with set-up and an operator."
+   ],
+   "town_body": "<h2>Wipeout and Last Man Standing hire for {city} events</h2><p>The spinning sweeper arm of a Wipeout inflatable draws a crowd at every {city} event – from staff summer parties and team building to freshers' fairs, festivals and birthdays. Players jump or duck as the arm speeds up, and the last one standing wins.</p>",
+   "town_faq": [
+    {
+     "q": "How much is Wipeout hire in {city}?",
+     "a": "Wipeout inflatables start from {price} + VAT for a one-day hire in {city}, including delivery, set-up and collection. Multi-day hires are discounted."
+    },
+    {
+     "q": "How many people can play Wipeout at once?",
+     "a": "Each Wipeout product page shows its player numbers and size. Our operator runs the sweeper and keeps the game moving."
+    }
+   ]
+  },
+  "bungee-run-hire": {
+   "title": "Bungee Run Hire UK | 2 & 3 Lane Inflatable Bungee Runs | JM Inflatable Hire",
+   "meta": "Inflatable bungee run hire across the UK – 2 and 3-lane bungee runs for fun days, team building, schools and parties. Delivery, set-up & collection. Live prices & availability.",
+   "h1": "Bungee Run Hire",
+   "label": "Bungee Run",
+   "kicker": "2 and 3-lane inflatable bungee runs",
+   "intro": "Inflatable bungee run hire across the UK. Players race against the pull of the bungee cord to place their marker furthest down the lane – fast, funny and great for spectators. Delivered, set up and collected by our crew.",
+   "image": "bungee-run-inflatable-hire",
+   "cat": "challenges",
+   "match": "bungee",
+   "local": true,
+   "angle": "inflatable bungee runs",
+   "sections": [
+    {
+     "h2": "Inflatable bungee run hire for every event",
+     "html": "<p>A <strong>bungee run</strong> is one of the simplest and funniest inflatable games: players wear a harness attached to a bungee cord and race down the lane to place a velcro marker as far as they can before being pulled back. Choose a two-lane run or our <strong>3-lane bungee run</strong> for bigger groups.</p><p>Bungee runs are popular for corporate fun days, team building, school sports days, university events and birthday parties.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "How much is bungee run hire?",
+     "a": "Bungee run hire is priced per day with delivery, set-up and collection included on most UK bookings. Live prices for 1, 2, 3, 4 and 7-day hires are shown on each product above – multi-day hires are discounted."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "keywords": "bungee run hire, inflatable bungee run hire, 3 lane bungee run hire, bungee run inflatable",
+   "town_intro": [
+    "Bungee run hire in {city} – two and three-lane inflatable bungee runs delivered, set up and staffed across {region}.",
+    "Race against the bungee cord at your {city} event: bungee run hire across {city}, {near1}, {near2} and {region}.",
+    "How far can you stretch? Book an inflatable bungee run in {city} for fun days, schools, team building and parties."
+   ],
+   "town_body": "<h2>Inflatable bungee run hire in {city}</h2><p>A bungee run is a simple, hilarious head-to-head race: players are clipped into harnesses and sprint to place a marker as far down the lane as possible before the bungee pulls them back. Perfect for {city} sports days, corporate fun days and parties.</p>",
+   "town_faq": [
+    {
+     "q": "How much is bungee run hire in {city}?",
+     "a": "Bungee runs start from {price} + VAT for a one-day hire in {city}, with delivery, set-up and collection included."
+    },
+    {
+     "q": "Can adults use a bungee run?",
+     "a": "Yes – our bungee runs are built for adults and older children. The product pages list sizes and age guidance."
+    }
+   ]
+  },
+  "gladiator-duel-hire": {
+   "title": "Gladiator Duel Hire UK | Inflatable Gladiators Arena Hire | JM Inflatable Hire",
+   "meta": "Inflatable Gladiator duel hire across the UK – podiums, pugil sticks and soft arena for parties, fun days and team building. Delivery, set-up & collection. Live prices & availability.",
+   "h1": "Gladiator Duel Hire",
+   "label": "Gladiator Duel",
+   "kicker": "Inflatable Gladiators arena with pugil sticks",
+   "intro": "Inflatable Gladiator duel hire across the UK. Two players take to the podiums with padded pugil sticks and battle to knock each other into the soft arena – a classic for parties, fun days and team building.",
+   "image": "gladiators-duel-hire",
+   "cat": "challenges",
+   "match": "gladiator|pillow-bash",
+   "local": true,
+   "angle": "inflatable Gladiator duels and pillow bash games",
+   "sections": [
+    {
+     "h2": "Inflatable Gladiators for parties, schools and corporate events",
+     "html": "<p>Our <strong>Gladiator duel</strong> is the classic inflatable jousting game: two players, two podiums, two padded pugil sticks and one winner. It comes with helmets, pugil sticks and a soft inflatable arena, and our crew sets everything up and gives a safety briefing.</p><p>Also see our <strong>pillow bash</strong> – a similar duel on a beam – and the full range of <a href=\"/inflatable-challenge-hire\">challenge inflatables</a>.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "How much does Gladiator duel hire cost?",
+     "a": "Gladiator duel hire is priced per day with delivery, set-up and collection included on most UK bookings. Live prices for 1, 2, 3, 4 and 7-day hires are shown on each product above – multi-day hires are discounted."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "keywords": "Gladiator duel hire, Gladiators inflatable hire, inflatable gladiator duel hire, pillow bash hire, gladiator jousting hire",
+   "town_intro": [
+    "Gladiator duel hire in {city} – go head-to-head with pugil sticks on the podiums, delivered and set up across {region}.",
+    "Inflatable Gladiators hire for {city}, {near1} and {near2}: the classic duelling game for parties, fun days and team building.",
+    "Settle the score at your {city} event with an inflatable Gladiator duel – delivery, set-up and collection included."
+   ],
+   "town_body": "<h2>Inflatable Gladiator duel hire in {city}</h2><p>Two players climb onto the podiums with padded pugil sticks and try to knock each other off into the soft inflatable arena. A Gladiator duel is a favourite at {city} birthday parties, school events, corporate fun days and festivals.</p>",
+   "town_faq": [
+    {
+     "q": "How much is Gladiator duel hire in {city}?",
+     "a": "Gladiator duels start from {price} + VAT for a one-day hire in {city}, including delivery, set-up and collection."
+    },
+    {
+     "q": "Is the Gladiator duel suitable for adults?",
+     "a": "Yes – adults and children can play. Our crew sets the equipment up and gives a safety briefing before play starts."
+    }
+   ]
+  }
+ },
+ "locations": [
+  {
+   "slug": "london",
+   "city": "London",
+   "region": "Greater London",
+   "nearby": "Westminster, the City, Canary Wharf, Croydon, Stratford",
+   "venues": "ExCeL London, Olympia, Business Design Centre, QEII Centre, Tobacco Dock",
+   "intro": ""
+  },
+  {
+   "slug": "birmingham",
+   "city": "Birmingham",
+   "region": "West Midlands",
+   "nearby": "Solihull, Coventry, Wolverhampton, Sutton Coldfield",
+   "venues": "NEC Birmingham, ICC Birmingham, Resorts World",
+   "intro": ""
+  },
+  {
+   "slug": "manchester",
+   "city": "Manchester",
+   "region": "Greater Manchester",
+   "nearby": "Salford, Stockport, Trafford, Bolton, Oldham",
+   "venues": "Manchester Central, EventCity, AO Arena, Old Trafford",
+   "intro": ""
+  },
+  {
+   "slug": "leeds",
+   "city": "Leeds",
+   "region": "West Yorkshire",
+   "nearby": "Bradford, Wakefield, Harrogate, Huddersfield",
+   "venues": "First Direct Arena, Royal Armouries, Harrogate Convention Centre",
+   "intro": ""
+  },
+  {
+   "slug": "liverpool",
+   "city": "Liverpool",
+   "region": "Merseyside",
+   "nearby": "Wirral, St Helens, Southport, Warrington",
+   "venues": "ACC Liverpool, Exhibition Centre Liverpool",
+   "intro": ""
+  },
+  {
+   "slug": "glasgow",
+   "city": "Glasgow",
+   "region": "Scotland",
+   "nearby": "Paisley, East Kilbride, Hamilton, Motherwell",
+   "venues": "SEC Glasgow, OVO Hydro",
+   "intro": ""
+  },
+  {
+   "slug": "edinburgh",
+   "city": "Edinburgh",
+   "region": "Scotland",
+   "nearby": "Leith, Livingston, Musselburgh, Dalkeith",
+   "venues": "EICC, Royal Highland Centre",
+   "intro": ""
+  },
+  {
+   "slug": "cardiff",
+   "city": "Cardiff",
+   "region": "Wales",
+   "nearby": "Newport, Barry, Penarth, Caerphilly",
+   "venues": "ICC Wales, Cardiff City Hall, Principality Stadium",
+   "intro": ""
+  },
+  {
+   "slug": "bristol",
+   "city": "Bristol",
+   "region": "South West",
+   "nearby": "Bath, Weston-super-Mare, Clifton, Filton",
+   "venues": "Brunel's Old Station, Ashton Gate, UWE Exhibition Centre",
+   "intro": ""
+  },
+  {
+   "slug": "newcastle",
+   "city": "Newcastle",
+   "region": "Tyne and Wear",
+   "nearby": "Gateshead, Sunderland, Durham, North Shields",
+   "venues": "Utilita Arena, The Glasshouse, St James' Park",
+   "intro": ""
+  },
+  {
+   "slug": "sheffield",
+   "city": "Sheffield",
+   "region": "South Yorkshire",
+   "nearby": "Rotherham, Doncaster, Barnsley, Chesterfield",
+   "venues": "Sheffield Arena, Magna Science Adventure Centre",
+   "intro": ""
+  },
+  {
+   "slug": "nottingham",
+   "city": "Nottingham",
+   "region": "East Midlands",
+   "nearby": "Derby, Beeston, West Bridgford, Mansfield",
+   "venues": "Motorpoint Arena, East Midlands Conference Centre",
+   "intro": ""
+  },
+  {
+   "slug": "leicester",
+   "city": "Leicester",
+   "region": "East Midlands",
+   "nearby": "Loughborough, Hinckley, Market Harborough",
+   "venues": "Athena, King Power Stadium",
+   "intro": ""
+  },
+  {
+   "slug": "reading",
+   "city": "Reading",
+   "region": "Berkshire",
+   "nearby": "Bracknell, Wokingham, Newbury, Maidenhead",
+   "venues": "Madejski Stadium, Reading Town Hall",
+   "intro": ""
+  },
+  {
+   "slug": "milton-keynes",
+   "city": "Milton Keynes",
+   "region": "Buckinghamshire",
+   "nearby": "Bletchley, Newport Pagnell, Bedford, Luton",
+   "venues": "MK Dons Stadium, Bletchley Park",
+   "intro": ""
+  },
+  {
+   "slug": "oxford",
+   "city": "Oxford",
+   "region": "Oxfordshire",
+   "nearby": "Abingdon, Didcot, Bicester, Witney",
+   "venues": "Oxford Town Hall, Kassam Stadium",
+   "intro": ""
+  },
+  {
+   "slug": "cambridge",
+   "city": "Cambridge",
+   "region": "Cambridgeshire",
+   "nearby": "Ely, Huntingdon, St Neots, Newmarket",
+   "venues": "Cambridge Corn Exchange, Duxford",
+   "intro": ""
+  },
+  {
+   "slug": "brighton",
+   "city": "Brighton",
+   "region": "East Sussex",
+   "nearby": "Hove, Worthing, Lewes, Eastbourne",
+   "venues": "Brighton Centre, Amex Stadium",
+   "intro": ""
+  },
+  {
+   "slug": "southampton",
+   "city": "Southampton",
+   "region": "Hampshire",
+   "nearby": "Eastleigh, Winchester, Fareham, Portsmouth",
+   "venues": "St Mary's Stadium, Southampton Guildhall",
+   "intro": ""
+  },
+  {
+   "slug": "kent",
+   "city": "Kent",
+   "region": "South East",
+   "nearby": "Maidstone, Canterbury, Ashford, Tunbridge Wells",
+   "venues": "Kent Event Centre, Detling Showground",
+   "intro": ""
+  },
+  {
+   "slug": "surrey",
+   "city": "Surrey",
+   "region": "South East",
+   "nearby": "Guildford, Woking, Epsom, Farnham",
+   "venues": "Sandown Park, Epsom Downs",
+   "intro": ""
+  },
+  {
+   "slug": "essex",
+   "city": "Essex",
+   "region": "East of England",
+   "nearby": "Chelmsford, Colchester, Southend, Basildon",
+   "venues": "Brentwood Centre, Chelmsford City Racecourse",
+   "intro": ""
+  },
+  {
+   "slug": "hertfordshire",
+   "city": "Hertfordshire",
+   "region": "East of England",
+   "nearby": "Watford, St Albans, Hatfield, Stevenage",
+   "venues": "Knebworth House, Hertfordshire County Showground",
+   "intro": ""
+  },
+  {
+   "slug": "hampshire",
+   "city": "Hampshire",
+   "region": "South East",
+   "nearby": "Basingstoke, Farnborough, Andover, Aldershot",
+   "venues": "Farnborough International, Hampshire Court",
+   "intro": ""
+  },
+  {
+   "slug": "cheshire",
+   "city": "Cheshire",
+   "region": "North West",
+   "nearby": "Chester, Crewe, Macclesfield, Warrington",
+   "venues": "Chester Racecourse, Cheshire Showground",
+   "intro": ""
+  },
+  {
+   "slug": "yorkshire",
+   "city": "Yorkshire",
+   "region": "Yorkshire",
+   "nearby": "York, Hull, Leeds, Sheffield, Harrogate",
+   "venues": "Great Yorkshire Showground, York Racecourse",
+   "intro": ""
+  },
+  {
+   "slug": "norwich",
+   "city": "Norwich",
+   "region": "Norfolk",
+   "nearby": "Great Yarmouth, Wymondham, Dereham",
+   "venues": "Norfolk Showground, Carrow Road",
+   "intro": ""
+  },
+  {
+   "slug": "exeter",
+   "city": "Exeter",
+   "region": "Devon",
+   "nearby": "Plymouth, Torquay, Exmouth, Taunton",
+   "venues": "Westpoint Exeter, Sandy Park",
+   "intro": ""
+  },
+  {
+   "slug": "coventry",
+   "city": "Coventry",
+   "region": "West Midlands",
+   "nearby": "Warwick, Leamington Spa, Rugby, Nuneaton",
+   "venues": "Coventry Building Society Arena, Stoneleigh Park",
+   "intro": ""
+  },
+  {
+   "slug": "peterborough",
+   "city": "Peterborough",
+   "region": "Cambridgeshire",
+   "nearby": "Stamford, Huntingdon, Wisbech",
+   "venues": "East of England Showground",
+   "intro": ""
+  },
+  {
+   "slug": "swindon",
+   "city": "Swindon",
+   "region": "Wiltshire",
+   "nearby": "Chippenham, Marlborough, Cirencester",
+   "venues": "STEAM Museum, County Ground",
+   "intro": ""
+  },
+  {
+   "slug": "northampton",
+   "city": "Northampton",
+   "region": "Northamptonshire",
+   "nearby": "Kettering, Wellingborough, Corby, Daventry",
+   "venues": "Silverstone, Sixfields",
+   "intro": ""
+  },
+  {
+   "slug": "aberdeen",
+   "city": "Aberdeen",
+   "region": "Scotland",
+   "nearby": "Dyce, Stonehaven, Inverurie",
+   "venues": "P&J Live",
+   "intro": ""
+  },
+  {
+   "slug": "belfast",
+   "city": "Belfast",
+   "region": "Northern Ireland",
+   "nearby": "Lisburn, Bangor, Newtownabbey",
+   "venues": "ICC Belfast, SSE Arena",
+   "intro": ""
+  },
+  {
+   "slug": "stoke-on-trent",
+   "city": "Stoke-on-Trent",
+   "region": "Staffordshire",
+   "nearby": "Newcastle-under-Lyme, Stafford, Leek",
+   "venues": "Bet365 Stadium, Trentham Estate",
+   "intro": ""
+  },
+  {
+   "slug": "derby",
+   "city": "Derby",
+   "region": "East Midlands",
+   "nearby": "Burton upon Trent, Ilkeston, Belper",
+   "venues": "Derby Arena, Pride Park",
+   "intro": ""
+  },
+  {
+   "slug": "hull",
+   "city": "Hull",
+   "region": "East Yorkshire",
+   "nearby": "Beverley, Bridlington, Cottingham",
+   "venues": "Connexin Live, MKM Stadium",
+   "intro": ""
+  },
+  {
+   "slug": "york",
+   "city": "York",
+   "region": "North Yorkshire",
+   "nearby": "Selby, Malton, Tadcaster",
+   "venues": "York Racecourse, York Barbican",
+   "intro": ""
+  },
+  {
+   "slug": "bournemouth",
+   "city": "Bournemouth",
+   "region": "Dorset",
+   "nearby": "Poole, Christchurch, Wimborne",
+   "venues": "Bournemouth International Centre",
+   "intro": ""
+  },
+  {
+   "slug": "swansea",
+   "city": "Swansea",
+   "region": "Wales",
+   "nearby": "Neath, Llanelli, Port Talbot",
+   "venues": "Swansea Arena, Swansea.com Stadium",
+   "intro": ""
+  }
+ ],
+ "gallery": [
+  {
+   "img": "twin-premium-inflatable-slide-hire",
+   "alt": "Twin premium inflatable racing slide set up on grass"
+  },
+  {
+   "img": "camelot-adult-bouncy-castle-hire",
+   "alt": "Camelot adult bouncy castle at an outdoor event"
+  },
+  {
+   "img": "disco-dome-with-slide-adults-and-children-hire",
+   "alt": "Disco dome bouncy castle with slide"
+  },
+  {
+   "img": "princess-a-frame-and-slide-hire",
+   "alt": "Pink princess A-frame bouncy castle with slide"
+  },
+  {
+   "img": "its-a-knockout-style-assault-course-hire",
+   "alt": "It's a Knockout style inflatable assault course"
+  },
+  {
+   "img": "army-theme-obstacle-course-75ft-hire",
+   "alt": "75ft army theme inflatable obstacle course in a sports hall"
+  },
+  {
+   "img": "inflatable-football-darts-hire",
+   "alt": "Giant inflatable football darts board"
+  },
+  {
+   "img": "human-table-football-inflatable-hire",
+   "alt": "Team playing human table football inflatable at a fun day"
+  },
+  {
+   "img": "gladiators-duel-hire",
+   "alt": "Gladiators duel inflatable with podiums and jousting sticks"
+  },
+  {
+   "img": "wipeout-challenge-inflatable-hire",
+   "alt": "Wipeout challenge inflatable with players jumping the sweeper"
+  },
+  {
+   "img": "human-hamster-balls-hire",
+   "alt": "Human hamster balls in an inflatable arena"
+  },
+  {
+   "img": "childrens-rodeo-bull-buffalo-billy-hire",
+   "alt": "Rider on the rodeo bull with inflatable safety bed"
+  },
+  {
+   "img": "giant-inflatable-christmas-snow-globe-hire",
+   "alt": "Giant walk-in inflatable Christmas snow globe"
+  },
+  {
+   "img": "inflatable-helter-skelter-slide-hire",
+   "alt": "Inflatable helter skelter slide at a summer fair"
+  },
+  {
+   "img": "velcro-fly-wall-hire",
+   "alt": "Child sticking to the inflatable Velcro fly wall"
+  }
+ ],
+ "admin": {
+  "user": "admin",
+  "pass_hash": "",
+  "totp_secret": ""
+ },
+ "text": {}
 }

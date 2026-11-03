@@ -219,7 +219,7 @@ function all_locations(): array {
     $places = is_file(ROOT . '/data/places.json') ? (json_decode((string)file_get_contents(ROOT . '/data/places.json'), true) ?: []) : [];
     $geo = []; foreach ($places as $pl) $geo[$pl['slug']] = $pl;
     $all = [];
-    foreach (data()['locations'] ?? [] as $l) { if (empty($l['slug'])) continue; $all[$l['slug']] = $l + ['lat' => $geo[$l['slug']]['lat'] ?? null, 'lng' => $geo[$l['slug']]['lng'] ?? null]; }
+    foreach (data()['locations'] ?? [] as $l) { if (empty($l['slug'])) continue; $all[$l['slug']] = $l + ['lat' => $geo[$l['slug']]['lat'] ?? null, 'lng' => $geo[$l['slug']]['lng'] ?? null, 'area' => $geo[$l['slug']]['area'] ?? false]; }
     foreach ($places as $pl) if (!isset($all[$pl['slug']])) $all[$pl['slug']] = $pl + ['nearby' => '', 'venues' => '', 'intro' => ''];
     foreach ($all as $slug => &$l) {
         $near = nearest_locations($l, $all, 6);
@@ -235,7 +235,7 @@ function nearest_locations(array $l, array $all, int $n): array {
     if (!isset($l['lat'], $l['lng'])) return [];
     $d = [];
     foreach ($all as $o) {
-        if ($o['slug'] === $l['slug'] || !isset($o['lat'], $o['lng']) || $o['region'] === $o['city']) continue;
+        if ($o['slug'] === $l['slug'] || !isset($o['lat'], $o['lng']) || $o['region'] === $o['city'] || !empty($o['area'])) continue;
         $d[$o['slug']] = (($o['lat'] - $l['lat']) ** 2) + ((($o['lng'] - $l['lng']) * cos(deg2rad($l['lat']))) ** 2);
     }
     asort($d);
@@ -249,6 +249,13 @@ function locations_by_region(): array {
     return $g;
 }
 function slugify(string $s): string { return trim(preg_replace('/[^a-z0-9]+/', '-', strtolower($s)), '-'); }
+/** Town pages for a page key: every town for service pages, the main towns list for event pages. */
+function page_has_town(string $key, string $slug): bool {
+    $pg = data()['pages'][$key] ?? null;
+    if (!$pg || !isset($pg['cat']) || find_location($slug) === null) return false;
+    if (empty($pg['event'])) return !empty($pg['local']);
+    return in_array($slug, array_column(data()['locations'] ?? [], 'slug'), true);
+}
 function find_location(string $slug): ?array {
     return all_locations()[$slug] ?? null;
 }

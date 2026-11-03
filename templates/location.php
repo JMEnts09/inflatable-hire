@@ -53,9 +53,9 @@ $show = $pg['cat'] === 'all' && empty($pg['match']) ? array_slice($items, 0, 12)
       <?= !empty($pg['town_body']) ? $fill($pg['town_body'], true) : '' ?>
       <?php if (!empty($loc['body'])): ?><?= $fill($loc['body']) ?><?php endif; ?>
       <?= th('town.body', $vars) ?>
-      <?php if ($near): ?>
+      <?php if ($near && array_filter($near, fn($n) => page_has_town($key, $n['slug']))): ?>
       <h2><?= e($label) ?> hire near <?= e($c) ?></h2>
-      <p>We also cover the towns around <?= e($c) ?>: <?php $links = []; foreach ($near as $n) $links[] = '<a href="/' . e($key) . '/' . e($n['slug']) . '">' . e($label) . ' hire ' . e($n['city']) . '</a> (' . $n['miles'] . ' miles)'; echo implode(', ', $links); ?>.</p>
+      <p>We also cover the towns around <?= e($c) ?>: <?php $links = []; foreach ($near as $n) if (page_has_town($key, $n['slug'])) $links[] = '<a href="/' . e($key) . '/' . e($n['slug']) . '">' . e($label) . ' hire ' . e($n['city']) . '</a> (' . $n['miles'] . ' miles)'; echo implode(', ', $links); ?>.</p>
       <?php endif; ?>
       <p>Also popular in <?= e($c) ?>: <?php $links = []; foreach (local_keys() as $k) if ($k !== $key) $links[] = '<a href="/' . e($k) . '/' . e($loc['slug']) . '">' . e(page_label($k)) . ' hire ' . e($c) . '</a>'; echo implode(', ', $links); ?>.</p>
     </div>

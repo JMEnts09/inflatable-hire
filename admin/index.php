@@ -291,7 +291,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 foreach ((array)($_POST['l'] ?? []) as $row) {
                     if (!empty($row['remove']) || trim($row['city'] ?? '') === '') continue;
                     $out[] = ['slug' => $slugify((string)$row['city']), 'city' => $clean($row['city'], 80), 'region' => $clean($row['region'] ?? '', 80),
-                        'nearby' => $clean($row['nearby'] ?? '', 300), 'venues' => $clean($row['venues'] ?? '', 300), 'intro' => $clean($row['intro'] ?? '', 1000)];
+                        'nearby' => $clean($row['nearby'] ?? '', 300), 'venues' => $clean($row['venues'] ?? '', 300), 'intro' => $clean($row['intro'] ?? '', 1000),
+                        'body' => $clean($row['body'] ?? '', 20000), 'faq' => array_values(array_filter(array_map(function ($line) use ($clean) {
+                            $p = array_map('trim', explode('|', $line, 2)); return count($p) === 2 && $p[0] !== '' ? ['q' => $clean($p[0], 300), 'a' => $clean($p[1], 2000)] : null;
+                        }, preg_split('/\R/', (string)($row['faq'] ?? '')))))];
                 }
                 $d['locations'] = $out; $msg = 'Locations saved.';
                 break;
@@ -526,6 +529,8 @@ elseif ($tab === 'locations'): ?>
 <div class="g2"><div><label for="lc<?= $i ?>">Town / city</label><input id="lc<?= $i ?>" name="l[<?= $i ?>][city]" value="<?= e($l['city']) ?>"></div><div><label for="lr<?= $i ?>">Region</label><input id="lr<?= $i ?>" name="l[<?= $i ?>][region]" value="<?= e($l['region']) ?>"></div></div>
 <div class="g2"><div><label for="ln<?= $i ?>">Nearby areas</label><input id="ln<?= $i ?>" name="l[<?= $i ?>][nearby]" value="<?= e($l['nearby']) ?>"></div><div><label for="lv<?= $i ?>">Venues</label><input id="lv<?= $i ?>" name="l[<?= $i ?>][venues]" value="<?= e($l['venues']) ?>"></div></div>
 <label for="li<?= $i ?>">Custom intro <small>(optional)</small></label><textarea id="li<?= $i ?>" name="l[<?= $i ?>][intro]" rows="2"><?= e($l['intro']) ?></textarea>
+<label for="lb<?= $i ?>">Local guide <small>(HTML, shown on every service page for this town; {label} = service name)</small></label><textarea id="lb<?= $i ?>" class="code" name="l[<?= $i ?>][body]" rows="4"><?= e($l['body'] ?? '') ?></textarea>
+<label for="lq<?= $i ?>">Local FAQs <small>(one per line: Question|Answer)</small></label><textarea id="lq<?= $i ?>" name="l[<?= $i ?>][faq]" rows="3"><?= e(implode("\n", array_map(fn($f) => $f['q'] . '|' . $f['a'], $l['faq'] ?? []))) ?></textarea>
 <?php if ($l['city']): ?><label class="chk"><input type="checkbox" name="l[<?= $i ?>][remove]" value="1"> Remove</label><?php endif; ?></fieldset>
 <?php endforeach; ?><div class="save"><button>Save towns</button></div></form>
 

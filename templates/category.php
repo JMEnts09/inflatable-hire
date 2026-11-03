@@ -22,7 +22,7 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/' . $key
   </div>
 </section>
 
-<?php if ($pg['cat'] === 'all'): ?>
+<?php if ($pg['cat'] === 'all' && empty($pg['match'])): ?>
 <nav class="wrap cat-jump" aria-label="Categories"><?php foreach (category_keys() as $k): if ($k === $key || !empty(data()['pages'][$k]['match'])) continue; ?><a href="#<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a><?php endforeach; ?></nav>
 <?php foreach (category_keys() as $k): if ($k === $key || !empty(data()['pages'][$k]['match'])) continue; $sub = page_products(data()['pages'][$k]); if (!$sub) continue; ?>
 <section class="wrap section" id="<?= e($k) ?>">
@@ -49,7 +49,7 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/' . $key
   <h2 class="sec-title">Plan another kind of event</h2>
   <ul class="area-chips"><?php foreach (event_keys() as $k): if ($k === $key) continue; ?><li><a href="/<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a></li><?php endforeach; ?></ul>
   <h2 class="sec-title" style="margin-top:28px">Popular areas</h2>
-  <ul class="area-chips"><?php foreach (data()['locations'] as $l): ?><li><a href="/inflatable-hire/<?= e($l['slug']) ?>"><?= e($l['city']) ?></a></li><?php endforeach; ?></ul>
+  <ul class="area-chips"><?php foreach (data()['locations'] as $l): ?><li><a href="/<?= e($key) ?>/<?= e($l['slug']) ?>"><?= e(page_label($key)) ?> <?= e($l['city']) ?></a></li><?php endforeach; ?></ul>
 </section>
 <?php endif; ?>
 <?php if (!empty($pg['local'])): ?>

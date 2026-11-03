@@ -15,7 +15,7 @@ switch (true) {
         require __DIR__ . '/templates/home.php'; break;
     case count($parts) === 1 && (in_array($parts[0], $categoryPages, true) || in_array($parts[0], event_keys(), true)):
         $key = $parts[0]; require __DIR__ . '/templates/category.php'; break;
-    case count($parts) === 2 && in_array($parts[0], $localPages, true) && find_location($parts[1]) !== null:
+    case count($parts) === 2 && page_has_town($parts[0], $parts[1]):
         $key = $parts[0]; $loc = find_location($parts[1]); require __DIR__ . '/templates/location.php'; break;
     case count($parts) === 2 && $parts[0] === 'hire' && find_product($parts[1]) !== null:
         $p = find_product($parts[1]); require __DIR__ . '/templates/product.php'; break;

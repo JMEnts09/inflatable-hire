@@ -19,10 +19,18 @@ function data(): array {
     return $d;
 }
 
+/** Fingerprint of a content value, to tell whether the admin has edited it since it shipped. */
+function content_fp($v): string {
+    $flat = [];
+    if (is_array($v)) array_walk_recursive($v, function ($x) use (&$flat) { $flat[] = (string)$x; });
+    else $flat = [(string)$v];
+    return md5(preg_replace('/\s+/', '', strip_tags(implode('|', $flat))));
+}
+
 /** One-off upgrades for sites whose content.json was created before a new feature shipped (admin edits are kept). */
 function content_upgrade(array $d): array {
     $rev = (int)($d['settings']['content_rev'] ?? 1);
-    if ($rev >= 2 || !is_file(ROOT . '/data/content.default.json')) return $d;
+    if ($rev >= 3 || !is_file(ROOT . '/data/content.default.json')) return $d;
     $def = json_decode((string)file_get_contents(ROOT . '/data/content.default.json'), true) ?: [];
     if ($rev < 2) {   // rev 2: Wipeout, Bungee Run and Gladiator Duel pages; town pages for slides and challenges
         foreach ($def['pages'] ?? [] as $k => $pg) if (!isset($d['pages'][$k])) $d['pages'][$k] = $pg;
@@ -35,7 +43,19 @@ function content_upgrade(array $d): array {
         foreach (['home', 'inflatable-hire'] as $k) foreach (['title', 'meta'] as $f)
             if (isset($def['pages'][$k][$f], $d['pages'][$k])) $d['pages'][$k][$f] = $def['pages'][$k][$f];
     }
-    $d['settings']['content_rev'] = 2;
+    if ($rev < 3) {   // rev 3: event pages, city guides, FAQ topics
+        foreach ($def['pages'] ?? [] as $k => $pg) if (!isset($d['pages'][$k])) $d['pages'][$k] = $pg;
+        foreach ($d['pages'] as $k => &$pg) foreach (['sections', 'faq', 'title', 'meta', 'intro'] as $f)
+            if (isset($def['pages'][$k][$f], $def['prev_fp'][$k][$f]) && content_fp($pg[$f] ?? '') === $def['prev_fp'][$k][$f]) $pg[$f] = $def['pages'][$k][$f];   // only if never edited in the admin
+        unset($pg);
+        $byslug = []; foreach ($def['locations'] ?? [] as $l) $byslug[$l['slug']] = $l;
+        foreach ($d['locations'] as &$l) foreach (['body', 'faq', 'guide_title'] as $f) if (!isset($l[$f]) && isset($byslug[$l['slug']][$f])) $l[$f] = $byslug[$l['slug']][$f];
+        unset($l);
+        $have = array_column($d['locations'], 'slug');
+        foreach ($def['locations'] ?? [] as $l) if (!in_array($l['slug'], $have, true)) $d['locations'][] = $l;
+        if (!isset($d['faq_topics']) && isset($def['faq_topics'])) $d['faq_topics'] = $def['faq_topics'];
+    }
+    $d['settings']['content_rev'] = 3;
     if (is_writable(DATA_FILE)) save_data($d);
     return $d;
 }
@@ -159,10 +179,14 @@ function products_in(string $cat): array {
 
 /** Category landing pages (every page with a "cat"), and the ones that also get town pages. */
 function category_keys(): array {
-    return array_keys(array_filter(data()['pages'] ?? [], fn($pg) => isset($pg['cat'])));
+    return array_keys(array_filter(data()['pages'] ?? [], fn($pg) => isset($pg['cat']) && empty($pg['event'])));
+}
+/** Event-type pages (corporate fun days, schools, weddings ...). */
+function event_keys(): array {
+    return array_keys(array_filter(data()['pages'] ?? [], fn($pg) => isset($pg['cat']) && !empty($pg['event'])));
 }
 function local_keys(): array {
-    return array_keys(array_filter(data()['pages'] ?? [], fn($pg) => isset($pg['cat']) && !empty($pg['local'])));
+    return array_keys(array_filter(data()['pages'] ?? [], fn($pg) => isset($pg['cat']) && empty($pg['event']) && !empty($pg['local'])));
 }
 /** The landing page for a product category (falls back to the all-inflatables page). */
 function page_key_for_cat(string $cat): string {

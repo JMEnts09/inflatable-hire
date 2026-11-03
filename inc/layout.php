@@ -119,6 +119,7 @@ function page_end(): void {
       <h3><?= e(t('footer.col2')) ?></h3>
       <ul>
         <?php foreach (category_keys() as $k): ?><li><a href="/<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a></li><?php endforeach; ?>
+        <?php foreach (event_keys() as $k): ?><li><a href="/<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a></li><?php endforeach; ?>
         <li><a href="/gallery">Gallery</a> · <a href="/faq">FAQ</a> · <a href="/areas">Areas</a></li>
       </ul>
     </div>

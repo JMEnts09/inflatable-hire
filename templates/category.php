@@ -44,6 +44,14 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/' . $key
   </div>
 </section>
 
+<?php if (!empty($pg['event'])): ?>
+<section class="wrap section">
+  <h2 class="sec-title">Plan another kind of event</h2>
+  <ul class="area-chips"><?php foreach (event_keys() as $k): if ($k === $key) continue; ?><li><a href="/<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a></li><?php endforeach; ?></ul>
+  <h2 class="sec-title" style="margin-top:28px">Popular areas</h2>
+  <ul class="area-chips"><?php foreach (data()['locations'] as $l): ?><li><a href="/inflatable-hire/<?= e($l['slug']) ?>"><?= e($l['city']) ?></a></li><?php endforeach; ?></ul>
+</section>
+<?php endif; ?>
 <?php if (!empty($pg['local'])): ?>
 <section class="wrap section">
   <h2 class="sec-title"><?= e(tf('cat.areas_heading', ['label' => page_label($key)])) ?></h2>

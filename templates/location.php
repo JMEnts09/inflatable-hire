@@ -15,6 +15,7 @@ $h1 = "$label Hire $c";
 
 // FAQs: this service's own town questions first, then the general ones.
 $faqs = [];
+foreach ((array)($loc['faq'] ?? []) as $row) $faqs[] = ['q' => $fill($row['q']), 'a' => $fill($row['a'])];
 foreach ((array)($pg['town_faq'] ?? []) as $row) $faqs[] = ['q' => $fill($row['q']), 'a' => $fill($row['a'])];
 foreach (tl('town.faq', $vars, true) as $r) $faqs[] = ['q' => $r[0], 'a' => $r[1]];
 
@@ -50,6 +51,7 @@ $show = $pg['cat'] === 'all' && empty($pg['match']) ? array_slice($items, 0, 12)
   <div class="wrap split">
     <div class="prose">
       <?= !empty($pg['town_body']) ? $fill($pg['town_body'], true) : '' ?>
+      <?php if (!empty($loc['body'])): ?><?= $fill($loc['body']) ?><?php endif; ?>
       <?= th('town.body', $vars) ?>
       <?php if ($near): ?>
       <h2><?= e($label) ?> hire near <?= e($c) ?></h2>

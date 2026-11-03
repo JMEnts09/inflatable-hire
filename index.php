@@ -13,7 +13,7 @@ $parts = explode('/', trim($path, '/'));
 switch (true) {
     case $path === '/':
         require __DIR__ . '/templates/home.php'; break;
-    case count($parts) === 1 && in_array($parts[0], $categoryPages, true):
+    case count($parts) === 1 && (in_array($parts[0], $categoryPages, true) || in_array($parts[0], event_keys(), true)):
         $key = $parts[0]; require __DIR__ . '/templates/category.php'; break;
     case count($parts) === 2 && in_array($parts[0], $localPages, true) && find_location($parts[1]) !== null:
         $key = $parts[0]; $loc = find_location($parts[1]); require __DIR__ . '/templates/location.php'; break;

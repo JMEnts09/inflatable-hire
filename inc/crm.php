@@ -105,18 +105,24 @@ function crm_fetch_products(bool $force = false): ?array {
     // Lock so only one visitor refreshes at a time; everyone else gets the current copy.
     $lock = @fopen(CACHE_DIR . '/crm_lock', 'c');
     if ($lock && !flock($lock, LOCK_EX | LOCK_NB) && !$force) return is_file($f) ? json_decode((string)file_get_contents($f), true) : null;
-    $path = strtr(crm_setting('crm_products_path'), ['{ids}' => rawurlencode(implode(',', crm_ids())), '{categories}' => rawurlencode(crm_setting('crm_categories'))]);
-    $j = crm_request($path);
-    $list = $j['products'] ?? null;
+    // Ask in batches of 80 IDs (the feed's database allows up to 100 values per query); categories go with the first batch.
+    $list = [];
+    $batches = array_chunk(crm_ids(), 80) ?: [[]];
+    foreach ($batches as $n => $chunk) {
+        $path = strtr(crm_setting('crm_products_path'), ['{ids}' => rawurlencode(implode(',', $chunk)), '{categories}' => $n === 0 ? rawurlencode(crm_setting('crm_categories')) : '']);
+        $j = crm_request($path);
+        if (!is_array($j['products'] ?? null)) { $list = null; break; }
+        $list = array_merge($list, $j['products']);
+    }
     if (is_array($list)) {
         $rows = [];
         foreach ($list as $r) if (is_array($r) && !empty($r['id'])) $rows[(string)$r['id']] = crm_normalise($r);
         $tmp = $f . '.tmp';
-        file_put_contents($tmp, json_encode(['at' => time(), 'rows' => $rows]));
+        file_put_contents($tmp, json_encode(['at' => time(), 'rows' => $rows, 'ids' => crm_ids()]));
         rename($tmp, $f);
         @unlink($fail);
         if ($lock) flock($lock, LOCK_UN);
-        return ['at' => time(), 'rows' => $rows];
+        return ['at' => time(), 'rows' => $rows, 'ids' => crm_ids()];
     }
     touch($fail);
     if ($lock) flock($lock, LOCK_UN);
@@ -148,7 +154,8 @@ function crm_products(): array {
     foreach ($local as &$p) {
         $id = (string)($p['crm_id'] ?? '');
         if ($id === '') continue;
-        if ($isLive && !isset($live['rows'][$id])) { $p['crm_gone'] = true; continue; }   // hidden or deleted in the CRM → off the site
+        // Hidden or deleted in the CRM → off the site (only when the feed was actually asked about this product).
+        if ($isLive && !isset($live['rows'][$id]) && in_array($id, $live['ids'] ?? [], true)) { $p['crm_gone'] = true; continue; }   // hidden or deleted in the CRM → off the site
         if (isset($rows[$id])) { $p = crm_apply($p, $rows[$id], $isLive); $used[$id] = true; }
     }
     unset($p);

@@ -19,6 +19,9 @@ switch (true) {
         $key = $parts[0]; $loc = find_location($parts[1]); require __DIR__ . '/templates/location.php'; break;
     case count($parts) === 2 && $parts[0] === 'hire' && find_product($parts[1]) !== null:
         $p = find_product($parts[1]); require __DIR__ . '/templates/product.php'; break;
+    case $path === '/news': require __DIR__ . '/templates/news.php'; break;
+    case count($parts) === 2 && $parts[0] === 'news' && find_article($parts[1]) !== null:
+        $a = find_article($parts[1]); require __DIR__ . '/templates/article.php'; break;
     case $path === '/areas': require __DIR__ . '/templates/areas.php'; break;
     case $path === '/availability': require __DIR__ . '/templates/availability.php'; break;
     case $path === '/gallery': require __DIR__ . '/templates/gallery.php'; break;

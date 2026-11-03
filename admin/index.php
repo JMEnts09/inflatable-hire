@@ -279,6 +279,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $d['gallery'] = $out; $msg = 'Gallery saved.';
                 break;
 
+            case 'news':
+                $news = $d['news'] ?? [];
+                $i = $_POST['i'] ?? '';
+                if (!empty($_POST['delete'])) { if (isset($news[(int)$i])) array_splice($news, (int)$i, 1); $d['news'] = array_values($news); $msg = 'Article deleted.'; $back = '?tab=news'; break; }
+                $title = $clean($_POST['title'] ?? '', 200);
+                if ($title === '') { $err = 'Give the article a title.'; break; }
+                $a = ($i !== '' && isset($news[(int)$i])) ? $news[(int)$i] : [];
+                $a['title'] = $title;
+                $a['slug'] = $slugify($clean($_POST['slug'] ?? '', 120) ?: $title);
+                $a['date'] = preg_match('/^\d{4}-\d{2}-\d{2}$/', (string)($_POST['date'] ?? '')) ? $_POST['date'] : date('Y-m-d');
+                $a['meta'] = $clean($_POST['meta'] ?? '', 400);
+                $a['summary'] = $clean($_POST['summary'] ?? '', 600);
+                $a['html'] = $clean($_POST['html'] ?? '', 60000);
+                $a['image'] = $imagePost('image', 'up_image') ?: ($a['image'] ?? '');
+                $a['published'] = !empty($_POST['published']);
+                foreach ($news as $j => $o) if ($o['slug'] === $a['slug'] && (string)$j !== (string)$i) { $a['slug'] .= '-' . substr(md5(uniqid()), 0, 4); break; }
+                if ($i !== '' && isset($news[(int)$i])) $news[(int)$i] = $a; else { $news[] = $a; $i = count($news) - 1; }
+                usort($news, fn($x, $y) => strcmp($y['date'], $x['date']));
+                $d['news'] = $news; $msg = 'Article saved.';
+                foreach ($news as $j => $o) if ($o['slug'] === $a['slug']) $back = '?tab=news&n=' . $j;
+                break;
+
             case 'seo':
                 foreach ((array)($_POST['pg'] ?? []) as $k => $v) if (isset($d['pages'][$k])) { $d['pages'][$k]['title'] = $clean($v['title'] ?? '', 200); $d['pages'][$k]['meta'] = $clean($v['meta'] ?? '', 400); }
                 foreach ((array)($_POST['t'] ?? []) as $k => $v) if (isset(text_fields()[$k])) { $v = $clean($v, 400); if ($v === text_fields()[$k][3]) unset($d['text'][$k]); else $d['text'][$k] = $v; }
@@ -339,7 +361,7 @@ function counted(string $label, string $name, string $val, int $ideal, bool $are
 }
 
 admin_shell_start('Admin');
-$tabs = ['pages' => 'Pages', 'products' => 'Products', 'text' => 'Site text', 'contact' => 'Contact page', 'seo' => 'SEO', 'media' => 'Photos', 'gallery' => 'Gallery', 'locations' => 'Towns', 'settings' => 'Settings', 'crm' => 'CRM & stock', 'enquiries' => 'Enquiries', 'account' => 'Account'];
+$tabs = ['pages' => 'Pages', 'products' => 'Products', 'text' => 'Site text', 'contact' => 'Contact page', 'seo' => 'SEO', 'media' => 'Photos', 'gallery' => 'Gallery', 'locations' => 'Towns', 'news' => 'News', 'settings' => 'Settings', 'crm' => 'CRM & stock', 'enquiries' => 'Enquiries', 'account' => 'Account'];
 if (!isset($tabs[$tab])) $tab = 'pages';
 ?>
 <header class="top"><b><?= e(s('site_name')) ?> · Admin</b><span><a href="/" target="_blank">View site ↗</a> · <a href="?logout=1">Sign out</a></span></header>
@@ -533,6 +555,29 @@ elseif ($tab === 'locations'): ?>
 <label for="lq<?= $i ?>">Local FAQs <small>(one per line: Question|Answer)</small></label><textarea id="lq<?= $i ?>" name="l[<?= $i ?>][faq]" rows="3"><?= e(implode("\n", array_map(fn($f) => $f['q'] . '|' . $f['a'], $l['faq'] ?? []))) ?></textarea>
 <?php if ($l['city']): ?><label class="chk"><input type="checkbox" name="l[<?= $i ?>][remove]" value="1"> Remove</label><?php endif; ?></fieldset>
 <?php endforeach; ?><div class="save"><button>Save towns</button></div></form>
+
+<?php /* ------------------------------------------------------------ NEWS */
+elseif ($tab === 'news'):
+$news = $d['news'] ?? []; $n = $_GET['n'] ?? null; ?>
+<?php if ($n === null): ?>
+<div class="box"><h2>News articles</h2><p><small>Articles appear at <a href="/news" target="_blank">/news</a>, on the home page and in Google. Untick “Published” to keep a draft.</small></p>
+<p><a class="btn" href="?tab=news&n=new">+ Write a new article</a></p>
+<div class="plist"><?php foreach ($news as $j => $a): ?><a class="prow" href="?tab=news&n=<?= $j ?>"><?= !empty($a['image']) && img_exists($a['image']) ? '<img src="' . e(img_src($a['image'], 480)) . '" alt="">' : '<span class="ph"></span>' ?><span><b><?= e($a['title']) ?></b><small><?= e($a['date']) ?> · /news/<?= e($a['slug']) ?></small></span><span class="badge<?= empty($a['published']) ? ' off' : '' ?>"><?= empty($a['published']) ? 'Draft' : 'Live' ?></span></a><?php endforeach; ?></div></div>
+<?php else: $isNew = $n === 'new' || !isset($news[(int)$n]); $a = $isNew ? ['title' => '', 'slug' => '', 'date' => date('Y-m-d'), 'meta' => '', 'summary' => '', 'html' => '', 'image' => '', 'published' => true] : $news[(int)$n]; ?>
+<form method="post" enctype="multipart/form-data" class="box"><?= $csrf ?><input type="hidden" name="act" value="news"><input type="hidden" name="i" value="<?= $isNew ? '' : (int)$n ?>">
+<p><a href="?tab=news">← All articles</a><?php if (!$isNew): ?> · <a href="/news/<?= e($a['slug']) ?>" target="_blank">View ↗</a><?php endif; ?></p>
+<h2><?= $isNew ? 'New article' : 'Edit article' ?></h2>
+<?= counted('Title <small>(also the Google title)</small>', 'title', $a['title'], 60) ?>
+<div class="g2"><div><label for="nslug">Web address <small>/news/…</small></label><input id="nslug" name="slug" value="<?= e($a['slug']) ?>" placeholder="made from the title"></div><div><label for="ndate">Date</label><input id="ndate" type="date" name="date" value="<?= e($a['date']) ?>"></div></div>
+<?= counted('Google description', 'meta', $a['meta'], 155, true) ?>
+<label for="nsum">Summary <small>(shown in the news list)</small></label><textarea id="nsum" name="summary" rows="2"><?= e($a['summary']) ?></textarea>
+<label>Main image</label><?= img_field('image', $a['image'], 'up_image', true) ?>
+<label>Article</label><textarea class="rich" name="html"><?= e($a['html']) ?></textarea>
+<label class="chk"><input type="checkbox" name="published" value="1"<?= !empty($a['published']) ? ' checked' : '' ?>> Published</label>
+<div class="save"><button>Save article</button></div>
+</form>
+<?php if (!$isNew): ?><form method="post" class="box" data-confirm="Delete this article? This can’t be undone."><?= $csrf ?><input type="hidden" name="act" value="news"><input type="hidden" name="i" value="<?= (int)$n ?>"><input type="hidden" name="delete" value="1"><button class="danger btn-sm">Delete article</button></form><?php endif; ?>
+<?php endif; ?>
 
 <?php /* ------------------------------------------------------------ SETTINGS */
 elseif ($tab === 'settings'): ?>

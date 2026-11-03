@@ -63,4 +63,8 @@ page_start(['title' => $pg['title'], 'meta' => $pg['meta'], 'path' => '/', 'imag
   <ul class="area-chips"><?php foreach (data()['locations'] as $l): ?><li><a href="/<?= e(local_keys()[0] ?? 'inflatable-hire') ?>/<?= e($l['slug']) ?>"><?= e($l['city']) ?></a></li><?php endforeach; ?></ul>
   <p class="center"><a class="btn btn-ghost" href="/areas">All <?= count(all_locations()) ?> towns &amp; cities we cover</a></p>
 </section>
-<?php faq_block($pg['faq'] ?? []); page_end();
+<?php if ($latest = array_slice(news_articles(), 0, 3)): ?>
+<section class="wrap section"><h2 class="sec-title">Latest news &amp; guides</h2><div class="grid3">
+<?php foreach ($latest as $o): ?><article class="card news-card"><div class="card-body"><p class="muted"><?= e(date('j F Y', strtotime($o['date']))) ?></p><h3><a href="/news/<?= e($o['slug']) ?>"><?= e($o['title']) ?></a></h3><p><?= e($o['summary']) ?></p></div></article><?php endforeach; ?>
+</div><p class="center"><a class="btn btn-ghost" href="/news">All news</a></p></section>
+<?php endif; faq_block($pg['faq'] ?? []); page_end();

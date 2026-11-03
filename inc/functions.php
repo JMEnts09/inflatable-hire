@@ -30,7 +30,7 @@ function content_fp($v): string {
 /** One-off upgrades for sites whose content.json was created before a new feature shipped (admin edits are kept). */
 function content_upgrade(array $d): array {
     $rev = (int)($d['settings']['content_rev'] ?? 1);
-    if ($rev >= 3 || !is_file(ROOT . '/data/content.default.json')) return $d;
+    if ($rev >= 4 || !is_file(ROOT . '/data/content.default.json')) return $d;
     $def = json_decode((string)file_get_contents(ROOT . '/data/content.default.json'), true) ?: [];
     if ($rev < 2) {   // rev 2: Wipeout, Bungee Run and Gladiator Duel pages; town pages for slides and challenges
         foreach ($def['pages'] ?? [] as $k => $pg) if (!isset($d['pages'][$k])) $d['pages'][$k] = $pg;
@@ -55,7 +55,12 @@ function content_upgrade(array $d): array {
         foreach ($def['locations'] ?? [] as $l) if (!in_array($l['slug'], $have, true)) $d['locations'][] = $l;
         if (!isset($d['faq_topics']) && isset($def['faq_topics'])) $d['faq_topics'] = $def['faq_topics'];
     }
-    $d['settings']['content_rev'] = 3;
+    if ($rev < 4) {   // rev 4: news articles
+        $have = array_column($d['news'] ?? [], 'slug');
+        foreach ($def['news'] ?? [] as $a) if (!in_array($a['slug'], $have, true)) $d['news'][] = $a;
+        foreach (['faq_topics'] as $f) if (isset($def[$f], $def['prev_fp'][$f]) && content_fp($d[$f] ?? '') === $def['prev_fp'][$f]) $d[$f] = $def[$f];
+    }
+    $d['settings']['content_rev'] = 4;
     if (is_writable(DATA_FILE)) save_data($d);
     return $d;
 }
@@ -255,6 +260,16 @@ function page_has_town(string $key, string $slug): bool {
     if (!$pg || !isset($pg['cat']) || find_location($slug) === null) return false;
     if (empty($pg['event'])) return !empty($pg['local']);
     return in_array($slug, array_column(data()['locations'] ?? [], 'slug'), true);
+}
+/** Published news articles, newest first. */
+function news_articles(): array {
+    $n = array_values(array_filter(data()['news'] ?? [], fn($a) => !empty($a['published']) && ($a['date'] ?? '') <= date('Y-m-d')));
+    usort($n, fn($x, $y) => strcmp($y['date'], $x['date']));
+    return $n;
+}
+function find_article(string $slug): ?array {
+    foreach (news_articles() as $a) if ($a['slug'] === $slug) return $a;
+    return null;
 }
 function find_location(string $slug): ?array {
     return all_locations()[$slug] ?? null;

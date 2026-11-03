@@ -59,7 +59,7 @@ function page_start(array $m): void {
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=6">
+<link rel="stylesheet" href="/assets/css/site.css?v=7">
 <style>:root{--red:<?= e($accent) ?>}</style>
 <script type="application/ld+json"><?= json_encode(['@context' => 'https://schema.org', '@graph' => strip_nulls($graph)], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php if (s('ga4_id')): ?>
@@ -120,7 +120,7 @@ function page_end(): void {
       <ul>
         <?php foreach (category_keys() as $k): ?><li><a href="/<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a></li><?php endforeach; ?>
         <?php foreach (event_keys() as $k): ?><li><a href="/<?= e($k) ?>"><?= e(data()['pages'][$k]['h1']) ?></a></li><?php endforeach; ?>
-        <li><a href="/gallery">Gallery</a> · <a href="/faq">FAQ</a> · <a href="/areas">Areas</a></li>
+        <li><a href="/gallery">Gallery</a> · <a href="/faq">FAQ</a> · <a href="/news">News</a> · <a href="/areas">Areas</a></li>
       </ul>
     </div>
     <div class="foot-areas">

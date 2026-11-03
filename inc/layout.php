@@ -150,7 +150,7 @@ function product_card(array $p): void {
     <div class="card-body">
       <h3><a href="<?= e(product_url($p)) ?>"><?= e($p['name']) ?></a></h3>
       <p><?= e($p['short'] ?? '') ?></p>
-      <div class="card-meta"><span class="price">From <?= money($p['price_from'] ?? 0) ?> <small>+ VAT</small></span><?php if (!empty($p['players'])): ?><span class="players"><?= e($p['players']) ?></span><?php endif; ?></div>
+      <div class="card-meta"><span class="price"><?php if (($p['price_from'] ?? 0) > 0): ?>From <?= money($p['price_from']) ?> <small>+ VAT</small><?php else: ?>Price on request<?php endif; ?></span><?php if (!empty($p['players'])): ?><span class="players"><?= e($p['players']) ?></span><?php endif; ?></div>
       <a class="btn btn-sm btn-block" href="<?= e(product_url($p)) ?>#check"><?= e(t('product.card_btn')) ?></a>
     </div>
   </article>

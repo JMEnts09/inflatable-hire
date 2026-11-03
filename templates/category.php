@@ -1,7 +1,7 @@
 <?php
 $pg = data()['pages'][$key];
 $items = page_products($pg);
-$prices = array_column($items, 'price_from');
+$prices = array_values(array_filter(array_column($items, 'price_from'), fn($x) => $x > 0));
 $schema = [['@type' => 'Service', 'name' => $pg['h1'], 'serviceType' => $pg['h1'], 'description' => $pg['meta'],
     'provider' => ['@id' => url('/#business')], 'areaServed' => ['@type' => 'Country', 'name' => 'United Kingdom'],
     'offers' => $prices ? ['@type' => 'AggregateOffer', 'priceCurrency' => 'GBP', 'lowPrice' => min($prices), 'highPrice' => max($prices), 'offerCount' => count($items)] : null]];

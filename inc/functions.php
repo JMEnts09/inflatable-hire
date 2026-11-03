@@ -30,7 +30,7 @@ function content_fp($v): string {
 /** One-off upgrades for sites whose content.json was created before a new feature shipped (admin edits are kept). */
 function content_upgrade(array $d): array {
     $rev = (int)($d['settings']['content_rev'] ?? 1);
-    if ($rev >= 4 || !is_file(ROOT . '/data/content.default.json')) return $d;
+    if ($rev >= 5 || !is_file(ROOT . '/data/content.default.json')) return $d;
     $def = json_decode((string)file_get_contents(ROOT . '/data/content.default.json'), true) ?: [];
     if ($rev < 2) {   // rev 2: Wipeout, Bungee Run and Gladiator Duel pages; town pages for slides and challenges
         foreach ($def['pages'] ?? [] as $k => $pg) if (!isset($d['pages'][$k])) $d['pages'][$k] = $pg;
@@ -60,7 +60,20 @@ function content_upgrade(array $d): array {
         foreach ($def['news'] ?? [] as $a) if (!in_array($a['slug'], $have, true)) $d['news'][] = $a;
         foreach (['faq_topics'] as $f) if (isset($def[$f], $def['prev_fp'][$f]) && content_fp($d[$f] ?? '') === $def['prev_fp'][$f]) $d[$f] = $def[$f];
     }
-    $d['settings']['content_rev'] = 4;
+    if ($rev < 5) {   // rev 5: bigger-ticket range (kids castles hidden), laser tag, bumper cars, IPS, sports day, warrior wall, rodeo game
+        $have = array_column($d['products'] ?? [], 'slug');
+        foreach ($def['products'] ?? [] as $p) if (!in_array($p['slug'], $have, true)) $d['products'][] = $p;
+        foreach ($d['products'] as &$p) {
+            if (in_array($p['slug'], $def['hide_rev5'] ?? [], true)) $p['hidden'] = true;
+            if ($p['slug'] === 'dash-n-grab-inflatable-6-player' && stripos($p['name'], 'hippo') === false) { $p['name'] = "Hungry Hippos / Dash 'n' Grab Inflatable (6 Player)"; }
+        }
+        unset($p);
+        foreach ($def['pages'] ?? [] as $k => $pg) {
+            if (!isset($d['pages'][$k])) { $d['pages'][$k] = $pg; continue; }
+            foreach ($pg as $f => $v) if (isset($def['prev_fp5'][$k][$f]) && content_fp($d['pages'][$k][$f] ?? '') === $def['prev_fp5'][$k][$f]) $d['pages'][$k][$f] = $v;
+        }
+    }
+    $d['settings']['content_rev'] = 5;
     if (is_writable(DATA_FILE)) save_data($d);
     return $d;
 }

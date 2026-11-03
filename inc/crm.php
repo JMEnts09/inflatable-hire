@@ -16,7 +16,7 @@
 
 const CRM_FEED_DEFAULT = 'https://jm-crm-feed.plain-wood-3958.workers.dev';
 const CRM_CATEGORIES_DEFAULT = 'Bouncy Castles & Slides|Action Inflatables|Assault Courses|Bungee Runs|Climbing Walls|Inflatables|Wipeout & Last Man Standing|Rodeo Bull Hire|Surf Simulator Hire';
-const CRM_EXCLUDE_DEFAULT = '90581,90827,90828,90217,90281,90677,90788';   // sports-day package, trampolines, bunting, solid climbing walls, rodeo rain cover
+const CRM_EXCLUDE_DEFAULT = '90827,90828,90217,90281,90677,90788';   // trampolines, bunting, solid climbing walls, rodeo rain cover
 
 function crm_setting(string $k): string {
     $v = trim((string)s($k));

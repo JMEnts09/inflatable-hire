@@ -27,7 +27,7 @@
   "crm_auto_add": true,
   "crm_categories": "Bouncy Castles & Slides|Action Inflatables|Assault Courses|Bungee Runs|Climbing Walls|Inflatables|Wipeout & Last Man Standing|Rodeo Bull Hire|Surf Simulator Hire",
   "crm_exclude": "90581,90827,90828,90217,90281,90677,90788",
-  "content_rev": 2
+  "content_rev": 5
  },
  "products": [
   {
@@ -46,7 +46,7 @@
    "players": "Adults & children",
    "image": "adult-bouncy-castle-red-and-black-with-roof-hire",
    "short": "Grown-up sized castle in red and black with a full rain roof – ideal for parties, weddings and corporate fun days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90024",
    "staffed": false
   },
@@ -66,7 +66,7 @@
    "players": "Adults & children",
    "image": "camelot-adult-bouncy-castle-hire",
    "short": "Classic Camelot-style castle built for adults as well as kids, with high walls and a covered roof.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90224",
    "staffed": false
   },
@@ -86,7 +86,7 @@
    "players": "Adults & children",
    "image": "adult-and-childrens-jungle-bouncy-castle-hire",
    "short": "Jungle-themed castle strong enough for adults and children alike.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90026",
    "staffed": false
   },
@@ -106,7 +106,7 @@
    "players": "Adults & children",
    "image": "adults-and-childrens-disco-dome-hire",
    "short": "Enclosed disco dome bouncy castle with party lights and speaker – a night-time favourite.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90027",
    "staffed": false
   },
@@ -127,7 +127,7 @@
    "players": "Adults & children",
    "image": "disco-dome-with-slide-adults-and-children-hire",
    "short": "Disco dome castle with a built-in slide, lights and music for all-ages parties.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90332",
    "staffed": false
   },
@@ -148,9 +148,10 @@
    "players": "Children",
    "image": "dinosaur-front-slide-castle-hire",
    "short": "Dinosaur-themed bounce and slide combi with a front slide.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90328",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "elephant-bounce-and-slide-a-frame",
@@ -169,9 +170,10 @@
    "players": "Children",
    "image": "elephant-bounce-and-slide-a-frame-hire",
    "short": "Bright elephant A-frame castle with a front slide – perfect for younger children's parties.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90339",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "farmyard-front-slide-castle",
@@ -190,9 +192,10 @@
    "players": "Children",
    "image": "farmyard-front-slide-castle-hire",
    "short": "Farmyard-themed bounce and slide with a generous front slide.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90358",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "farmyard-bouncy-castle-10ft-x-10ft",
@@ -214,7 +217,8 @@
     "dimensions": "10ft x 10ft"
    },
    "crm_id": "90357",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "jungle-bounce-and-slide-front-slide",
@@ -233,9 +237,10 @@
    "players": "Children",
    "image": "jungle-bounce-and-slide-front-slide-hire",
    "short": "Jungle bounce area with a front slide – lots of play in one inflatable.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90491",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "jungle-themed-a-frame-castle",
@@ -253,9 +258,10 @@
    "players": "Children",
    "image": "jungle-themed-a-frame-castle-hire",
    "short": "Jungle A-frame bouncy castle with themed artwork panels.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90494",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "party-bounce-and-slide",
@@ -274,9 +280,10 @@
    "players": "Children",
    "image": "party-bounce-and-slide-hire",
    "short": "Colourful party-themed bounce and slide combi for birthdays and fun days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90590",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "peppa-pig-bouncy-castle",
@@ -294,9 +301,10 @@
    "players": "Children",
    "image": "peppa-pig-bouncy-castle-hire",
    "short": "Peppa Pig themed bouncy castle for little ones' birthday parties.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90601",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "princess-a-frame-and-slide",
@@ -315,9 +323,10 @@
    "players": "Children",
    "image": "princess-a-frame-and-slide-hire",
    "short": "Pink princess A-frame castle with a front slide.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90633",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "undersea-a-frame-castle",
@@ -335,9 +344,10 @@
    "players": "Children",
    "image": "undersea-a-frame-castle-hire",
    "short": "Under-the-sea themed A-frame bouncy castle.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90836",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "undersea-bounce-and-slide",
@@ -356,9 +366,10 @@
    "players": "Children",
    "image": "undersea-bounce-and-slide-hire",
    "short": "Undersea bounce and slide combi with ocean artwork.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90838",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "activity-toddler-inflatable-event-style",
@@ -376,7 +387,7 @@
    "players": "Toddlers",
    "image": "activity-toddler-inflatable-event-style-hire",
    "short": "Event-sized toddler activity inflatable with soft climbs, pop-ups and a mini slide – great for family zones.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90022",
    "staffed": false
   },
@@ -396,7 +407,7 @@
    "players": "All ages",
    "image": "inflatable-helter-skelter-slide-hire",
    "short": "Traditional helter skelter as a giant inflatable – a centrepiece for fêtes, festivals and fun days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90463",
    "staffed": false
   },
@@ -416,7 +427,7 @@
    "players": "All ages",
    "image": "inflatable-platform-slide-hire",
    "short": "Tall platform slide that keeps a fast-moving queue going all day at larger events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90465",
    "staffed": false
   },
@@ -436,7 +447,7 @@
    "players": "All ages",
    "image": "twin-premium-inflatable-slide-hire",
    "short": "Two side-by-side lanes so friends can race each other to the bottom.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90832",
    "staffed": false
   },
@@ -544,7 +555,7 @@
    "players": "Adults & children",
    "image": "bootcamp-assault-course-hire",
    "short": "Bootcamp-style assault course packed with obstacles for team-building and fitness events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90108",
    "staffed": false
   },
@@ -564,7 +575,7 @@
    "players": "Adults & children",
    "image": "its-a-knockout-style-assault-course-hire",
    "short": "It's a Knockout style course for heats, relays and team competitions.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90479",
    "staffed": false
   },
@@ -584,7 +595,7 @@
    "players": "Children",
    "image": "jungle-assault-course-fun-run-hire",
    "short": "Jungle-themed fun run for children's parties and school sports days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90488",
    "staffed": false
   },
@@ -650,7 +661,7 @@
    "players": "All ages",
    "image": "inflatable-football-darts-hire",
    "short": "Kick footballs at a giant dartboard – perfect for football-themed events and fun days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90460",
    "staffed": false
   },
@@ -670,7 +681,7 @@
    "players": "All ages",
    "image": "rugby-darts-kick-n-stick-hire",
    "short": "Kick rugby balls at a giant target – a hit at rugby clubs and sports events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90716",
    "staffed": false
   },
@@ -690,7 +701,7 @@
    "players": "All ages",
    "image": "inflatable-penalty-shootout-hire",
    "short": "Beat the keeper and score through the target holes – easy to understand, great for queues.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90597",
    "staffed": false
   },
@@ -710,7 +721,7 @@
    "players": "2 players",
    "image": "inflatable-connect-4-2-games-in-1-hire",
    "short": "Giant inflatable Connect 4 with a second game built in.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90458",
    "staffed": false
   },
@@ -730,7 +741,7 @@
    "players": "Groups",
    "image": "inflatable-twister-hire",
    "short": "Giant inflatable Twister – left hand red, right foot yellow, lots of laughs.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90467",
    "staffed": false
   },
@@ -750,7 +761,7 @@
    "players": "Teams",
    "image": "inflatable-volleyball-court-hire",
    "short": "Enclosed inflatable volleyball court for team tournaments and corporate sports days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90849",
    "staffed": false
   },
@@ -770,7 +781,7 @@
    "players": "Teams",
    "image": "inflatable-curling-lane-hire",
    "short": "Slide the stones down the inflatable lane – a wintry favourite for Christmas and corporate events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90296",
    "staffed": false
   },
@@ -790,13 +801,13 @@
    "players": "2+ players",
    "image": "basketball-inflatable-hire",
    "short": "Giant inflatable basketball challenge for fun days, schools and outdoor events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90075",
    "staffed": false
   },
   {
    "slug": "dash-n-grab-inflatable-6-player",
-   "name": "Dash N Grab Inflatable (6 Player)",
+   "name": "Hungry Hippos / Dash 'n' Grab Inflatable (6 Player)",
    "cats": [
     "games"
    ],
@@ -809,8 +820,8 @@
    },
    "players": "6 players",
    "image": "dash-n-grab-inflatable-6-player-hire",
-   "short": "Six players race on bungees to grab the balls from the centre – fast, frantic team fun.",
-   "spec": {},
+   "short": "Hungry Hippos come to life – six players race on bungees to grab the balls from the centre. Fast, loud and hilarious.",
+   "spec": [],
    "crm_id": "90309",
    "staffed": false
   },
@@ -830,7 +841,7 @@
    "players": "Groups",
    "image": "grand-national-inflatable-hire",
    "short": "Bounce your way round the course on space-hopper horses – ideal for race-day themes.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90430",
    "staffed": false
   },
@@ -850,7 +861,7 @@
    "players": "Groups",
    "image": "inflatable-grand-national-horse-race-hire",
    "short": "A larger Grand National course for horse-racing themed parties and family fun days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90462",
    "staffed": false
   },
@@ -870,7 +881,7 @@
    "players": "All ages",
    "image": "inflatable-axe-throwing-hire",
    "short": "Safe soft-axe throwing at an inflatable target – the axe-throwing craze, made event-friendly.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90456",
    "staffed": false
   },
@@ -890,7 +901,7 @@
    "players": "Up to 10 players",
    "image": "human-table-football-inflatable-hire",
    "short": "Become the players in a giant game of table football – brilliant for team building.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90448",
    "staffed": false
   },
@@ -910,7 +921,7 @@
    "players": "2 players",
    "image": "adult-sumo-suits-hire",
    "short": "Padded adult sumo suits with helmets and mat for hilarious head-to-head wrestling.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90025",
    "staffed": false
   },
@@ -930,7 +941,7 @@
    "players": "2 players",
    "image": "childrens-sumo-suits-hire",
    "short": "Child-sized sumo suits and mat for parties and fun days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90257",
    "staffed": false
   },
@@ -950,9 +961,10 @@
    "players": "Children",
    "image": "hamster-caterpillar-track-hire",
    "short": "Inflatable caterpillar wheels for sports-day races.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90435",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "inflatable-stepping-stones",
@@ -970,9 +982,10 @@
    "players": "Children",
    "image": "inflatable-stepping-stones-hire",
    "short": "Inflatable stepping stones for races and obstacle relays.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90798",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "walk-the-plank",
@@ -990,9 +1003,10 @@
    "players": "Children",
    "image": "walk-the-plank-hire",
    "short": "Inflatable walk-the-plank balance challenge for pirate parties and sports days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90852",
-   "staffed": false
+   "staffed": false,
+   "hidden": true
   },
   {
    "slug": "giant-inflatable-christmas-snow-globe",
@@ -1010,7 +1024,7 @@
    "players": "Walk-in",
    "image": "giant-inflatable-christmas-snow-globe-hire",
    "short": "Walk-in giant snow globe for Christmas markets, grottos and festive photo opportunities.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90261",
    "staffed": false
   },
@@ -1030,7 +1044,7 @@
    "players": "2 players",
    "image": "gladiators-duel-hire",
    "short": "Battle it out on podiums with padded jousting sticks – the classic Gladiators duel.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90419",
    "staffed": false
   },
@@ -1050,7 +1064,7 @@
    "players": "Up to 6 players",
    "image": "wipeout-challenge-inflatable-hire",
    "short": "Jump the spinning sweeper arm and be the last one standing.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90862",
    "staffed": false
   },
@@ -1070,7 +1084,7 @@
    "players": "Up to 8 players",
    "image": "ultimate-wipeout-sweeper-last-man-standing-hire",
    "short": "The ultimate Last Man Standing sweeper – duck and jump or you're out.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90833",
    "staffed": false
   },
@@ -1090,7 +1104,7 @@
    "players": "1 at a time",
    "image": "total-wipeout-big-red-balls-hire",
    "short": "Can you cross the Big Red Balls? The TV challenge everyone wants to try.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90823",
    "staffed": false
   },
@@ -1110,7 +1124,7 @@
    "players": "2 players",
    "image": "bungee-run-inflatable-hire",
    "short": "Race against the bungee cord to place your marker furthest down the lane.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90216",
    "staffed": false
   },
@@ -1130,7 +1144,7 @@
    "players": "3 players",
    "image": "bungee-run-3-lane-inflatable-hire",
    "short": "Three-lane bungee run for bigger groups and team tournaments.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90215",
    "staffed": false
   },
@@ -1150,7 +1164,7 @@
    "players": "Up to 4 players",
    "image": "wrecking-ball-inflatable-hire",
    "short": "Stay on your podium while the swinging wrecking ball tries to knock you off.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90868",
    "staffed": false
   },
@@ -1170,7 +1184,7 @@
    "players": "Up to 4 players",
    "image": "human-demolition-zone-hire",
    "short": "Dodge the giant demolition ball to be the last player standing.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90446",
    "staffed": false
   },
@@ -1190,7 +1204,7 @@
    "players": "1 at a time",
    "image": "leap-of-faith-inflatable-hire",
    "short": "Climb the tower and leap for the bar – a true test of nerve.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90508",
    "staffed": false
   },
@@ -1210,7 +1224,7 @@
    "players": "1 at a time",
    "image": "base-jump-inflatable-hire",
    "short": "Free-fall onto a giant air cushion from the jump platform.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90073",
    "staffed": false
   },
@@ -1230,7 +1244,7 @@
    "players": "2 players",
    "image": "unclimbable-ladder-hire",
    "short": "Race to the top of the wobbly rope ladder – much harder than it looks.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90835",
    "staffed": false
   },
@@ -1250,7 +1264,7 @@
    "players": "1 at a time",
    "image": "velcro-fly-wall-hire",
    "short": "Pull on a Velcro suit, bounce and stick yourself to the wall.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90845",
    "staffed": false
   },
@@ -1270,7 +1284,7 @@
    "players": "2 players",
    "image": "pillow-bash-hire",
    "short": "Balance on the beam and knock your opponent off with a pillow.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90608",
    "staffed": false
   },
@@ -1312,7 +1326,7 @@
    "players": "1 per ball",
    "image": "human-hamster-balls-hire",
    "short": "Climb inside a giant inflatable ball and roll around the arena.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90449",
    "staffed": false
   },
@@ -1332,7 +1346,7 @@
    "players": "2 climbers",
    "image": "inflatable-climbing-wall-hire",
    "short": "Inflatable climbing wall with handholds and a soft landing for younger climbers.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90457",
    "staffed": false
   },
@@ -1352,7 +1366,7 @@
    "players": "Groups",
    "image": "inflatable-maze-hire",
    "short": "Find your way through the inflatable maze – great with laser tag or as a stand-alone attraction.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90464",
    "staffed": false
   },
@@ -1372,7 +1386,7 @@
    "players": "Ages 5+",
    "image": "rodeo-bull-hire",
    "short": "Mechanical rodeo bull on an inflatable safety bed, with an operator controlling the speed for every rider.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90678",
    "staffed": false
   },
@@ -1392,7 +1406,7 @@
    "players": "Children",
    "image": "childrens-rodeo-bull-buffalo-billy-hire",
    "short": "Junior rodeo bull with gentler speeds, ideal for children's parties and family fun days.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90256",
    "staffed": false
   },
@@ -1412,7 +1426,7 @@
    "players": "All ages",
    "image": "rodeo-horse-hire",
    "short": "Ride the rodeo horse – a gentler, race-day themed alternative to the bull.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90682",
    "staffed": false
   },
@@ -1432,7 +1446,7 @@
    "players": "All ages",
    "image": "rodeo-sheep-hire",
    "short": "A woolly twist on the rodeo ride – great for country shows and farm themes.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90688",
    "staffed": false
   },
@@ -1452,7 +1466,7 @@
    "players": "All ages",
    "image": "rodeo-bull-hire",
    "short": "Hang on to the rodeo pig – fun for farm days and family events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90684",
    "staffed": false
   },
@@ -1472,7 +1486,7 @@
    "players": "All ages",
    "image": "rodeo-bull-hire",
    "short": "A giant rodeo football for football clubs, World Cup and sports-themed parties.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90681",
    "staffed": false
   },
@@ -1492,7 +1506,7 @@
    "players": "All ages",
    "image": "rodeo-rugby-ball-hire",
    "short": "Rodeo rugby ball for rugby clubs, Six Nations and sports events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90687",
    "staffed": false
   },
@@ -1512,7 +1526,7 @@
    "players": "Adults",
    "image": "champagne-bottle-rodeo-hire",
    "short": "Ride the giant champagne bottle – made for weddings, launches and celebrations.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90252",
    "staffed": false
   },
@@ -1532,7 +1546,7 @@
    "players": "All ages",
    "image": "rodeo-pumpkin-hire",
    "short": "Halloween-themed rodeo pumpkin for spooky parties and October events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90685",
    "staffed": false
   },
@@ -1552,7 +1566,7 @@
    "players": "All ages",
    "image": "rodeo-christmas-pudding-hire",
    "short": "Festive rodeo Christmas pudding for Christmas parties and markets.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90679",
    "staffed": false
   },
@@ -1572,7 +1586,7 @@
    "players": "All ages",
    "image": "rodeo-reindeer-hire",
    "short": "Ride Rudolph! A rodeo reindeer for Christmas events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90686",
    "staffed": false
   },
@@ -1592,7 +1606,7 @@
    "players": "All ages",
    "image": "rodeo-easter-egg-hire",
    "short": "Easter-themed rodeo egg for spring fairs and Easter events.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90680",
    "staffed": false
   },
@@ -1612,7 +1626,7 @@
    "players": "Ages 5+",
    "image": "surf-simulator-rodeo-surf-machine-hire",
    "short": "Catch a wave on dry land – a rodeo-style surf board on an inflatable bed.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90814",
    "staffed": false
   },
@@ -1632,9 +1646,276 @@
    "players": "Ages 5+",
    "image": "snowboard-simulator-hire",
    "short": "Rodeo-style snowboard simulator on an inflatable bed – great for winter and ski themes.",
-   "spec": {},
+   "spec": [],
    "crm_id": "90776",
    "staffed": false
+  },
+  {
+   "slug": "laser-tag",
+   "name": "Laser Tag Hire",
+   "cats": [
+    "laser"
+   ],
+   "price_from": 695,
+   "prices": {
+    "1": 695,
+    "2": 1090,
+    "3": 1355,
+    "7": 2015
+   },
+   "players": "Teams",
+   "image": "laser-tag-hire",
+   "short": "Mobile laser tag with an inflatable battle arena – teams, scores and non-stop action for parties and corporate events.",
+   "spec": [],
+   "staffed": false,
+   "crm_id": "90505"
+  },
+  {
+   "slug": "laser-tag-area-51",
+   "name": "Laser Tag Hire – Area 51",
+   "cats": [
+    "laser"
+   ],
+   "price_from": 695,
+   "prices": {
+    "1": 695,
+    "2": 1090,
+    "3": 1355,
+    "7": 2015
+   },
+   "players": "Teams",
+   "image": "laser-tag-area-51-hire",
+   "short": "Area 51-themed inflatable laser tag arena with bunkers and barriers for team battles.",
+   "spec": [],
+   "staffed": false,
+   "crm_id": "90506",
+   "images": [
+    "laser-tag-area-51-hire-2"
+   ]
+  },
+  {
+   "slug": "laser-clay-pigeon-shooting",
+   "name": "Laser Clay Pigeon Shooting",
+   "cats": [
+    "laser"
+   ],
+   "price_from": 695,
+   "prices": {
+    "1": 695,
+    "2": 1090,
+    "3": 1355,
+    "7": 2015
+   },
+   "players": "Up to 5 shooters",
+   "image": "laser-clay-pigeon-shooting-hire",
+   "short": "Safe laser clay shooting with real-feel shotguns and live scoring – no noise, no pellets, all the fun.",
+   "spec": [],
+   "staffed": true,
+   "crm_id": "90504"
+  },
+  {
+   "slug": "bumper-carz",
+   "name": "Bumper Carz – Bumper Car Hire",
+   "cats": [
+    "rides"
+   ],
+   "price_from": 1100,
+   "prices": {
+    "1": 1100,
+    "2": 1725,
+    "3": 2145,
+    "7": 3190
+   },
+   "players": "All ages",
+   "image": "bumper-carz-hire",
+   "short": "Electric bumper cars inside an inflatable arena – the fairground favourite for fun days, festivals and corporate events.",
+   "spec": [],
+   "staffed": true,
+   "crm_id": "90214",
+   "images": [
+    "bumper-carz-hire-2"
+   ]
+  },
+  {
+   "slug": "warrior-wall-inflatable",
+   "name": "Warrior Wall Inflatable",
+   "cats": [
+    "challenges"
+   ],
+   "price_from": 695,
+   "prices": {
+    "1": 695,
+    "2": 1090,
+    "3": 1355,
+    "7": 2015
+   },
+   "players": "Groups",
+   "image": "warrior-wall-inflatable-hire",
+   "short": "Race up the steep inflatable warrior wall, then slide back down – three difficulty levels and three attempts to reach the top.",
+   "spec": {
+    "dimensions": "6.0m x 5.3m, 4.7m high (space needed approx. 6.4m x 5.5m, 4.9m high)"
+   },
+   "staffed": true,
+   "crm_id": "90872"
+  },
+  {
+   "slug": "old-school-sports-day-package",
+   "name": "Old School Sports Day Package",
+   "cats": [
+    "sports-day"
+   ],
+   "price_from": 1795,
+   "prices": {
+    "1": 1795,
+    "2": 2820,
+    "3": 3500,
+    "7": 5205
+   },
+   "players": "Groups & teams",
+   "image": "old-school-sports-day-package-hire",
+   "short": "A full retro sports day – tug of war, sack races, egg and spoon and more, ready for teams and run with our staff.",
+   "spec": [],
+   "staffed": true,
+   "crm_id": "90581",
+   "images": [
+    "old-school-sports-day-package-hire-2"
+   ]
+  },
+  {
+   "slug": "ips-archery-game",
+   "name": "Interactive IPS Archery Game",
+   "cats": [
+    "ips"
+   ],
+   "price_from": 595,
+   "prices": {
+    "1": 595,
+    "2": 935,
+    "3": 1160,
+    "7": 1725
+   },
+   "players": "Groups",
+   "image": "ips-archery-game-hire",
+   "short": "Interactive archery with light-up targets and live scores on the Interactive Play System.",
+   "spec": [],
+   "staffed": false,
+   "crm_id": "90471"
+  },
+  {
+   "slug": "ips-battle-bunker-arena",
+   "name": "Interactive IPS Battle Bunker Arena",
+   "cats": [
+    "ips"
+   ],
+   "price_from": 495,
+   "prices": {
+    "1": 495,
+    "2": 775,
+    "3": 965,
+    "7": 1435
+   },
+   "players": "2 players",
+   "image": "ips-battle-bunker-arena-hire",
+   "short": "Head-to-head interactive reaction battle in an inflatable bunker – hit your lights faster than your opponent.",
+   "spec": [],
+   "staffed": false,
+   "crm_id": "90472"
+  },
+  {
+   "slug": "ips-beer-pong-game",
+   "name": "Interactive IPS Beer Pong Game",
+   "cats": [
+    "ips"
+   ],
+   "price_from": 495,
+   "prices": {
+    "1": 495,
+    "2": 775,
+    "3": 965,
+    "7": 1435
+   },
+   "players": "2 teams",
+   "image": "ips-beer-pong-game-hire",
+   "short": "Giant interactive beer pong arena with light-up cups and automatic scoring – no drinks needed.",
+   "spec": [],
+   "staffed": false,
+   "crm_id": "90473"
+  },
+  {
+   "slug": "ips-podium-arena",
+   "name": "Interactive IPS Podium Arena",
+   "cats": [
+    "ips"
+   ],
+   "price_from": 395,
+   "prices": {
+    "1": 395,
+    "2": 620,
+    "3": 770,
+    "7": 1145
+   },
+   "players": "Up to 10 players",
+   "image": "ips-podium-arena-hire",
+   "short": "Light-up interactive podiums for reaction races and team games – works indoors and out.",
+   "spec": [],
+   "staffed": false,
+   "crm_id": "90474"
+  },
+  {
+   "slug": "ips-team-challenge-game",
+   "name": "Interactive IPS Team Challenge Game",
+   "cats": [
+    "ips"
+   ],
+   "price_from": 495,
+   "prices": {
+    "1": 495,
+    "2": 775,
+    "3": 965,
+    "7": 1435
+   },
+   "players": "Teams",
+   "image": "ips-team-challenge-game-hire",
+   "short": "Team-based interactive reaction challenge – race to hit the lights and top the leaderboard.",
+   "spec": [],
+   "staffed": false,
+   "crm_id": "90476"
+  },
+  {
+   "slug": "ips-shooting-arena",
+   "name": "Interactive Play System Shooting Arena",
+   "cats": [
+    "ips"
+   ],
+   "price_from": 395,
+   "prices": {
+    "1": 395,
+    "2": 620,
+    "3": 770,
+    "7": 1145
+   },
+   "players": "Up to 3 players",
+   "image": "ips-shooting-arena-hire",
+   "short": "Inflatable shooting gallery with interactive light-up targets and live scores.",
+   "spec": [],
+   "staffed": false,
+   "crm_id": "90477"
+  },
+  {
+   "slug": "rodeo-game-inflatable",
+   "name": "Rodeo Game Inflatable – Wild West Horseshoe Throw",
+   "cats": [
+    "games",
+    "rodeo"
+   ],
+   "price_from": 0,
+   "prices": [],
+   "players": "2 players",
+   "image": "rodeo-game-inflatable-hire",
+   "short": "Wild West-themed inflatable horseshoe throw – two players race to ring the horseshoes on the bull targets. A perfect partner for the rodeo bull at cowboy, country and Western-themed events.",
+   "spec": [],
+   "staffed": false,
+   "crm_id": "90873"
   }
  ],
  "pages": {
@@ -1648,7 +1929,7 @@
    "sections": [
     {
      "h2": "Inflatable hire for every kind of event",
-     "html": "<p>From a single <strong>bouncy castle</strong> for a garden party to a 220ft <strong>obstacle course</strong>, rodeo bull and a field full of <strong>inflatable games</strong> for a corporate fun day, JM Inflatable Hire has the stock and the crew to make it happen. Everything you see on this site is our own stock, kept in our own warehouse and set up by our own team.</p><p>Every hire includes delivery, professional set-up, a full safety check and collection. Add operators and staff so your guests are looked after all day, or combine inflatables with arcade games, simulators and side stalls from the wider JM Entertainment range.</p>"
+     "html": "<p>From an adult <strong>bouncy castle</strong> or <strong>laser tag</strong> arena to a 220ft <strong>obstacle course</strong>, rodeo bull and a field full of <strong>inflatable games</strong> for a corporate fun day, JM Inflatable Hire has the stock and the crew to make it happen. Everything you see on this site is our own stock, kept in our own warehouse and set up by our own team.</p><p>Every hire includes delivery, professional set-up, a full safety check and collection. Add operators and staff so your guests are looked after all day, or combine inflatables with arcade games, simulators and side stalls from the wider JM Entertainment range.</p>"
     },
     {
      "h2": "Why event organisers choose JM",
@@ -1662,7 +1943,7 @@
    "faq": [
     {
      "q": "How much does inflatable hire cost?",
-     "a": "Bouncy castles start from £85 + VAT per day and larger event inflatables such as assault courses, Wipeout and rodeo bulls start from around £450–£695 + VAT. Delivery, set-up and collection are included on most UK bookings. Multi-day hires are discounted – a two-day hire costs roughly 1.5 days and longer hires work out cheaper per day. Each inflatable's page shows 1, 2, 3, 4 and 7-day prices."
+     "a": "Adult bouncy castles start from around £125 + VAT per day, inflatable games and challenges from around £175–£695 + VAT, and showpieces such as assault courses, Wipeout, bungee runs, laser tag and bumper cars from around £450–£1,995 + VAT. Delivery, set-up and collection are included on most UK bookings, and multi-day hires are discounted – each product page shows 1, 2, 3, 4 and 7-day prices."
     },
     {
      "q": "Do you deliver inflatables nationwide?",
@@ -1736,12 +2017,12 @@
    ]
   },
   "bouncy-castle-hire": {
-   "title": "Bouncy Castle Hire | Adult & Kids Bouncy Castles | JM",
-   "meta": "Bouncy castle hire for adults and children – disco domes, bounce & slides and themed castles from £85 + VAT. Delivered, set up & collected. Check availability.",
+   "title": "Adult Bouncy Castle Hire | Disco Domes & Event Bouncy Castles | JM",
+   "meta": "Adult bouncy castle and disco dome hire for corporate events, weddings, adult birthdays and fun days across the UK. Delivered, set up and collected.",
    "h1": "Bouncy Castle Hire",
    "label": "Bouncy Castle",
-   "kicker": "Adult, children's & disco bouncy castles",
-   "intro": "Themed children's castles, bounce and slide combis, disco domes and adult-sized bouncy castles with rain roofs. Perfect for birthdays, weddings, school fairs and corporate family days.",
+   "kicker": "Adult bouncy castles · disco domes · event inflatables",
+   "intro": "Adult-sized bouncy castles and disco domes built for grown-ups as well as kids – the centrepiece for weddings, adult birthdays, staff parties and family fun days.",
    "image": "camelot-adult-bouncy-castle-hire",
    "cat": "bouncy-castles",
    "local": true,
@@ -1749,11 +2030,11 @@
    "sections": [
     {
      "h2": "Bouncy castles for adults and children",
-     "html": "<p>Our range runs from compact <strong>10ft x 10ft garden castles</strong> to <strong>adult bouncy castles</strong> with full rain roofs. Themed castles – jungle, farmyard, undersea, princess, dinosaur and Peppa Pig – are perfect for children's birthday parties, while disco domes with lights and music turn any evening do into a party.</p>"
+     "html": "<p>Our range runs from compact <strong>10ft x 10ft garden castles</strong> to <strong>adult bouncy castles</strong> with full rain roofs. Themed castles – jungle, farmyard, undersea, princess, dinosaur and Peppa Pig – are perfect for birthday parties, while disco domes with lights and music turn any evening do into a party.</p>"
     },
     {
      "h2": "How much space does a bouncy castle need?",
-     "html": "<p>Allow the size of the castle plus around 1–2 metres on each side for the blower, safety mats and access. A typical children's castle needs about 4m x 5m and roughly 3.5m of height; adult castles need more. Exact sizes come with your quote so you can be sure it fits your garden, hall or marquee.</p>"
+     "html": "<p>Allow the size of the castle plus around 1–2 metres on each side for the blower, safety mats and access. A typical castle needs about 4m x 5m and roughly 3.5m of height; adult castles need more. Exact sizes come with your quote so you can be sure it fits your garden, hall or marquee.</p>"
     },
     {
      "h2": "Safe, clean and professionally installed",
@@ -1761,7 +2042,7 @@
     },
     {
      "h2": "Choosing the right bouncy castle",
-     "html": "<p><strong>Age and size.</strong> Toddler and children's castles suit gardens and halls; adult castles and disco domes are built for grown-ups too. <strong>Space.</strong> Our smallest castle is 10ft x 10ft – check the size on each product and allow room around it. <strong>Power.</strong> One 13 amp socket for the blower. <strong>Rain.</strong> Choose a castle with a roof if the forecast is mixed.</p>"
+     "html": "<p><strong>Size.</strong> Adult castles and disco domes need a little more room than garden castles – check the size on each product and allow space around it. <strong>Power.</strong> One 13 amp socket for the blower. <strong>Rain.</strong> Choose a castle with a roof if the forecast is mixed.</p>"
     }
    ],
    "faq": [
@@ -1800,15 +2081,15 @@
    ],
    "keywords": "bouncy castle hire, adult bouncy castle hire, kids bouncy castle hire, bouncy castle hire near me",
    "town_intro": [
-    "Bouncy castle hire in {city} for kids' parties, adult birthdays, weddings and fun days – themed castles, bounce and slides and disco domes delivered across {region}.",
-    "Need a bouncy castle in {city}? Our children's and adult bouncy castles are delivered, set up and collected in {city}, {near1}, {near2} and the rest of {region}.",
-    "Book a bouncy castle anywhere in {city} – from toddler castles to adult disco domes, every castle is PIPA tested and safety-checked on site."
+    "Adult bouncy castle hire in {city} – adult-sized castles and disco domes for weddings, birthdays, staff parties and fun days across {region}.",
+    "Grown-ups welcome: adult bouncy castles and disco domes delivered to {city}, {near1}, {near2} and all of {region}.",
+    "Book an adult bouncy castle or disco dome anywhere in {city} – PIPA tested and safety-checked on site."
    ],
-   "town_body": "<h2>Kids' and adult bouncy castle hire in {city}</h2><p>Choose from themed children's castles, bounce-and-slide combos and adult-sized castles and disco domes for {city} birthday parties, garden parties, weddings, school fairs and corporate family days.</p>",
+   "town_body": "<h2>Adult bouncy castles and disco domes in {city}</h2><p>Our adult bouncy castles and disco domes are built for grown-ups as well as children, making them a hit at {city} weddings, adult birthdays, staff parties and family fun days.</p>",
    "town_faq": [
     {
      "q": "Do you hire adult bouncy castles in {city}?",
-     "a": "Yes – our adult bouncy castles and disco domes are available in {city} and across {region} for birthdays, weddings and staff parties."
+     "a": "Yes – our adult bouncy castles and disco domes are available in {city} and across {region}."
     }
    ]
   },
@@ -2652,6 +2933,223 @@
      "a": "Yes. We hold public liability insurance and send the certificate to you or your venue once your booking is confirmed."
     }
    ]
+  },
+  "laser-tag-hire": {
+   "title": "Laser Tag Hire UK | Mobile Laser Tag & Laser Clay Shooting | JM",
+   "meta": "Mobile laser tag hire and laser clay pigeon shooting for corporate events, parties and fun days across the UK – inflatable arenas, team scoring and staff included.",
+   "h1": "Laser Tag Hire",
+   "label": "Laser Tag",
+   "kicker": "Mobile laser tag · laser clay shooting",
+   "intro": "Mobile laser tag and laser clay pigeon shooting brought to your event – inflatable battle arenas, team scoring and our staff to run every game, anywhere in the UK.",
+   "image": "laser-tag-area-51-hire",
+   "cat": "laser",
+   "local": true,
+   "angle": "mobile laser tag arenas and laser clay pigeon shooting",
+   "sections": [
+    {
+     "h2": "Mobile laser tag for any event",
+     "html": "<p>Our <strong>mobile laser tag</strong> sets up an inflatable battle arena on any field, car park or hall – teams pick a side, grab a tagger and battle it out for the top score. Prefer something more refined? <strong>Laser clay pigeon shooting</strong> brings the thrill of clay shooting to your venue with no noise and no ammunition.</p><p>Every hire includes delivery, set-up, staff to run the games and collection.</p>"
+    },
+    {
+     "h2": "Popular for",
+     "html": "<p>Corporate team building, staff fun days, birthday parties, stag and hen dos, university events and summer fairs.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Is laser tag safe for children?",
+     "a": "Yes – laser tag uses infra-red taggers with no projectiles. Our staff brief players and run every game."
+    },
+    {
+     "q": "Does laser clay shooting use real guns?",
+     "a": "No – it uses deactivated or replica shotguns that fire a harmless laser beam, with live scoring. No noise, no pellets."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "town_intro": [
+    "Laser tag hire in {city} – mobile inflatable battle arenas and laser clay shooting, delivered and run by our staff across {region}.",
+    "Bring mobile laser tag to your {city} event – we cover {city}, {near1}, {near2} and all of {region}.",
+    "Team battles, live scores and no mess: book laser tag or laser clay shooting anywhere in {city}."
+   ],
+   "town_body": "<h2>Mobile laser tag in {city}</h2><p>We set up laser tag arenas at {city} offices, schools, sports clubs, parks and gardens, and run every game so your guests just play. Laser clay pigeon shooting is popular for {city} corporate days and garden parties.</p>",
+   "town_faq": [
+    {
+     "q": "How much is laser tag hire in {city}?",
+     "a": "Laser tag starts from {price} + VAT in {city}, including delivery, set-up, staff and collection."
+    }
+   ]
+  },
+  "bumper-car-hire": {
+   "title": "Bumper Car Hire UK | Bumper Carz Inflatable Arena Hire | JM Inflatable Hire",
+   "meta": "Bumper car hire across the UK – electric Bumper Carz in an inflatable arena for fun days, festivals, corporate events and parties, with staff included.",
+   "h1": "Bumper Car Hire",
+   "label": "Bumper Car",
+   "kicker": "Bumper Carz in an inflatable arena",
+   "intro": "Bumper Carz – electric bumper cars in an inflatable arena – bring the fairground to your event. Delivered, set up and run by our staff across the UK.",
+   "image": "bumper-carz-hire",
+   "cat": "rides",
+   "local": true,
+   "angle": "electric Bumper Carz in an inflatable arena",
+   "sections": [
+    {
+     "h2": "Bumper cars without the fairground",
+     "html": "<p><strong>Bumper Carz</strong> are electric bumper cars that drive inside a colourful inflatable arena, so you can have the fairground favourite at a school, office, park or garden. Our staff run the ride, manage the queue and keep everyone safe.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Who can drive the bumper cars?",
+     "a": "Bumper Carz suit children and adults – our staff will advise on ages and heights for your event."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "town_intro": [
+    "Bumper car hire in {city} – electric Bumper Carz in an inflatable arena, delivered and staffed across {region}.",
+    "Bring the fairground to {city}: Bumper Carz hire across {city}, {near1} and {near2}.",
+    "Book bumper cars for your {city} fun day, festival or corporate event – set up and run by our crew."
+   ],
+   "town_body": "<h2>Bumper Carz hire in {city}</h2><p>Bumper Carz are a showpiece for {city} fun days, school fairs, festivals and staff family days, and they work on flat grass or hard ground.</p>",
+   "town_faq": [
+    {
+     "q": "How much is bumper car hire in {city}?",
+     "a": "Bumper Carz start from {price} + VAT in {city}, including delivery, set-up, staff and collection."
+    }
+   ]
+  },
+  "ips-game-hire": {
+   "title": "Interactive IPS Game Hire | Interactive Play System Games UK | JM",
+   "meta": "Interactive IPS game hire across the UK – light-up archery, shooting arenas, battle bunkers, beer pong and team challenges with live scoring. Live prices.",
+   "h1": "Interactive IPS Game Hire",
+   "label": "Interactive IPS Game",
+   "kicker": "Interactive Play System games",
+   "intro": "Interactive Play System (IPS) games combine inflatables with light-up targets and live scoring – archery, shooting galleries, battle bunkers, podium races and team challenges.",
+   "image": "ips-battle-bunker-arena-hire",
+   "cat": "ips",
+   "local": true,
+   "angle": "Interactive Play System games with light-up targets and live scores",
+   "sections": [
+    {
+     "h2": "What is an Interactive Play System?",
+     "html": "<p>IPS games use wireless light-up targets that react when they are hit, with automatic scoring and game modes for reaction races, team battles and high-score challenges. Built into inflatables or podiums, they are perfect for <a href=\"/corporate-fun-day-hire\">corporate fun days</a>, exhibitions, schools and parties – and many work indoors.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Can IPS games be used indoors?",
+     "a": "Yes – most IPS games work indoors. Tell us the space and ceiling height and we will confirm."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "town_intro": [
+    "Interactive IPS game hire in {city} – light-up archery, shooting arenas, battle bunkers and team challenges across {region}.",
+    "Live scores and light-up targets: book Interactive Play System games for your {city} event.",
+    "IPS games for {city} corporate events, schools and parties – delivered to {city}, {near1} and {near2}."
+   ],
+   "town_body": "<h2>Interactive games for {city} events</h2><p>IPS games are popular at {city} exhibitions, staff events and school fairs because they keep score automatically and suit every age.</p>",
+   "town_faq": [
+    {
+     "q": "How much is IPS game hire in {city}?",
+     "a": "Interactive IPS games start from {price} + VAT in {city}, with delivery, set-up and collection."
+    }
+   ]
+  },
+  "sports-day-hire": {
+   "title": "Sports Day Hire | Old School Sports Day Packages for Schools & Companies | JM",
+   "meta": "Sports day hire across the UK – old school sports day packages, sumo suits, penalty shoot-outs and inflatable sports games for schools, PTAs and corporate events.",
+   "h1": "Sports Day Hire",
+   "label": "Sports Day",
+   "kicker": "Old school sports days · sports games · team events",
+   "intro": "Old school sports day packages and inflatable sports games for schools and companies – tug of war, sack races, sumo suits, penalty shoot-outs and more, run by our staff.",
+   "image": "old-school-sports-day-package-hire",
+   "cat": "sports-day",
+   "local": true,
+   "angle": "old school sports day packages and inflatable sports games",
+   "sections": [
+    {
+     "h2": "A proper old school sports day",
+     "html": "<p>Our <strong>Old School Sports Day Package</strong> brings back the classics – tug of war, sack races, egg and spoon and more – ready for teams of staff or pupils, with our crew to set up and run it. Add inflatable games such as <a href=\"/inflatable-games-hire\">penalty shoot-outs and football darts</a>, sumo suits or an <a href=\"/assault-course-hire\">assault course</a> for the finale.</p>"
+    }
+   ],
+   "faq": [
+    {
+     "q": "Is the sports day package suitable for companies?",
+     "a": "Yes – it is one of our most popular team-building days for companies, as well as schools."
+    },
+    {
+     "q": "Do you deliver inflatables nationwide?",
+     "a": "Yes. Our crews deliver, set up and collect across England, Scotland and Wales – from London and the South East to Manchester, Birmingham, Leeds, Newcastle, Glasgow and Cardiff."
+    },
+    {
+     "q": "What power do inflatables need?",
+     "a": "Most inflatables run from one standard 13 amp socket within 25 metres for the electric blower. No power on site? We can supply a petrol blower or generator – just ask when you book."
+    },
+    {
+     "q": "Can inflatables be used outdoors on grass?",
+     "a": "Yes – grass is ideal. We stake every inflatable down and supply safety mats. On hard ground or indoors we use sandbags and crash mats instead. Inflatables can't be used in high winds or heavy rain, so our crew will advise on the day."
+    },
+    {
+     "q": "Are your inflatables safety tested?",
+     "a": "Every inflatable is PIPA tested, cleaned and checked before each hire, and all blowers are PAT tested. We hold public liability insurance; risk assessments and insurance documents are supplied once your booking is confirmed."
+    }
+   ],
+   "town_intro": [
+    "Sports day hire in {city} – old school sports day packages and inflatable sports games for schools and companies across {region}.",
+    "Book an old school sports day for your {city} school or company – we cover {city}, {near1} and {near2}.",
+    "Tug of war, sack races and inflatable games: sports day hire anywhere in {city}."
+   ],
+   "town_body": "<h2>Sports days in {city}</h2><p>We run sports days for {city} schools, PTAs and companies on playing fields, sports halls and parks, with everything delivered and set up.</p>",
+   "town_faq": [
+    {
+     "q": "How much is sports day hire in {city}?",
+     "a": "Sports day equipment starts from {price} + VAT in {city}, including delivery and set-up."
+    }
+   ],
+   "match": "sports-day|sumo|penalty|football-darts|basketball|3-in-1|rugby-darts|table-football|bungee-run-inflatable$"
   }
  },
  "locations": [
@@ -3193,7 +3691,7 @@
   "pass_hash": "",
   "totp_secret": ""
  },
- "text": {},
+ "text": [],
  "prev_fp": {
   "home": {
    "sections": "1a9abe5408dc3b736c8e08020f370fea",
@@ -3499,5 +3997,213 @@
    "date": "2026-11-03",
    "published": true
   }
- ]
+ ],
+ "hide_rev5": [
+  "dinosaur-front-slide-castle",
+  "elephant-bounce-and-slide-a-frame",
+  "farmyard-front-slide-castle",
+  "farmyard-bouncy-castle-10ft-x-10ft",
+  "jungle-bounce-and-slide-front-slide",
+  "jungle-themed-a-frame-castle",
+  "party-bounce-and-slide",
+  "peppa-pig-bouncy-castle",
+  "princess-a-frame-and-slide",
+  "undersea-a-frame-castle",
+  "undersea-bounce-and-slide",
+  "hamster-caterpillar-track",
+  "inflatable-stepping-stones",
+  "walk-the-plank"
+ ],
+ "prev_fp5": {
+  "home": {
+   "title": "c06dacdba9000e1638cf15f40e9b75a0",
+   "meta": "062fac432f776443c3e3843892c38b76",
+   "intro": "a6ab06a10f9525b8adce2e663b2c6246",
+   "kicker": "c0012d221f35e9486297221567afd4bb",
+   "sections": "1a9abe5408dc3b736c8e08020f370fea",
+   "faq": "a9e3ce8e959b72d3f70844a45fff2f52"
+  },
+  "inflatable-hire": {
+   "title": "96c25c621b2ed8368a59c0a0cbc417ee",
+   "meta": "9ab653dddc5d2d88367136e2684c8fa7",
+   "intro": "cae9dcfc4a3ba281316ea486382b9a2f",
+   "kicker": "fff61283326899919754532f52375295",
+   "sections": "9d2cf9a513b5d168553213205496b5fa",
+   "faq": "18f1b251a6d111d2db8398a0816f57d8",
+   "town_intro": "49b6b26e39a6e59ba57934c330cd1e92",
+   "town_body": "bcb520bb38c5954527b34b0471aab05f",
+   "town_faq": "d1d0befb8bad94fdd436a2196265abe0"
+  },
+  "bouncy-castle-hire": {
+   "title": "bf9f9c74931c4064573776e6b58ed8b9",
+   "meta": "e4c7dc64a1bc530535ad07ba77927a3c",
+   "intro": "fe77d2d80f06babcdaddbbc0192537a2",
+   "kicker": "f193829266a8d6154500cefad57e5e2b",
+   "sections": "7391842a4f9c50c6749372cc8acff31b",
+   "faq": "1e37c79f986e178803b0e528a14d5434",
+   "town_intro": "7d3ecacb8637428e1cd8b4857d86ca19",
+   "town_body": "3514048de9603c042e7465c37e895e7e",
+   "town_faq": "81b0e1edf970c3c4a61f1a8c2ba047f2"
+  },
+  "inflatable-slide-hire": {
+   "title": "8c48cb7d2e69f82d11ee073cb0499c42",
+   "meta": "54c365e51d85591dd34654eaae7f355a",
+   "intro": "2a8395f7c21c251607e1cb58615615c1",
+   "kicker": "80ad81eb23ccd0db3695930d38a5aa21",
+   "sections": "779a4fbc4f4e3fa0f257c150be49bddc",
+   "faq": "d1256ff7f2a26e3ab4dccf35b4eb315e",
+   "town_intro": "40f071608ab6524ec3cc3745d38d0f63",
+   "town_body": "33ab36570378e9f74f323291a8159486",
+   "town_faq": "78dac65040e0152d90086a6d8f58e6b9"
+  },
+  "assault-course-hire": {
+   "title": "335da1e06fbd1221f00d8b691a312125",
+   "meta": "a5c1d24f2dfe6a62252490df730d9538",
+   "intro": "2c550d870f04215d8c19500aaf49b3f0",
+   "kicker": "7822e56fe93bd0467ac8bf1af5ef8923",
+   "sections": "8b8eb6e5b2e9bb4176b2bc8046c699e6",
+   "faq": "55096eb37d9a382d7c15910e66ee1833",
+   "town_intro": "48fad4ff7a15b494376b94070b860883",
+   "town_body": "ddca3626e8dd88f54d2d9dfd4dd8835f",
+   "town_faq": "bc3e93cdf35a56ce78f56607bb9731f0"
+  },
+  "inflatable-games-hire": {
+   "title": "502805409e1ef6b5b54ad0967617195d",
+   "meta": "1982b0cdaeccce5062fc963d77307c2e",
+   "intro": "29754bf611a2393011d75944c786f74e",
+   "kicker": "a3c84fde3749406fc94f57eb5a6fe01e",
+   "sections": "98521a3306adc7f7183b26e1ef939f1b",
+   "faq": "3d489775bdac72ec180bc377dee8c20b",
+   "town_intro": "86bb41cd9de1b4f8d39ee222012f4f12",
+   "town_body": "cc7ba679e9d6c159ae80d413ed5e12bc",
+   "town_faq": "7e21753ea30a736fd0f38064a98bf292"
+  },
+  "inflatable-challenge-hire": {
+   "title": "78b4b1c24d1a65c7e0c6fed96a06511d",
+   "meta": "968cac4250cefacc1a5854fffde4a09e",
+   "intro": "d156a493430c51d499e1d79db7961783",
+   "kicker": "29f9eace11fb23676ef83471d64fed58",
+   "sections": "48667a065eebe8ba8b2f40596b575f2d",
+   "faq": "ff857a1c918bd6b158016c917a103ddf",
+   "town_intro": "656944e9b471d3b7f3edd54abcac21f7",
+   "town_body": "842a8e1165192768f9906c9540ae24a7",
+   "town_faq": "c0d1434f144daf6212f94431eb587d17"
+  },
+  "rodeo-bull-hire": {
+   "title": "78f0ee6704d1bed670353ef6bd8d08d6",
+   "meta": "826daf380c8dc0c6d588f1eab217a8ed",
+   "intro": "77a96714496b184cc4948a93912a86dc",
+   "kicker": "3fdbd21f8cf10175b9950c198e42767c",
+   "sections": "56fed126f33b48c7fd7bf8e77aecb910",
+   "faq": "a0382c51ef0882c0b7da057b150ce9aa",
+   "town_intro": "daf0f7813cdbe096822538e8ec2f3c2e",
+   "town_body": "6db9f1485f601da5c32262e21dd0fc50",
+   "town_faq": "a19f2e716af467db3dcdfa12ceef7d6b"
+  },
+  "wipeout-hire": {
+   "title": "409bf3be07762f8a7f0679c36567a0db",
+   "meta": "1998b703ef3e3cd795858c6f11c2c69e",
+   "intro": "a9816ccc1b538eb037ba8e28bbb8957b",
+   "kicker": "89b8c9d1ad8d1df2524df73c83b2aa63",
+   "sections": "5d2462b4531bfdaa912740ffc93f4186",
+   "faq": "716e05ad5b1a2f20abc42c5ee15266bb",
+   "town_intro": "bd8b266b31b3a4403f0ed1466020884f",
+   "town_body": "ce05b2366fc36778f29eec1bfdafcc45",
+   "town_faq": "9c1591592d940c7bbb5687fe6db9b4da"
+  },
+  "bungee-run-hire": {
+   "title": "a8b6df65ed176f59bdf692968c6978c6",
+   "meta": "27d9f746d91571436347badf1a3c058b",
+   "intro": "e03cad220d20d40cb821884787338f9a",
+   "kicker": "2b5cda162d7c2bce8fe7d3755e394ae9",
+   "sections": "558877ba3bca30c2d70290e305e76435",
+   "faq": "b14ba5ee66261d061838aa2d359d0282",
+   "town_intro": "ab311e11eaae8c4b34ebb61b8e6128e2",
+   "town_body": "a362ca4700abe1cb203f25b3839b7a47",
+   "town_faq": "ee5dbcf7b46c43a3e9c75d74660be1a0"
+  },
+  "gladiator-duel-hire": {
+   "title": "06c0a1568c0c8961101f15a5afb19f96",
+   "meta": "4d1e3d7a4a03d9faf1049b257052a853",
+   "intro": "e930c78559cdb0d3d43595a17e783997",
+   "kicker": "0f09ce0ec969aa76f345e6bcafc1e86c",
+   "sections": "989b7612703b175b2826f214f092b88b",
+   "faq": "9eeadfbcc4c2f01db60e3e9ace841b05",
+   "town_intro": "08e402050d1adf86caf3faba41fea1d5",
+   "town_body": "ecbf124c23661327a46531dcf2cd9859",
+   "town_faq": "45a331871c5f2fe2b4c5614871000cf1"
+  },
+  "corporate-fun-day-hire": {
+   "title": "f60df03a0b00edbda1fe7202edd2437b",
+   "meta": "24686aefe989e61e6cb8c54aaa43694d",
+   "intro": "8adbf707bff3536ff215dd2a0258d623",
+   "kicker": "d8cb120d55ee7334351a80a4c1021cf1",
+   "sections": "caf668ac9ec2664e38ad5da499b86b0d",
+   "faq": "c415f5b7b0734eff351482012c089c81"
+  },
+  "team-building-inflatables": {
+   "title": "73e37e09c3b757b39d19e083615a2ab2",
+   "meta": "c39bb7ef791ea2eaef97df6752df2d11",
+   "intro": "601ea232af97e10d7cfb72aafc3ef702",
+   "kicker": "d5255be59a858f2c6d47178b47658ce5",
+   "sections": "1131bc910039b7e05505fa4c0777f7eb",
+   "faq": "f66673373f88411fa7ef6741b0fa0b4f"
+  },
+  "school-fun-day-inflatable-hire": {
+   "title": "5bffe5ba3bc8f90c346236120d130929",
+   "meta": "8b1c4e7a572b4648265b65deb82ab6a6",
+   "intro": "e12c8e986736a7e49077c51671bb91f9",
+   "kicker": "d194a82d6dbc863378112e2628259ea2",
+   "sections": "30f1c3a30b757f2f3039a46889dddca8",
+   "faq": "428ad15870fdf35a2cf265eca0b3d164"
+  },
+  "its-a-knockout-hire": {
+   "title": "26d7bb6d5cee6ea7ab1c67cecedb4c31",
+   "meta": "bc2432ccc5673a3c1dd3ed8efd3db0c6",
+   "intro": "d96b1a25daa61fddb425835b787b26bc",
+   "kicker": "7149c60da9b6449abb45ddd114d23364",
+   "sections": "71e6ba6b6b9147abf135c2401b47818f",
+   "faq": "71970679546d15465b426003b63bbd5e"
+  },
+  "university-freshers-inflatable-hire": {
+   "title": "03374a97bc3dfd755e00ed3137e2fa31",
+   "meta": "414949223004a5da9082ded6baf3c22e",
+   "intro": "0a0cd8f1fd2149465fd013a569d1394d",
+   "kicker": "7dee8eb92119b9cdbbfabf0372813165",
+   "sections": "00a26fa083f4cbbbc4f1765167fd037f",
+   "faq": "bec659255da0ac5ca540eac96df6a9dd"
+  },
+  "wedding-inflatable-hire": {
+   "title": "9facdd7a16cfa3475a70bb51316b4a37",
+   "meta": "a9fb195aadb03493c199dd421e76da24",
+   "intro": "b9971f4082ac7a0efedad032b86b8fe6",
+   "kicker": "52e283d43dfd521668fd58256722e9b5",
+   "sections": "d67e74ca97a1171730324e1ac045b21a",
+   "faq": "64ee9a5cc42cde9ceadeb1b0fa792ca5"
+  },
+  "birthday-party-inflatable-hire": {
+   "title": "4de36ec2ed0ed07be6f5667ba9bf2e6d",
+   "meta": "94c2906100ee4526805d6332204cd3c2",
+   "intro": "7a4a2819d0ea97c7f6c27de8f313b13f",
+   "kicker": "bb07327fa2f00bee7f64fb9de6c9977c",
+   "sections": "347dbfe694ba856c291dfc9cab2df461",
+   "faq": "4f98fee4e0ddb37d50b732b006baab6e"
+  },
+  "christmas-party-inflatables": {
+   "title": "4104957656c4ed54e4bcff8f829e2051",
+   "meta": "85f906301bbbeaf61971c953bdd84ca4",
+   "intro": "7b174d59ef2c490e2e51fc5ce14fda34",
+   "kicker": "b05bd9e35b9ff710bd974e62e3d2af53",
+   "sections": "31f53d456d5810e81057519b6cf42d97",
+   "faq": "44b391e2bb66042a3ab8bede233dca12"
+  },
+  "festival-inflatable-hire": {
+   "title": "88586f1873d9cfbe8526549b071d3667",
+   "meta": "c674ab8f2732b0c5b1ba53d3cd8da746",
+   "intro": "efba51e2b810b8114397eb27ff173df7",
+   "kicker": "b298987a842ca6db621858270874bfe3",
+   "sections": "8d5328f6a4a73d0d52b930e5062baa8c",
+   "faq": "87dca41336a2afdd82b0b74c640be0ec"
+  }
+ }
 }

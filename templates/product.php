@@ -12,14 +12,14 @@ $img = $p['crm_image'] ?? null;
 $extra = array_values(array_filter($p['images'] ?? [], 'img_exists'));
 $related = array_slice(array_values(array_filter(products_in($cat), fn($x) => $x['slug'] !== $p['slug'])), 0, 3);
 $imgUrl = $img ?: url(img_src($p['image']));
-$vars = ['name' => $p['name'], 'price' => money($price), 'short' => $p['short'] ?? ''];
-$title = trim((string)($p['seo_title'] ?? '')) ?: tf('product.title', $vars);
-$meta = trim((string)($p['seo_meta'] ?? '')) ?: mb_strimwidth(tf('product.meta', $vars), 0, 158, '…');
+$vars = ['name' => $p['name'], 'price' => $price > 0 ? money($price) : 'Quote', 'short' => $p['short'] ?? ''];
+$title = trim((string)($p['seo_title'] ?? '')) ?: ($price > 0 ? tf('product.title', $vars) : $p['name'] . ' Hire | ' . s('site_name'));
+$meta = trim((string)($p['seo_meta'] ?? '')) ?: mb_strimwidth($price > 0 ? tf('product.meta', $vars) : ($p['short'] ?? '') . ' UK delivery, set-up & collection. Ask for a quote.', 0, 158, '…');
 page_start(['title' => $title, 'meta' => $meta, 'path' => product_url($p), 'image' => $p['image'],
     'crumbs' => [$catPage['h1'] => '/' . $catKey, $p['name'] => product_url($p)],
     'schema' => [['@type' => 'Product', 'name' => $p['name'] . ' Hire', 'description' => $p['short'] ?? '', 'image' => $imgUrl,
         'brand' => ['@type' => 'Brand', 'name' => s('company')], 'category' => 'Inflatable hire',
-        'offers' => ['@type' => 'Offer', 'priceCurrency' => 'GBP', 'price' => $price, 'url' => url(product_url($p)),
+        'offers' => $price <= 0 ? null : ['@type' => 'Offer', 'priceCurrency' => 'GBP', 'price' => $price, 'url' => url(product_url($p)),
             'availability' => 'https://schema.org/InStock', 'businessFunction' => 'http://purl.org/goodrelations/v1#LeaseOut',
             'seller' => ['@id' => url('/#business')]]]]]);
 ?>
@@ -36,10 +36,10 @@ page_start(['title' => $title, 'meta' => $meta, 'path' => product_url($p), 'imag
       <p class="kicker"><a href="/<?= e($catKey) ?>"><?= e($catPage['h1']) ?></a><?php if (!empty($p['crm_live'])): ?> · <span class="live">Live prices &amp; stock</span><?php endif; ?></p>
       <h1><?= e($p['h1'] ?? '') ?: e($p['name']) . ' Hire' ?></h1>
       <p class="lead"><?= e($p['short'] ?? '') ?></p>
-      <table class="prices"><caption><?= e(t('product.prices_caption')) ?></caption>
+      <?php if ($price > 0): ?><table class="prices"><caption><?= e(t('product.prices_caption')) ?></caption>
         <tr><?php foreach ($multi as $d => $v): ?><th><?= $d ?> day<?= $d > 1 ? 's' : '' ?></th><?php endforeach; ?></tr>
         <tr><?php foreach ($multi as $v): ?><td><?= money($v) ?></td><?php endforeach; ?></tr>
-      </table>
+      </table><?php else: ?><p class="from"><b>Price on request</b> – <a href="/contact?interest=<?= e(urlencode($p['name'])) ?>">ask for a quote</a></p><?php endif; ?>
       <ul class="spec">
         <?php if (!empty($p['players'])): ?><li><b>Suitable for</b><?= e($p['players']) ?></li><?php endif; ?>
         <?php if (!empty($p['stock_qty'])): ?><li><b>Units in stock</b><?= (int)$p['stock_qty'] ?></li><?php endif; ?>

@@ -3,7 +3,7 @@ $pg = data()['pages'][$key];
 $c = $loc['city'];
 $label = page_label($key);
 $items = page_products($pg);
-$prices = array_column($items, 'price_from');
+$prices = array_values(array_filter(array_column($items, 'price_from'), fn($x) => $x > 0));
 $from = $prices ? money(min($prices)) : '';
 $v = crc32($c . $key) % 3;
 $near = $loc['near'] ?? [];
